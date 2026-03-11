@@ -8,3 +8,11 @@ wheels/
 
 # Virtual environments
 .venv
+
+# scratchpad
+scratchpad.md
+
+#cookies
+*.pkl
+
+*.log

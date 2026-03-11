@@ -3,7 +3,13 @@
 ```mermaid
 graph TD
     subgraph further-issue-tracker
-        src[src/further_issue_tracker]
-        tests[tests]
+        cli[cli.py]
+        fetcher[fetcher.py]
+        parser[parser.py]
+        
+        cli --> fetcher
+        cli --> parser
+        fetcher --> nse[NSE API]
+        parser --> nsexbrl[nse_xbrl_parser]
     end
 ```

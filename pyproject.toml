@@ -1,13 +1,22 @@
 [project]
 name = "further-issue-tracker"
-version = "0.1.0"
+version = "0.2.0"
 description = "Add your description here"
 readme = "README.md"
 authors = [
     { name = "eggmasonvalue"}
 ]
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "click>=8.3.1",
+    "nse-xbrl-parser",
+    "nse[server]>=2.1.0",
+    "pydantic>=2.12.5",
+    "pydantic-settings>=2.13.1",
+]
+
+[project.scripts]
+further-issue-tracker = "further_issue_tracker.cli:cli"
 
 [build-system]
 requires = ["uv_build>=0.9.26,<0.10.0"]
@@ -19,3 +28,6 @@ dev = [
     "pytest-cov>=7.0.0",
     "ruff>=0.15.5",
 ]
+
+[tool.uv.sources]
+nse-xbrl-parser = { path = "../nse-xbrl-parser" }
