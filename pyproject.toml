@@ -30,4 +30,4 @@ dev = [
 ]
 
 [tool.uv.sources]
-nse-xbrl-parser = { path = "../nse-xbrl-parser" }
+nse-xbrl-parser = { git = "https://github.com/eggmasonvalue/nse-xbrl-parser.git" }
