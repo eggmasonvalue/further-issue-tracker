@@ -1,7 +1,7 @@
 # Design
 
 ## Features
-- Track Preferential Allotments
-- Track Rights Issues
-- Track QIPs
-- NSE Data Integration
+- Implemented: Track Preferential Allotments
+- Implemented: Track QIPs
+- Implemented: NSE Data Integration with XBRL download and parsing
+- Not implemented: Rights Issues workflow

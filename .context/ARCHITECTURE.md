@@ -11,5 +11,6 @@ graph TD
         cli --> parser
         fetcher --> nse[NSE API]
         parser --> nsexbrl[nse_xbrl_parser]
+        parser --> json[JSON artifacts]
     end
 ```

@@ -248,7 +248,7 @@ dev = [
 requires-dist = [
     { name = "click", specifier = ">=8.3.1" },
     { name = "nse", extras = ["server"], specifier = ">=2.1.0" },
-    { name = "nse-xbrl-parser", directory = "../nse-xbrl-parser" },
+    { name = "nse-xbrl-parser", git = "https://github.com/eggmasonvalue/nse-xbrl-parser.git" },
     { name = "pydantic", specifier = ">=2.12.5" },
     { name = "pydantic-settings", specifier = ">=2.13.1" },
 ]
@@ -505,27 +505,12 @@ server = [
 [[package]]
 name = "nse-xbrl-parser"
 version = "0.1.0"
-source = { directory = "../nse-xbrl-parser" }
+source = { git = "https://github.com/eggmasonvalue/nse-xbrl-parser.git#9e7e14c3a2d28892d460e4c7273750a469da6f26" }
 dependencies = [
     { name = "arelle-release" },
     { name = "bs4" },
     { name = "httpx", extra = ["http2"] },
     { name = "lxml" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "arelle-release", specifier = ">=2.38.17" },
-    { name = "bs4", specifier = ">=0.0.2" },
-    { name = "httpx", extras = ["http2"], specifier = ">=0.28.1" },
-    { name = "lxml", specifier = ">=5.3.0" },
-]
-
-[package.metadata.requires-dev]
-dev = [
-    { name = "pytest", specifier = ">=9.0.2" },
-    { name = "pytest-cov", specifier = ">=7.0.0" },
-    { name = "ruff", specifier = ">=0.15.4" },
 ]
 
 [[package]]
