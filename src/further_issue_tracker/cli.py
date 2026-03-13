@@ -1,4 +1,5 @@
 import sys
+import json
 import logging
 import click
 from datetime import datetime
@@ -15,16 +16,18 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-# Redirect stdout and stderr to None or a black hole if strictly required,
-# but logging to file is usually sufficient if we don't print anything.
-# To be completely silent:
-class DevNull:
+class LogWriter:
+    """Redirects writes to the logger."""
+    def __init__(self, level):
+        self.level = level
+
     def write(self, msg):
-        pass
+        for line in msg.rstrip().splitlines():
+            if line.strip():
+                logger.log(self.level, line.strip())
 
     def flush(self):
         pass
-
 
 def validate_date(ctx, param, value):
     try:
@@ -64,17 +67,22 @@ def fetch(from_date, to_date, category):
     """
     Fetch corporate filings for PREF, QIP, or BOTH categories within a date range and parse the XBRL contents.
 
-    This command runs silently. Check cli.log for details, and the resulting JSON files for the output.
+    Returns a JSON object with the status and output details.
     """
-    # Silencing standard output/error to ensure it is completely silent per user request
-    sys.stdout = DevNull()
-    sys.stderr = DevNull()
+    # Redirecting standard output/error to the log file instead of discarding it
+    original_stdout = sys.stdout
+    original_stderr = sys.stderr
+    sys.stdout = LogWriter(logging.INFO)
+    sys.stderr = LogWriter(logging.ERROR)
+
+    result = {}
+    fetcher = None
 
     try:
         dt_from = datetime.strptime(from_date, "%d-%m-%Y")
         dt_to = datetime.strptime(to_date, "%d-%m-%Y")
         if dt_from > dt_to:
-            logger.error(f"from-date {from_date} cannot be after to-date {to_date}")
+            result["error"] = f"from-date {from_date} cannot be after to-date {to_date}"
             return
 
         logger.info(
@@ -85,22 +93,36 @@ def fetch(from_date, to_date, category):
             ["PREF", "QIP"] if category.upper() == "BOTH" else [category.upper()]
         )
 
+        output_files = []
         fetcher = NSEFetcher()
-        try:
-            for cat in categories_to_fetch:
-                logger.info(f"Fetching data for {cat}")
-                filings = fetcher.fetch_corporate_filings(cat, from_date, to_date)
-                logger.info(f"Parsing {len(filings)} filings for {cat}")
-                parsed_records = parse_filings_data(cat, filings, fetcher)
+        for cat in categories_to_fetch:
+            logger.info(f"Fetching data for {cat}")
+            filings = fetcher.fetch_corporate_filings(cat, from_date, to_date)
+            logger.info(f"Parsing {len(filings)} filings for {cat}")
+            parsed_records = parse_filings_data(cat, filings, fetcher)
 
-                output_filename = f"{cat.lower()}_data.json"
-                save_to_json(parsed_records, output_filename)
-                logger.info(f"Successfully saved {cat} data to {output_filename}")
-        finally:
-            fetcher.close()
+            output_filename = f"{cat.lower()}_data.json"
+            save_to_json(parsed_records, output_filename)
+            logger.info(f"Successfully saved {cat} data to {output_filename}")
+            output_files.append(output_filename)
+
+        result["files"] = output_files
 
     except Exception as e:
-        logger.error(f"Execution failed: {e}")
+        error_msg = f"Execution failed: {e}"
+        logger.error(error_msg)
+        result["error"] = error_msg
+
+    finally:
+        if fetcher:
+            try:
+                fetcher.close()
+            except Exception:
+                pass
+        sys.stdout = original_stdout
+        sys.stderr = original_stderr
+
+    click.echo(json.dumps(result))
 
 
 if __name__ == "__main__":

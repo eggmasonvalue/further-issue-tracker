@@ -1,6 +1,8 @@
 # Changelog
 
 ## [Unreleased]
+- Improved CLI `fetch` command to return a minimal JSON object with essential results (`files` or `error`).
+- Implemented stdout/stderr redirection to the log file during CLI execution to ensure clean JSON output while capturing external messages.
 - Switched the `nse-xbrl-parser` dependency source from a local path checkout to the GitHub HTTPS repository URL.
 - Replaced the placeholder README with usage, output, and structure documentation aligned to the current CLI behavior.
 
