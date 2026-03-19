@@ -4,6 +4,7 @@ from typing import Any, Dict, Iterable, List, Optional
 from nse_xbrl_parser import parse_xbrl_file
 
 logger = logging.getLogger(__name__)
+_CMP_RELEVANT_ACQ_MODES = {"Market Purchase", "Market Sale"}
 
 
 def _empty_results() -> Dict[str, Any]:
@@ -26,11 +27,21 @@ def _resolve_first(item: Dict[str, Any], keys: Iterable[str]) -> Optional[Any]:
     return None
 
 
+def _extract_cmp(quote_data: Dict[str, Any]) -> Optional[Any]:
+    price_info = quote_data.get("priceInfo", {})
+    for key in ("close", "lastPrice", "previousClose"):
+        value = price_info.get(key)
+        if value not in (None, 0, 0.0, "0", "0.0"):
+            return value
+    return None
+
+
 def parse_filings_data(
     filings: List[Dict[str, Any]],
     fetcher: Any,
     symbol_keys: Iterable[str],
     xbrl_keys: Iterable[str],
+    enable_xbrl_processing: bool = True,
 ) -> Dict[str, Any]:
     """
     Given a list of JSON payload items from NSE, extract metadata into a dict
@@ -60,7 +71,7 @@ def parse_filings_data(
         xbrl_url = _resolve_first(item, xbrl_keys)
         parsed_xbrl = {}
 
-        if xbrl_url:
+        if enable_xbrl_processing and xbrl_url:
             xml_path = fetcher.download_xbrl_file(xbrl_url)
             if xml_path and xml_path.exists():
                 try:
@@ -73,7 +84,12 @@ def parse_filings_data(
                     logger.error(f"Failed to parse XBRL file {xml_path}: {e}")
 
         records.append(
-            {"symbol": symbol, "base_row": base_row, "xbrl_dict": parsed_xbrl}
+            {
+                "symbol": symbol,
+                "base_row": base_row,
+                "xbrl_dict": parsed_xbrl,
+                "source_item": item,
+            }
         )
 
     # PASS 2: Construct metadata and flattened data arrays
@@ -92,20 +108,18 @@ def parse_filings_data(
         "data": [],
     }
 
-    quote_cache = {}
-
     for rec in records:
         symbol = rec["symbol"]
+        source_item = rec["source_item"]
         xbrl_values = [rec["xbrl_dict"].get(k) for k in sorted_xbrl_keys]
 
         # Fetch CMP
         cmp = None
-        if symbol != "UNKNOWN":
-            if symbol not in quote_cache:
-                quote_cache[symbol] = fetcher.get_quote(symbol)
-            quote_data = quote_cache[symbol]
-            if quote_data and "priceInfo" in quote_data:
-                cmp = quote_data["priceInfo"].get("close")
+        acq_mode = source_item.get("acqMode")
+        if symbol != "UNKNOWN" and acq_mode in _CMP_RELEVANT_ACQ_MODES:
+            quote_data = fetcher.get_quote(symbol)
+            if quote_data:
+                cmp = _extract_cmp(quote_data)
 
         # Get industry data for this symbol
         industry_values = industry_map.get(symbol, [])

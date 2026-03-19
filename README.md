@@ -16,8 +16,10 @@ For each workflow, the CLI:
 2. Downloads the linked XBRL document when one is present.
 3. Attempts to parse the XBRL into a flat dictionary using `nse-xbrl-parser`.
 4. Fetches four-level industry mapping (Macro, Sector, Industry, Basic Industry) from `eggmasonvalue/stock-industry-map-in`.
-5. Fetches Current Market Price (CMP) for stock symbols.
+5. Fetches Current Market Price (CMP) for stock symbols only when it materially matters, currently insider `acqMode` values `Market Purchase` and `Market Sale`.
 6. Writes normalized JSON output files for downstream processing.
+
+For insider trading specifically, XBRL processing is configurable and disabled by default because the API payload is already rich enough for the current use case.
 
 ## Requirements
 
@@ -39,7 +41,7 @@ uv sync
 ### Further issues
 
 ```bash
-uv run nse-corporate-data further-issues --from-date DD-MM-YYYY [--to-date DD-MM-YYYY] [--categories PREF|QIP|BOTH]
+uv run nse-corporate-data further-issues --from-date DD-MM-YYYY [--to-date DD-MM-YYYY] [--category pref|qip...]
 ```
 
 Example:
@@ -51,12 +53,12 @@ uv run nse-corporate-data further-issues --from-date 01-03-2026
 Defaults:
 
 - `--to-date`: current local date when the command runs
-- `--categories`: `BOTH`
+- `--category`: both `pref` and `qip`
 
 ### Insider trading
 
 ```bash
-uv run nse-corporate-data insider-trading --from-date DD-MM-YYYY [--to-date DD-MM-YYYY]
+uv run nse-corporate-data insider-trading --from-date DD-MM-YYYY [--to-date DD-MM-YYYY] [--mode TOKEN...]
 ```
 
 Example:
@@ -64,6 +66,35 @@ Example:
 ```bash
 uv run nse-corporate-data insider-trading --from-date 18-09-2025
 ```
+
+Supported insider mode tokens:
+
+- `market`: `Market Purchase` and `Market Sale`
+- `market-buy`: `Market Purchase`
+- `market-sell`: `Market Sale`
+- `gift`: `Gift`
+- `bonus`: `Bonus`
+- `conversion`: `Conversion of security`
+- `esop`: `ESOP`
+- `off-market`: `Off Market`
+- `inter-se-transfer`: `Inter-se-Transfer`
+- `pledge-create`: `Pledge Creation`
+- `pledge-invoke`: `Invocation of pledge`
+- `pledge-revoke`: `Revokation of Pledge`
+- `preferential-offer`: `Preferential Offer`
+- `public-right`: `Public Right`
+- `scheme`: `Scheme of Amalgamation/Merger/Demerger/Arrangement`
+- `others`: `Others`
+- `unknown`: `-`
+
+Defaults:
+
+- `--mode`: `market`
+- Repeat `--mode` to include multiple tokens explicitly
+
+### Configuration
+
+- `NSE_CORPORATE_DATA_ENABLE_INSIDER_TRADING_XBRL=false` by default
 
 ## Outputs
 
@@ -112,11 +143,11 @@ Output shape:
 - `data[].api`: row values aligned to `metadata.api`
 - `data[].xbrl`: row values aligned to `metadata.xbrl`
 - `data[].industry`: classification values aligned to `metadata.industry`
-- `data[].CMP`: current market price (last close) for the symbol
+- `data[].CMP`: current market price for the symbol, using quote-field priority `close`, then `lastPrice`, then `previousClose`, while treating zero-valued quote fields as missing
 
 ## Insider trading XBRL note
 
-The insider trading workflow downloads the linked XML and attempts to parse it with `nse-xbrl-parser`, but current NSE insider-trading taxonomy resolution is broken upstream. When parsing fails for that reason, the command still succeeds and writes API, industry, and CMP data with empty XBRL fields.
+The insider trading workflow can download and parse linked XML through `nse-xbrl-parser`, but this is disabled by default. If enabled, current NSE insider-trading taxonomy resolution may still fail upstream; when that happens, the command continues and writes API, industry, and CMP data with empty XBRL fields.
 
 ## Project Structure
 

@@ -29,6 +29,7 @@ class NSEFetcher:
         # Initialize cookies
         self._init_session()
         self._industry_data_cache: Optional[Dict[str, Any]] = None
+        self._quote_cache: Dict[str, Optional[Dict[str, Any]]] = {}
 
     def _init_session(self):
         try:
@@ -131,12 +132,17 @@ class NSEFetcher:
         """
         if not symbol:
             return None
+        if symbol in self._quote_cache:
+            return self._quote_cache[symbol]
         try:
-            return self.nse.quote(symbol)
+            quote = self.nse.quote(symbol)
+            self._quote_cache[symbol] = quote
+            return quote
         except Exception as e:
             if should_retry_exception(e):
                 raise e
             logger.error(f"Failed to fetch quote for {symbol}: {e}")
+            self._quote_cache[symbol] = None
             return None
 
     def get_industry_data(self) -> Dict[str, Any]:

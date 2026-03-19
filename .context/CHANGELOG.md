@@ -1,5 +1,12 @@
 # Changelog
 ## [Unreleased]
+- Changed CMP extraction to use NSE quote priority `close`, then `lastPrice`, then `previousClose`, while treating zero-valued quote fields as missing so fallbacks can apply.
+- Limited insider-trading CMP lookups to `Market Purchase` and `Market Sale` rows to avoid unnecessary quote calls.
+- Added `Settings`-based configuration for insider trading, including `NSE_CORPORATE_DATA_ENABLE_INSIDER_TRADING_XBRL`.
+- Disabled insider-trading XBRL processing by default while keeping it configurable.
+- Added a fetcher-level per-symbol quote cache to avoid repeated NSE quote requests within a run.
+- Replaced raw CLI values with canonical machine-facing tokens: repeatable `--category pref|qip` for further issues and repeatable `--mode` tokens for insider trading.
+- Renamed insider mode tokens `buy` and `sell` to `market-buy` and `market-sell` to avoid ambiguity with broader NSE buy/sell semantics.
 - Renamed the project/package surface to `nse-corporate-data` / `nse_corporate_data`.
 - Replaced the old single `fetch` command with `further-issues` and `insider-trading`.
 - Changed the further-issues CLI option from `--category` to `--categories`.

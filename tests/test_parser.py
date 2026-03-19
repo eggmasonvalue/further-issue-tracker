@@ -6,8 +6,11 @@ import nse_corporate_data.parser as parser_module
 class FakeFetcher:
     def __init__(self, xml_path: Path):
         self.xml_path = xml_path
+        self.download_calls = []
+        self.quote_calls = []
 
     def download_xbrl_file(self, xbrl_url: str):
+        self.download_calls.append(xbrl_url)
         return self.xml_path
 
     def get_industry_data(self):
@@ -17,7 +20,8 @@ class FakeFetcher:
         }
 
     def get_quote(self, symbol: str):
-        return {"priceInfo": {"close": 123.45}}
+        self.quote_calls.append(symbol)
+        return {"priceInfo": {"close": 123.45, "lastPrice": 99.0}}
 
 
 def test_parse_filings_data_supports_custom_symbol_and_xbrl_keys(tmp_path, monkeypatch):
@@ -35,20 +39,22 @@ def test_parse_filings_data_supports_custom_symbol_and_xbrl_keys(tmp_path, monke
             {
                 "symbol": "ABC",
                 "company": "Example Corp",
+                "acqMode": "Market Purchase",
                 "xbrl": "https://example.com/it.xml",
             }
         ],
         fetcher=FakeFetcher(xml_path),
         symbol_keys=("symbol",),
         xbrl_keys=("xbrl",),
+        enable_xbrl_processing=True,
     )
 
-    assert result["metadata"]["api"] == ["company", "symbol", "xbrl"]
+    assert result["metadata"]["api"] == ["acqMode", "company", "symbol", "xbrl"]
     assert result["metadata"]["xbrl"] == ["Field A", "Field B"]
     assert result["data"] == [
         {
             "symbol": "ABC",
-            "api": ["Example Corp", "ABC", "https://example.com/it.xml"],
+            "api": ["Market Purchase", "Example Corp", "ABC", "https://example.com/it.xml"],
             "xbrl": ["value-a", "value-b"],
             "industry": ["M", "S", "I", "B"],
             "CMP": 123.45,
@@ -76,7 +82,65 @@ def test_parse_filings_data_logs_and_continues_on_xbrl_parse_failure(tmp_path, m
         fetcher=FakeFetcher(xml_path),
         symbol_keys=("symbol",),
         xbrl_keys=("xbrl",),
+        enable_xbrl_processing=True,
     )
 
     assert result["metadata"]["xbrl"] == []
     assert result["data"][0]["xbrl"] == []
+
+
+def test_parse_filings_data_skips_xbrl_download_when_disabled(tmp_path, monkeypatch):
+    xml_path = tmp_path / "it.xml"
+    xml_path.write_text("<xbrl />", encoding="utf-8")
+    fetcher = FakeFetcher(xml_path)
+
+    def parse_should_not_run(path):
+        raise AssertionError("XBRL parsing should be disabled")
+
+    monkeypatch.setattr(parser_module, "parse_xbrl_file", parse_should_not_run)
+
+    result = parser_module.parse_filings_data(
+        filings=[
+            {
+                "symbol": "ABC",
+                "company": "Example Corp",
+                "xbrl": "https://example.com/it.xml",
+            }
+        ],
+        fetcher=fetcher,
+        symbol_keys=("symbol",),
+        xbrl_keys=("xbrl",),
+        enable_xbrl_processing=False,
+    )
+
+    assert fetcher.download_calls == []
+    assert result["metadata"]["xbrl"] == []
+
+
+def test_extract_cmp_uses_fallback_when_close_is_zero():
+    assert parser_module._extract_cmp(
+        {"priceInfo": {"close": 0, "lastPrice": 42.75, "previousClose": 42.75}}
+    ) == 42.75
+
+
+def test_parse_filings_data_skips_quote_for_non_market_acq_modes(monkeypatch):
+    fetcher = FakeFetcher(Path("."))
+
+    monkeypatch.setattr(parser_module, "parse_xbrl_file", lambda path: {})
+
+    result = parser_module.parse_filings_data(
+        filings=[
+            {
+                "symbol": "ABC",
+                "company": "Example Corp",
+                "acqMode": "Gift",
+            }
+        ],
+        fetcher=fetcher,
+        symbol_keys=("symbol",),
+        xbrl_keys=("xbrl",),
+        enable_xbrl_processing=False,
+    )
+
+    assert fetcher.quote_calls == []
+    assert result["data"][0]["CMP"] is None

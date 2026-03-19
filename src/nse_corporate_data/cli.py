@@ -6,7 +6,13 @@ from datetime import datetime
 from typing import Any, Callable
 
 from nse_corporate_data.fetcher import NSEFetcher
+from nse_corporate_data.insider import (
+    DEFAULT_INSIDER_MODES,
+    INSIDER_MODES,
+    filter_insider_filings_by_mode,
+)
 from nse_corporate_data.parser import parse_filings_data, save_to_json
+from nse_corporate_data.settings import get_settings
 
 # Configure silent execution by routing logs to a file
 logging.basicConfig(
@@ -16,6 +22,7 @@ logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
 )
 logger = logging.getLogger(__name__)
+FURTHER_ISSUE_CATEGORIES = ("pref", "qip")
 
 
 class LogWriter:
@@ -103,15 +110,17 @@ def cli():
     help="End date in DD-MM-YYYY format",
 )
 @click.option(
-    "--categories",
-    default="BOTH",
+    "--category",
+    "categories",
+    multiple=True,
+    default=FURTHER_ISSUE_CATEGORIES,
     show_default=True,
-    type=click.Choice(["PREF", "QIP", "BOTH"], case_sensitive=False),
-    help="Categories to fetch: PREF, QIP, or BOTH",
+    type=click.Choice(FURTHER_ISSUE_CATEGORIES, case_sensitive=False),
+    help="Issue categories to fetch. Repeat the option to include multiple categories.",
 )
 def further_issues(from_date, to_date, categories):
     """
-    Fetch corporate filings for PREF, QIP, or BOTH categories within a date range and parse the XBRL contents.
+    Fetch corporate filings for selected further-issue categories within a date range and parse the XBRL contents.
 
     Returns a JSON object with the status and output details.
     """
@@ -121,9 +130,7 @@ def further_issues(from_date, to_date, categories):
             f"Starting further-issues command for {categories} from {from_date} to {to_date}"
         )
 
-        categories_to_fetch = (
-            ["PREF", "QIP"] if categories.upper() == "BOTH" else [categories.upper()]
-        )
+        categories_to_fetch = [category.upper() for category in categories]
 
         output_files = []
         for cat in categories_to_fetch:
@@ -135,6 +142,7 @@ def further_issues(from_date, to_date, categories):
                 fetcher=fetcher,
                 symbol_keys=("nseSymbol", "nsesymbol"),
                 xbrl_keys=("xmlFileName",),
+                enable_xbrl_processing=True,
             )
 
             output_filename = f"{cat.lower()}_data.json"
@@ -161,8 +169,21 @@ def further_issues(from_date, to_date, categories):
     callback=validate_date,
     help="End date in DD-MM-YYYY format",
 )
-def insider_trading(from_date, to_date):
+@click.option(
+    "--mode",
+    "modes",
+    multiple=True,
+    default=DEFAULT_INSIDER_MODES,
+    show_default=True,
+    type=click.Choice(INSIDER_MODES, case_sensitive=False),
+    help=(
+        "Filter insider trading records by canonical mode token. "
+        "Repeat the option to include multiple modes."
+    ),
+)
+def insider_trading(from_date, to_date, modes):
     """Fetch insider trading disclosures and normalize the result into JSON."""
+    settings = get_settings()
 
     def work(fetcher: NSEFetcher) -> dict[str, Any]:
         validate_date_range(from_date, to_date)
@@ -170,12 +191,16 @@ def insider_trading(from_date, to_date):
             f"Starting insider-trading command from {from_date} to {to_date}"
         )
         filings = fetcher.fetch_insider_trading(from_date, to_date)
+        filings = filter_insider_filings_by_mode(
+            filings, tuple(mode.lower() for mode in modes)
+        )
         logger.info(f"Parsing {len(filings)} insider trading filings")
         parsed_records = parse_filings_data(
             filings=filings,
             fetcher=fetcher,
             symbol_keys=("symbol",),
             xbrl_keys=("xbrl",),
+            enable_xbrl_processing=settings.enable_insider_trading_xbrl,
         )
 
         output_filename = "insider_trading_data.json"

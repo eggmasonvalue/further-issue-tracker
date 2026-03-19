@@ -1,5 +1,6 @@
 import os
 from pathlib import Path
+from types import SimpleNamespace
 from nse_corporate_data.fetcher import NSEFetcher
 
 
@@ -38,3 +39,22 @@ def test_fetcher_uses_provided_download_folder(tmp_path):
     # Assert
     # The provided directory shouldn't be deleted by the fetcher
     assert os.path.exists(custom_dir)
+
+
+def test_get_quote_uses_fetcher_cache():
+    # Arrange
+    calls = []
+    fetcher = NSEFetcher.__new__(NSEFetcher)
+    fetcher._quote_cache = {}
+    fetcher.nse = SimpleNamespace(
+        quote=lambda symbol: calls.append(symbol) or {"priceInfo": {"close": 123.45}}
+    )
+
+    # Act
+    first = fetcher.get_quote("ABC")
+    second = fetcher.get_quote("ABC")
+
+    # Assert
+    assert first == {"priceInfo": {"close": 123.45}}
+    assert second == {"priceInfo": {"close": 123.45}}
+    assert calls == ["ABC"]
