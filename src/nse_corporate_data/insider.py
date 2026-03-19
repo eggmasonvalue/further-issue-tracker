@@ -26,7 +26,7 @@ INSIDER_MODE_TO_ACQ_MODE = {
     "preferential-offer": ("Preferential Offer",),
     "public-right": ("Public Right",),
     "pledge-release": ("Pledge Release",),
-    "pledge-revoke": ("Revocation of Pledge",),
+    "pledge-revoke": ("Revokation of Pledge",),
     "scheme": ("Scheme of Amalgamation/Merger/Demerger/Arrangement",),
 }
 
