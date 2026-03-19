@@ -1,37 +1,37 @@
 {
   "metadata": {
     "api": [
-      "acqMode",
-      "acqName",
-      "acqfromDt",
-      "acqtoDt",
-      "afterAcqSharesNo",
-      "afterAcqSharesPer",
-      "anex",
-      "befAcqSharesNo",
-      "befAcqSharesPer",
-      "buyQuantity",
-      "buyValue",
+      "transactionMode",
+      "personName",
+      "transactionStartDate",
+      "transactionEndDate",
+      "holdingAfterShares",
+      "holdingAfterPct",
+      "annexure",
+      "holdingBeforeShares",
+      "holdingBeforePct",
+      "reportedBuyQuantity",
+      "reportedBuyValue",
       "company",
-      "date",
+      "filingDateTime",
       "derivativeType",
-      "did",
+      "disclosureId",
       "exchange",
-      "intimDt",
+      "intimationDate",
       "personCategory",
-      "pid",
+      "personId",
       "remarks",
-      "secAcq",
-      "secType",
-      "secVal",
-      "securitiesTypePost",
-      "sellValue",
-      "sellquantity",
+      "transactionQuantity",
+      "securityType",
+      "transactionValue",
+      "postTransactionSecurityType",
+      "reportedSellValue",
+      "reportedSellQuantity",
       "symbol",
-      "tdpDerivativeContractType",
-      "tdpTransactionType",
-      "tkdAcqm",
-      "xbrl",
+      "derivativeContractType",
+      "transactionDirection",
+      "additionalTransactionDetail",
+      "xbrlUrl",
       "xbrlFileSize"
     ],
     "xbrl": [],
@@ -52,7 +52,1944 @@
   },
   "data": [
     {
-      "symbol": "NOVAAGRI",
+      "api": [
+        "Market Purchase",
+        "KIRAN PODDAR",
+        "17-Mar-2026",
+        "17-Mar-2026",
+        "29393",
+        "0.07",
+        "7(2)",
+        "27477",
+        "0.06",
+        "0",
+        "0",
+        "Mayur Uniquoters Ltd",
+        "19-Mar-2026 16:57",
+        "-",
+        "567694",
+        "BSE",
+        "18-Mar-2026",
+        "Promoters",
+        "1196253",
+        "-",
+        "1916",
+        "Equity Shares",
+        "960108",
+        "Equity Shares",
+        "0",
+        "0",
+        "MAYURUNIQ",
+        "-",
+        "Buy",
+        null,
+        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196253_1637567_19032026045748_WEB.xml",
+        "8.76 KB"
+      ],
+      "xbrl": [],
+      "industry": [
+        "Consumer Discretionary",
+        "Consumer Durables",
+        "Consumer Durables",
+        "Leather And Leather Products"
+      ],
+      "marketData": [
+        500.55,
+        43452600,
+        8769452012.9,
+        "12.65",
+        629.9,
+        441
+      ]
+    },
+    {
+      "api": [
+        "Market Purchase",
+        "KIRAN PODDAR",
+        "17-Mar-2026",
+        "17-Mar-2026",
+        "36619",
+        "0.08",
+        "7(2)",
+        "29393",
+        "0.07",
+        "0",
+        "0",
+        "Mayur Uniquoters Ltd",
+        "19-Mar-2026 16:57",
+        "-",
+        "567695",
+        "NSE",
+        "18-Mar-2026",
+        "Promoters",
+        "1196253",
+        "-",
+        "7226",
+        "Equity Shares",
+        "3646168",
+        "Equity Shares",
+        "0",
+        "0",
+        "MAYURUNIQ",
+        "-",
+        "Buy",
+        null,
+        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196253_1637567_19032026045748_WEB.xml",
+        "8.76 KB"
+      ],
+      "xbrl": [],
+      "industry": [
+        "Consumer Discretionary",
+        "Consumer Durables",
+        "Consumer Durables",
+        "Leather And Leather Products"
+      ],
+      "marketData": [
+        500.55,
+        43452600,
+        8769452012.9,
+        "12.65",
+        629.9,
+        441
+      ]
+    },
+    {
+      "api": [
+        "Market Purchase",
+        "NCVI Enterprises Limited",
+        "18-Mar-2026",
+        "18-Mar-2026",
+        "48250695",
+        "16.44",
+        "7(2)",
+        "47550695",
+        "16.2",
+        "0",
+        "0",
+        "IOL Chemicals and Pharmaceuticals Limited",
+        "19-Mar-2026 16:43",
+        "-",
+        "567693",
+        "NSE",
+        "19-Mar-2026",
+        "Promoter Group",
+        "1196251",
+        "-",
+        "700000",
+        "Equity Shares",
+        "51408739",
+        "Equity Shares",
+        "0",
+        "0",
+        "IOLCP",
+        "-",
+        "Buy",
+        null,
+        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196251_1637559_19032026044306_WEB.xml",
+        "5.36 KB"
+      ],
+      "xbrl": [],
+      "industry": [
+        "Healthcare",
+        "Healthcare",
+        "Pharmaceuticals & Biotechnology",
+        "Pharmaceuticals"
+      ],
+      "marketData": [
+        72.65,
+        293527510,
+        8434701846.64,
+        "18.72",
+        126.66,
+        57.5
+      ]
+    },
+    {
+      "api": [
+        "Market Purchase",
+        "Mayadevi Polycot Limited",
+        "18-Mar-2026",
+        "18-Mar-2026",
+        "63945330",
+        "21.78",
+        "7(2)",
+        "63891133",
+        "21.76",
+        "0",
+        "0",
+        "IOL Chemicals and Pharmaceuticals Limited",
+        "19-Mar-2026 16:36",
+        "-",
+        "567689",
+        "NSE",
+        "19-Mar-2026",
+        "Promoter Group",
+        "1196248",
+        "-",
+        "54197",
+        "Equity Shares",
+        "4000210",
+        "Equity Shares",
+        "0",
+        "0",
+        "IOLCP",
+        "-",
+        "Buy",
+        null,
+        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196248_1637550_19032026043601_WEB.xml",
+        "5.36 KB"
+      ],
+      "xbrl": [],
+      "industry": [
+        "Healthcare",
+        "Healthcare",
+        "Pharmaceuticals & Biotechnology",
+        "Pharmaceuticals"
+      ],
+      "marketData": [
+        72.65,
+        293527510,
+        8434701846.64,
+        "18.72",
+        126.66,
+        57.5
+      ]
+    },
+    {
+      "api": [
+        "Market Purchase",
+        "Karan Paul",
+        "17-Mar-2026",
+        "18-Mar-2026",
+        "44280",
+        "0.02",
+        "7(2)",
+        "100",
+        "0",
+        "0",
+        "0",
+        "Apeejay Surrendra Park Hotels Limited",
+        "19-Mar-2026 16:01",
+        "-",
+        "567681",
+        "NSE",
+        "18-Mar-2026",
+        "Director",
+        "1196239",
+        "-",
+        "44180",
+        "Equity Shares",
+        "4974242",
+        "Equity Shares",
+        "0",
+        "0",
+        "PARKHOTELS",
+        "-",
+        "Buy",
+        null,
+        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196239_1637518_19032026040152_WEB.xml",
+        "5.33 KB"
+      ],
+      "xbrl": [],
+      "industry": [
+        "Consumer Discretionary",
+        "Consumer Services",
+        "Leisure Services",
+        "Hotels & Resorts"
+      ],
+      "marketData": [
+        108.32,
+        213374246,
+        7367400488.14,
+        "29.9",
+        173.2,
+        105.13
+      ]
+    },
+    {
+      "api": [
+        "Market Purchase",
+        "Gujarat Narmada Valley Fertilizers And Chemicals Limited",
+        "18-Mar-2026",
+        "18-Mar-2026",
+        "1763525",
+        "2.4",
+        "7(2)",
+        "1759996",
+        "2.4",
+        "0",
+        "0",
+        "Gujarat Alkalies and Chemicals Limited",
+        "19-Mar-2026 15:58",
+        "-",
+        "567679",
+        "NSE",
+        "19-Mar-2026",
+        "Promoters",
+        "1196237",
+        "-",
+        "3529",
+        "Equity Shares",
+        "1522014",
+        "Equity Shares",
+        "0",
+        "0",
+        "GUJALKALI",
+        "-",
+        "Buy",
+        null,
+        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196237_1637515_19032026035843_WEB.xml",
+        "5.52 KB"
+      ],
+      "xbrl": [],
+      "industry": [
+        "Commodities",
+        "Chemicals",
+        "Chemicals & Petrochemicals",
+        "Commodity Chemicals"
+      ],
+      "marketData": [
+        486.5,
+        73445242,
+        8413246627.9,
+        "92.55",
+        698.4,
+        409.15
+      ]
+    },
+    {
+      "api": [
+        "Market Purchase",
+        "Kaksha Vipul Parekh",
+        "19-Mar-2026",
+        "19-Mar-2026",
+        "4843219",
+        "9.27",
+        "7(2)",
+        "4768219",
+        "9.13",
+        "0",
+        "0",
+        "Gem Aromatics Limited",
+        "19-Mar-2026 15:39",
+        "-",
+        "567677",
+        "NSE",
+        "19-Mar-2026",
+        "Promoters",
+        "1196235",
+        "-",
+        "75000",
+        "Equity Shares",
+        "12823500",
+        "Equity Shares",
+        "0",
+        "0",
+        "GEMAROMA",
+        "-",
+        "Buy",
+        null,
+        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196235_1637504_19032026033903_WEB.xml",
+        "5.47 KB"
+      ],
+      "xbrl": [],
+      "industry": [
+        "Commodities",
+        "Chemicals",
+        "Chemicals & Petrochemicals",
+        "Specialty Chemicals"
+      ],
+      "marketData": [
+        166.56,
+        52237138,
+        1970923410.25,
+        null,
+        349.6,
+        133
+      ]
+    },
+    {
+      "api": [
+        "Market Purchase",
+        "Nitin Sachdeva",
+        "19-Mar-2026",
+        "19-Mar-2026",
+        "3634695",
+        "39.9",
+        "7(2)",
+        "3633495",
+        "39.88",
+        "0",
+        "0",
+        "Delaplex Limited",
+        "19-Mar-2026 15:21",
+        "-",
+        "567670",
+        "NSE",
+        "19-Mar-2026",
+        "Promoters",
+        "1196230",
+        "-",
+        "1200",
+        "Equity Shares",
+        "115776",
+        "Equity Shares",
+        "0",
+        "0",
+        "DELAPLEX",
+        "-",
+        "Buy",
+        null,
+        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196230_1637490_19032026032136_WEB.xml",
+        "48.47 KB"
+      ],
+      "xbrl": [],
+      "industry": [
+        "Information Technology",
+        "Information Technology",
+        "IT - Software",
+        "Computers - Software & Consulting"
+      ],
+      "marketData": [
+        95.6,
+        9110000,
+        226232875.26,
+        "6.69",
+        194.85,
+        83.35
+      ]
+    },
+    {
+      "api": [
+        "Market Purchase",
+        "Nitin Sachdeva",
+        "19-Mar-2026",
+        "19-Mar-2026",
+        "3632295",
+        "39.87",
+        "7(2)",
+        "3631095",
+        "39.86",
+        "0",
+        "0",
+        "Delaplex Limited",
+        "19-Mar-2026 15:21",
+        "-",
+        "567668",
+        "NSE",
+        "19-Mar-2026",
+        "Promoters",
+        "1196230",
+        "-",
+        "1200",
+        "Equity Shares",
+        "115800",
+        "Equity Shares",
+        "0",
+        "0",
+        "DELAPLEX",
+        "-",
+        "Buy",
+        null,
+        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196230_1637490_19032026032136_WEB.xml",
+        "48.47 KB"
+      ],
+      "xbrl": [],
+      "industry": [
+        "Information Technology",
+        "Information Technology",
+        "IT - Software",
+        "Computers - Software & Consulting"
+      ],
+      "marketData": [
+        95.6,
+        9110000,
+        226232875.26,
+        "6.69",
+        194.85,
+        83.35
+      ]
+    },
+    {
+      "api": [
+        "Market Purchase",
+        "Nitin Sachdeva",
+        "19-Mar-2026",
+        "19-Mar-2026",
+        "3631095",
+        "39.86",
+        "7(2)",
+        "3629895",
+        "39.85",
+        "0",
+        "0",
+        "Delaplex Limited",
+        "19-Mar-2026 15:21",
+        "-",
+        "567667",
+        "NSE",
+        "19-Mar-2026",
+        "Promoters",
+        "1196230",
+        "-",
+        "1200",
+        "Equity Shares",
+        "115800",
+        "Equity Shares",
+        "0",
+        "0",
+        "DELAPLEX",
+        "-",
+        "Buy",
+        null,
+        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196230_1637490_19032026032136_WEB.xml",
+        "48.47 KB"
+      ],
+      "xbrl": [],
+      "industry": [
+        "Information Technology",
+        "Information Technology",
+        "IT - Software",
+        "Computers - Software & Consulting"
+      ],
+      "marketData": [
+        95.6,
+        9110000,
+        226232875.26,
+        "6.69",
+        194.85,
+        83.35
+      ]
+    },
+    {
+      "api": [
+        "Market Purchase",
+        "Nitin Sachdeva",
+        "19-Mar-2026",
+        "19-Mar-2026",
+        "3629895",
+        "39.85",
+        "7(2)",
+        "3628695",
+        "39.83",
+        "0",
+        "0",
+        "Delaplex Limited",
+        "19-Mar-2026 15:21",
+        "-",
+        "567666",
+        "NSE",
+        "19-Mar-2026",
+        "Promoters",
+        "1196230",
+        "-",
+        "1200",
+        "Equity Shares",
+        "115800",
+        "Equity Shares",
+        "0",
+        "0",
+        "DELAPLEX",
+        "-",
+        "Buy",
+        null,
+        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196230_1637490_19032026032136_WEB.xml",
+        "48.47 KB"
+      ],
+      "xbrl": [],
+      "industry": [
+        "Information Technology",
+        "Information Technology",
+        "IT - Software",
+        "Computers - Software & Consulting"
+      ],
+      "marketData": [
+        95.6,
+        9110000,
+        226232875.26,
+        "6.69",
+        194.85,
+        83.35
+      ]
+    },
+    {
+      "api": [
+        "Market Purchase",
+        "Nitin Sachdeva",
+        "19-Mar-2026",
+        "19-Mar-2026",
+        "3628695",
+        "39.83",
+        "7(2)",
+        "3628095",
+        "39.83",
+        "0",
+        "0",
+        "Delaplex Limited",
+        "19-Mar-2026 15:21",
+        "-",
+        "567665",
+        "NSE",
+        "19-Mar-2026",
+        "Promoters",
+        "1196230",
+        "-",
+        "600",
+        "Equity Shares",
+        "58770",
+        "Equity Shares",
+        "0",
+        "0",
+        "DELAPLEX",
+        "-",
+        "Buy",
+        null,
+        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196230_1637490_19032026032136_WEB.xml",
+        "48.47 KB"
+      ],
+      "xbrl": [],
+      "industry": [
+        "Information Technology",
+        "Information Technology",
+        "IT - Software",
+        "Computers - Software & Consulting"
+      ],
+      "marketData": [
+        95.6,
+        9110000,
+        226232875.26,
+        "6.69",
+        194.85,
+        83.35
+      ]
+    },
+    {
+      "api": [
+        "Market Purchase",
+        "Nitin Sachdeva",
+        "19-Mar-2026",
+        "19-Mar-2026",
+        "3628095",
+        "39.83",
+        "7(2)",
+        "3626895",
+        "39.81",
+        "0",
+        "0",
+        "Delaplex Limited",
+        "19-Mar-2026 15:21",
+        "-",
+        "567664",
+        "NSE",
+        "19-Mar-2026",
+        "Promoters",
+        "1196230",
+        "-",
+        "1200",
+        "Equity Shares",
+        "117600",
+        "Equity Shares",
+        "0",
+        "0",
+        "DELAPLEX",
+        "-",
+        "Buy",
+        null,
+        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196230_1637490_19032026032136_WEB.xml",
+        "48.47 KB"
+      ],
+      "xbrl": [],
+      "industry": [
+        "Information Technology",
+        "Information Technology",
+        "IT - Software",
+        "Computers - Software & Consulting"
+      ],
+      "marketData": [
+        95.6,
+        9110000,
+        226232875.26,
+        "6.69",
+        194.85,
+        83.35
+      ]
+    },
+    {
+      "api": [
+        "Market Purchase",
+        "Nitin Sachdeva",
+        "19-Mar-2026",
+        "19-Mar-2026",
+        "3633495",
+        "39.88",
+        "7(2)",
+        "3632295",
+        "39.87",
+        "0",
+        "0",
+        "Delaplex Limited",
+        "19-Mar-2026 15:21",
+        "-",
+        "567669",
+        "NSE",
+        "19-Mar-2026",
+        "Promoters",
+        "1196230",
+        "-",
+        "1200",
+        "Equity Shares",
+        "115800",
+        "Equity Shares",
+        "0",
+        "0",
+        "DELAPLEX",
+        "-",
+        "Buy",
+        null,
+        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196230_1637490_19032026032136_WEB.xml",
+        "48.47 KB"
+      ],
+      "xbrl": [],
+      "industry": [
+        "Information Technology",
+        "Information Technology",
+        "IT - Software",
+        "Computers - Software & Consulting"
+      ],
+      "marketData": [
+        95.6,
+        9110000,
+        226232875.26,
+        "6.69",
+        194.85,
+        83.35
+      ]
+    },
+    {
+      "api": [
+        "Market Purchase",
+        "Nitin Sachdeva",
+        "19-Mar-2026",
+        "19-Mar-2026",
+        "3635895",
+        "39.91",
+        "7(2)",
+        "3635295",
+        "39.9",
+        "0",
+        "0",
+        "Delaplex Limited",
+        "19-Mar-2026 15:21",
+        "-",
+        "567672",
+        "NSE",
+        "19-Mar-2026",
+        "Promoters",
+        "1196230",
+        "-",
+        "600",
+        "Equity Shares",
+        "57570",
+        "Equity Shares",
+        "0",
+        "0",
+        "DELAPLEX",
+        "-",
+        "Buy",
+        null,
+        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196230_1637490_19032026032136_WEB.xml",
+        "48.47 KB"
+      ],
+      "xbrl": [],
+      "industry": [
+        "Information Technology",
+        "Information Technology",
+        "IT - Software",
+        "Computers - Software & Consulting"
+      ],
+      "marketData": [
+        95.6,
+        9110000,
+        226232875.26,
+        "6.69",
+        194.85,
+        83.35
+      ]
+    },
+    {
+      "api": [
+        "Market Purchase",
+        "Nitin Sachdeva",
+        "19-Mar-2026",
+        "19-Mar-2026",
+        "3635295",
+        "39.9",
+        "7(2)",
+        "3634695",
+        "39.9",
+        "0",
+        "0",
+        "Delaplex Limited",
+        "19-Mar-2026 15:21",
+        "-",
+        "567671",
+        "NSE",
+        "19-Mar-2026",
+        "Promoters",
+        "1196230",
+        "-",
+        "600",
+        "Equity Shares",
+        "57900",
+        "Equity Shares",
+        "0",
+        "0",
+        "DELAPLEX",
+        "-",
+        "Buy",
+        null,
+        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196230_1637490_19032026032136_WEB.xml",
+        "48.47 KB"
+      ],
+      "xbrl": [],
+      "industry": [
+        "Information Technology",
+        "Information Technology",
+        "IT - Software",
+        "Computers - Software & Consulting"
+      ],
+      "marketData": [
+        95.6,
+        9110000,
+        226232875.26,
+        "6.69",
+        194.85,
+        83.35
+      ]
+    },
+    {
+      "api": [
+        "Market Purchase",
+        "Nitin Sachdeva",
+        "19-Mar-2026",
+        "19-Mar-2026",
+        "3625095",
+        "39.79",
+        "7(2)",
+        "3624495",
+        "39.79",
+        "0",
+        "0",
+        "Delaplex Limited",
+        "19-Mar-2026 15:21",
+        "-",
+        "567660",
+        "NSE",
+        "19-Mar-2026",
+        "Promoters",
+        "1196230",
+        "-",
+        "600",
+        "Equity Shares",
+        "57450",
+        "Equity Shares",
+        "0",
+        "0",
+        "DELAPLEX",
+        "-",
+        "Buy",
+        null,
+        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196230_1637490_19032026032136_WEB.xml",
+        "48.47 KB"
+      ],
+      "xbrl": [],
+      "industry": [
+        "Information Technology",
+        "Information Technology",
+        "IT - Software",
+        "Computers - Software & Consulting"
+      ],
+      "marketData": [
+        95.6,
+        9110000,
+        226232875.26,
+        "6.69",
+        194.85,
+        83.35
+      ]
+    },
+    {
+      "api": [
+        "Market Purchase",
+        "Nitin Sachdeva",
+        "19-Mar-2026",
+        "19-Mar-2026",
+        "3624495",
+        "39.79",
+        "7(2)",
+        "3623895",
+        "39.78",
+        "0",
+        "0",
+        "Delaplex Limited",
+        "19-Mar-2026 15:21",
+        "-",
+        "567659",
+        "NSE",
+        "19-Mar-2026",
+        "Promoters",
+        "1196230",
+        "-",
+        "600",
+        "Equity Shares",
+        "57330",
+        "Equity Shares",
+        "0",
+        "0",
+        "DELAPLEX",
+        "-",
+        "Buy",
+        null,
+        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196230_1637490_19032026032136_WEB.xml",
+        "48.47 KB"
+      ],
+      "xbrl": [],
+      "industry": [
+        "Information Technology",
+        "Information Technology",
+        "IT - Software",
+        "Computers - Software & Consulting"
+      ],
+      "marketData": [
+        95.6,
+        9110000,
+        226232875.26,
+        "6.69",
+        194.85,
+        83.35
+      ]
+    },
+    {
+      "api": [
+        "Market Purchase",
+        "Nitin Sachdeva",
+        "19-Mar-2026",
+        "19-Mar-2026",
+        "3625695",
+        "39.8",
+        "7(2)",
+        "3625095",
+        "39.79",
+        "0",
+        "0",
+        "Delaplex Limited",
+        "19-Mar-2026 15:21",
+        "-",
+        "567661",
+        "NSE",
+        "19-Mar-2026",
+        "Promoters",
+        "1196230",
+        "-",
+        "600",
+        "Equity Shares",
+        "57480",
+        "Equity Shares",
+        "0",
+        "0",
+        "DELAPLEX",
+        "-",
+        "Buy",
+        null,
+        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196230_1637490_19032026032136_WEB.xml",
+        "48.47 KB"
+      ],
+      "xbrl": [],
+      "industry": [
+        "Information Technology",
+        "Information Technology",
+        "IT - Software",
+        "Computers - Software & Consulting"
+      ],
+      "marketData": [
+        95.6,
+        9110000,
+        226232875.26,
+        "6.69",
+        194.85,
+        83.35
+      ]
+    },
+    {
+      "api": [
+        "Market Purchase",
+        "Nitin Sachdeva",
+        "19-Mar-2026",
+        "19-Mar-2026",
+        "3626295",
+        "39.81",
+        "7(2)",
+        "3625695",
+        "39.8",
+        "0",
+        "0",
+        "Delaplex Limited",
+        "19-Mar-2026 15:21",
+        "-",
+        "567662",
+        "NSE",
+        "19-Mar-2026",
+        "Promoters",
+        "1196230",
+        "-",
+        "600",
+        "Equity Shares",
+        "57570",
+        "Equity Shares",
+        "0",
+        "0",
+        "DELAPLEX",
+        "-",
+        "Buy",
+        null,
+        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196230_1637490_19032026032136_WEB.xml",
+        "48.47 KB"
+      ],
+      "xbrl": [],
+      "industry": [
+        "Information Technology",
+        "Information Technology",
+        "IT - Software",
+        "Computers - Software & Consulting"
+      ],
+      "marketData": [
+        95.6,
+        9110000,
+        226232875.26,
+        "6.69",
+        194.85,
+        83.35
+      ]
+    },
+    {
+      "api": [
+        "Market Purchase",
+        "Nitin Sachdeva",
+        "19-Mar-2026",
+        "19-Mar-2026",
+        "3626895",
+        "39.81",
+        "7(2)",
+        "3626295",
+        "39.81",
+        "0",
+        "0",
+        "Delaplex Limited",
+        "19-Mar-2026 15:21",
+        "-",
+        "567663",
+        "NSE",
+        "19-Mar-2026",
+        "Promoters",
+        "1196230",
+        "-",
+        "600",
+        "Equity Shares",
+        "60000",
+        "Equity Shares",
+        "0",
+        "0",
+        "DELAPLEX",
+        "-",
+        "Buy",
+        null,
+        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196230_1637490_19032026032136_WEB.xml",
+        "48.47 KB"
+      ],
+      "xbrl": [],
+      "industry": [
+        "Information Technology",
+        "Information Technology",
+        "IT - Software",
+        "Computers - Software & Consulting"
+      ],
+      "marketData": [
+        95.6,
+        9110000,
+        226232875.26,
+        "6.69",
+        194.85,
+        83.35
+      ]
+    },
+    {
+      "api": [
+        "Market Purchase",
+        "Mr. Ajay Mian",
+        "17-Mar-2026",
+        "17-Mar-2026",
+        "9956272",
+        "49.3",
+        "7(2)",
+        "9955472",
+        "49.3",
+        "0",
+        "0",
+        "All E Technologies Limited",
+        "19-Mar-2026 14:55",
+        "-",
+        "567642",
+        "NSE",
+        "17-Mar-2026",
+        "Promoters",
+        "1196226",
+        "-",
+        "800",
+        "Equity Shares",
+        "105600",
+        "Equity Shares",
+        "0",
+        "0",
+        "ALLETEC",
+        "-",
+        "Buy",
+        null,
+        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196226_1637479_19032026025502_WEB.xml",
+        "8.77 KB"
+      ],
+      "xbrl": [],
+      "industry": [
+        "Information Technology",
+        "Information Technology",
+        "IT - Software",
+        "Computers - Software & Consulting"
+      ],
+      "marketData": [
+        144.25,
+        20194176,
+        1125541785.77,
+        "9.33",
+        475.5,
+        131
+      ]
+    },
+    {
+      "api": [
+        "Market Purchase",
+        "Mr. Ajay Mian",
+        "17-Mar-2026",
+        "17-Mar-2026",
+        "9955472",
+        "49.3",
+        "7(2)",
+        "9954272",
+        "49.29",
+        "0",
+        "0",
+        "All E Technologies Limited",
+        "19-Mar-2026 14:55",
+        "-",
+        "567641",
+        "NSE",
+        "17-Mar-2026",
+        "Promoters",
+        "1196226",
+        "-",
+        "1200",
+        "Equity Shares",
+        "159600",
+        "Equity Shares",
+        "0",
+        "0",
+        "ALLETEC",
+        "-",
+        "Buy",
+        null,
+        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196226_1637479_19032026025502_WEB.xml",
+        "8.77 KB"
+      ],
+      "xbrl": [],
+      "industry": [
+        "Information Technology",
+        "Information Technology",
+        "IT - Software",
+        "Computers - Software & Consulting"
+      ],
+      "marketData": [
+        144.25,
+        20194176,
+        1125541785.77,
+        "9.33",
+        475.5,
+        131
+      ]
+    },
+    {
+      "api": [
+        "Market Purchase",
+        "Goel Die Cast Limited",
+        "16-Mar-2026",
+        "16-Mar-2026",
+        "7982348",
+        "3.67",
+        "7(2)",
+        "7932348",
+        "3.64",
+        "0",
+        "0",
+        "Surya Roshni Limited",
+        "19-Mar-2026 14:34",
+        "-",
+        "567638",
+        "NSE",
+        "17-Mar-2026",
+        "Promoter Group",
+        "1196223",
+        "-",
+        "50000",
+        "Equity Shares",
+        "10239382",
+        "Equity Shares",
+        "0",
+        "0",
+        "SURYAROSNI",
+        "-",
+        "Buy",
+        null,
+        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196223_1637456_19032026023453_WEB.xml",
+        "5.48 KB"
+      ],
+      "xbrl": [],
+      "industry": [
+        "Industrials",
+        "Capital Goods",
+        "Industrial Products",
+        "Iron & Steel Products"
+      ],
+      "marketData": [
+        204.22,
+        217635896,
+        16422412423.46,
+        "14.48",
+        359,
+        199.47
+      ]
+    },
+    {
+      "api": [
+        "Market Purchase",
+        "R V Shekar",
+        "18-Mar-2026",
+        "18-Mar-2026",
+        "17754149",
+        "24.14",
+        "7(2)",
+        "17734821",
+        "24.11",
+        "0",
+        "0",
+        "Lancor Holdings Limited",
+        "19-Mar-2026 13:33",
+        "-",
+        "567632",
+        "NSE",
+        "19-Mar-2026",
+        "Promoters",
+        "1196219",
+        "-",
+        "19328",
+        "Equity Shares",
+        "386560",
+        "Equity Shares",
+        "0",
+        "0",
+        "LANCORHOL",
+        "-",
+        "Buy",
+        null,
+        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196219_1637436_19032026013340_WEB.xml",
+        "5.33 KB"
+      ],
+      "xbrl": [],
+      "industry": [
+        "Consumer Discretionary",
+        "Realty",
+        "Realty",
+        "Residential, Commercial Projects"
+      ],
+      "marketData": [
+        30,
+        73550560,
+        0,
+        "118.39",
+        42.44,
+        19.01
+      ]
+    },
+    {
+      "api": [
+        "Market Purchase",
+        "Eclerx Employee Welfare Trust",
+        "17-Mar-2026",
+        "17-Mar-2026",
+        "1931411",
+        "2.05",
+        "7(2)",
+        "1918873",
+        "2.04",
+        "0",
+        "0",
+        "eClerx Services Limited",
+        "19-Mar-2026 13:12",
+        "-",
+        "567629",
+        "NSE",
+        "19-Mar-2026",
+        "Other",
+        "1196218",
+        "-",
+        "12538",
+        "Equity Shares",
+        "18949034",
+        "Equity Shares",
+        "0",
+        "0",
+        "ECLERX",
+        "-",
+        "Buy",
+        null,
+        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196218_1637432_19032026011249_WEB.xml",
+        "8.79 KB"
+      ],
+      "xbrl": [],
+      "industry": [
+        "Services",
+        "Services",
+        "Commercial Services & Supplies",
+        "Business Process Outsourcing (BPO)/ Knowledge Process Outsourcing (KPO)"
+      ],
+      "marketData": [
+        1456.8,
+        94050718,
+        61480963987.39,
+        "20.88",
+        2497.5,
+        1084
+      ]
+    },
+    {
+      "api": [
+        "Market Purchase",
+        "Eclerx Employee Welfare Trust",
+        "18-Mar-2026",
+        "18-Mar-2026",
+        "1943985",
+        "2.06",
+        "7(2)",
+        "1931411",
+        "2.05",
+        "0",
+        "0",
+        "eClerx Services Limited",
+        "19-Mar-2026 13:12",
+        "-",
+        "567630",
+        "NSE",
+        "19-Mar-2026",
+        "Other",
+        "1196218",
+        "-",
+        "12574",
+        "Equity Shares",
+        "18949727",
+        "Equity Shares",
+        "0",
+        "0",
+        "ECLERX",
+        "-",
+        "Buy",
+        null,
+        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196218_1637432_19032026011249_WEB.xml",
+        "8.79 KB"
+      ],
+      "xbrl": [],
+      "industry": [
+        "Services",
+        "Services",
+        "Commercial Services & Supplies",
+        "Business Process Outsourcing (BPO)/ Knowledge Process Outsourcing (KPO)"
+      ],
+      "marketData": [
+        1456.8,
+        94050718,
+        61480963987.39,
+        "20.88",
+        2497.5,
+        1084
+      ]
+    },
+    {
+      "api": [
+        "Market Purchase",
+        "VINIT ARVIND SHAH",
+        "16-Mar-2026",
+        "16-Mar-2026",
+        "1276500",
+        "7.17",
+        "7(2)",
+        "1246500",
+        "7",
+        "0",
+        "0",
+        "ARVIND PORT AND INFRA LIMITED",
+        "19-Mar-2026 12:47",
+        "-",
+        "567626",
+        "NSE",
+        "18-Mar-2026",
+        "Promoters",
+        "1196216",
+        "-",
+        "30000",
+        "Equity Shares",
+        "869475",
+        "Equity Shares",
+        "0",
+        "0",
+        "ARVINDPORT",
+        "-",
+        "Buy",
+        null,
+        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196216_1637429_19032026124719_WEB.xml",
+        "5.47 KB"
+      ],
+      "xbrl": [],
+      "industry": [
+        "Services",
+        "Services",
+        "Transport Services",
+        "Shipping"
+      ],
+      "marketData": [
+        30.4,
+        17798300,
+        253898431.61,
+        "8.73",
+        87.4,
+        27.45
+      ]
+    },
+    {
+      "api": [
+        "Market Purchase",
+        "PRATIMA SANDHIR",
+        "18-Mar-2026",
+        "18-Mar-2026",
+        "365316",
+        "1.93",
+        "7(2)",
+        "364010",
+        "1.92",
+        "0",
+        "0",
+        "Vibhor Steel Tubes Limited",
+        "19-Mar-2026 12:43",
+        "-",
+        "567624",
+        "NSE",
+        "19-Mar-2026",
+        "Promoter Group",
+        "1196214",
+        "-",
+        "1306",
+        "Equity Shares",
+        "142649",
+        "Equity Shares",
+        "0",
+        "0",
+        "VSTL",
+        "-",
+        "Buy",
+        null,
+        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196214_1637426_19032026124329_WEB.xml",
+        "5.33 KB"
+      ],
+      "xbrl": [],
+      "industry": [
+        "Industrials",
+        "Capital Goods",
+        "Industrial Products",
+        "Iron & Steel Products"
+      ],
+      "marketData": [
+        112.29,
+        18962443,
+        542143868.27,
+        "19.99",
+        204.99,
+        100.8
+      ]
+    },
+    {
+      "api": [
+        "Market Purchase",
+        "VIJAY KUMAR KAUSHIK",
+        "18-Mar-2026",
+        "18-Mar-2026",
+        "4059806",
+        "21.41",
+        "7(2)",
+        "4049580",
+        "21.35",
+        "0",
+        "0",
+        "Vibhor Steel Tubes Limited",
+        "19-Mar-2026 12:41",
+        "-",
+        "567621",
+        "NSE",
+        "19-Mar-2026",
+        "Promoters",
+        "1196212",
+        "-",
+        "10226",
+        "Equity Shares",
+        "1123499",
+        "Equity Shares",
+        "0",
+        "0",
+        "VSTL",
+        "-",
+        "Buy",
+        null,
+        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196212_1637423_19032026124143_WEB.xml",
+        "8.51 KB"
+      ],
+      "xbrl": [],
+      "industry": [
+        "Industrials",
+        "Capital Goods",
+        "Industrial Products",
+        "Iron & Steel Products"
+      ],
+      "marketData": [
+        112.29,
+        18962443,
+        542143868.27,
+        "19.99",
+        204.99,
+        100.8
+      ]
+    },
+    {
+      "api": [
+        "Market Purchase",
+        "VIJAY KUMAR KAUSHIK",
+        "18-Mar-2026",
+        "18-Mar-2026",
+        "4059998",
+        "21.41",
+        "7(2)",
+        "4059806",
+        "21.41",
+        "0",
+        "0",
+        "Vibhor Steel Tubes Limited",
+        "19-Mar-2026 12:41",
+        "-",
+        "567622",
+        "BSE",
+        "19-Mar-2026",
+        "Promoters",
+        "1196212",
+        "-",
+        "192",
+        "Equity Shares",
+        "21141",
+        "Equity Shares",
+        "0",
+        "0",
+        "VSTL",
+        "-",
+        "Buy",
+        null,
+        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196212_1637423_19032026124143_WEB.xml",
+        "8.51 KB"
+      ],
+      "xbrl": [],
+      "industry": [
+        "Industrials",
+        "Capital Goods",
+        "Industrial Products",
+        "Iron & Steel Products"
+      ],
+      "marketData": [
+        112.29,
+        18962443,
+        542143868.27,
+        "19.99",
+        204.99,
+        100.8
+      ]
+    },
+    {
+      "api": [
+        "Market Purchase",
+        "GIRISHKUMAR OCHCHHAVLAL RAVAL",
+        "18-Mar-2026",
+        "18-Mar-2026",
+        "6087981",
+        "32.72",
+        "7(2)",
+        "6074281",
+        "32.65",
+        "0",
+        "0",
+        "Rachana Infrastructure Limited",
+        "19-Mar-2026 12:28",
+        "-",
+        "567618",
+        "NSE",
+        "19-Mar-2026",
+        "Promoters",
+        "1196209",
+        "-",
+        "13700",
+        "Equity Shares",
+        "480870",
+        "Equity Shares",
+        "0",
+        "0",
+        "RILINFRA",
+        "-",
+        "Buy",
+        null,
+        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196209_1637413_19032026122803_WEB.xml",
+        "5.49 KB"
+      ],
+      "xbrl": [],
+      "industry": [
+        "Industrials",
+        "Construction",
+        "Construction",
+        "Civil Construction"
+      ],
+      "marketData": [
+        37.3,
+        18605000,
+        228401249.89,
+        "15.15",
+        53.9,
+        27.6
+      ]
+    },
+    {
+      "api": [
+        "Market Purchase",
+        "Gaurav Verma",
+        "17-Mar-2026",
+        "17-Mar-2026",
+        "1570",
+        "0",
+        "7(2)",
+        "1470",
+        "0",
+        "0",
+        "0",
+        "Thyrocare Technologies Limited",
+        "19-Mar-2026 11:38",
+        "-",
+        "567616",
+        "NSE",
+        "18-Mar-2026",
+        "-",
+        "1196206",
+        "-",
+        "100",
+        "Equity Shares",
+        "36115",
+        "Equity Shares",
+        "0",
+        "0",
+        "THYROCARE",
+        "-",
+        "Buy",
+        null,
+        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196206_1637397_19032026113827_WEB.xml",
+        "5.21 KB"
+      ],
+      "xbrl": [],
+      "industry": [
+        "Healthcare",
+        "Healthcare",
+        "Healthcare Services",
+        "Healthcare Service Provider"
+      ],
+      "marketData": [
+        358.8,
+        159165315,
+        22516717544.44,
+        "43.76",
+        536.67,
+        219.57
+      ]
+    },
+    {
+      "api": [
+        "Market Purchase",
+        "BANWARI LAL MITTAL",
+        "16-Mar-2026",
+        "17-Mar-2026",
+        "10776223",
+        "33.88",
+        "7(2)",
+        "10768560",
+        "33.85",
+        "0",
+        "0",
+        "Sastasundar Ventures Limited",
+        "19-Mar-2026 11:18",
+        "-",
+        "567614",
+        "NSE",
+        "18-Mar-2026",
+        "Promoters",
+        "1196204",
+        "-",
+        "7663",
+        "Equity Shares",
+        "2126214",
+        "Equity Shares",
+        "0",
+        "0",
+        "SASTASUNDR",
+        "-",
+        "Buy",
+        null,
+        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196204_1637391_19032026111846_WEB.xml",
+        "5.48 KB"
+      ],
+      "xbrl": [],
+      "industry": [
+        "Healthcare",
+        "Healthcare",
+        "Healthcare Services",
+        "Healthcare Service Provider"
+      ],
+      "marketData": [
+        281.05,
+        31810500,
+        2026244902.09,
+        "31.23",
+        363,
+        230
+      ]
+    },
+    {
+      "api": [
+        "Market Sale",
+        "ZALAVADIA JAYANTILAL TAPUBHAI HUF",
+        "17-Mar-2026",
+        "17-Mar-2026",
+        "Nil",
+        "0",
+        "7(2)",
+        "2000",
+        "0.11",
+        "0",
+        "0",
+        "Rajoo Engineers Limited",
+        "19-Mar-2026 11:12",
+        "-",
+        "567612",
+        "-",
+        "18-Mar-2026",
+        "Other",
+        "1196202",
+        "-",
+        "2000",
+        "Equity Shares",
+        "113884",
+        "Equity Shares",
+        "0",
+        "0",
+        "RAJOOENG",
+        "-",
+        "Sell",
+        null,
+        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196202_1637388_19032026111240_WEB.xml",
+        "5.32 KB"
+      ],
+      "xbrl": [],
+      "industry": [
+        "Industrials",
+        "Capital Goods",
+        "Industrial Manufacturing",
+        "Industrial Products"
+      ],
+      "marketData": [
+        56,
+        178675293,
+        3936250429.75,
+        null,
+        145.88,
+        55.04
+      ]
+    },
+    {
+      "api": [
+        "Market Sale",
+        "Maheshbhai Naranbhai Patel",
+        "16-Mar-2026",
+        "16-Mar-2026",
+        "323850",
+        "2.63",
+        "7(2)",
+        "324850",
+        "2.64",
+        "0",
+        "0",
+        "Magson Retail And Distribution Limited",
+        "19-Mar-2026 10:45",
+        "-",
+        "567610",
+        "NSE",
+        "18-Mar-2026",
+        "Promoter Group",
+        "1196200",
+        "-",
+        "1000",
+        "Equity Shares",
+        "137000",
+        "Equity Shares",
+        "0",
+        "0",
+        "MAGSON",
+        "-",
+        "Sell",
+        null,
+        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196200_1637379_19032026104542_WEB.xml",
+        "5.35 KB"
+      ],
+      "xbrl": [],
+      "industry": [
+        "Consumer Discretionary",
+        "Consumer Services",
+        "Retailing",
+        "Diversified Retail"
+      ],
+      "marketData": [
+        140,
+        12325168,
+        491750045.87,
+        null,
+        166.1,
+        92.6
+      ]
+    },
+    {
+      "api": [
+        "Market Sale",
+        "DORAISWAMY VISHNURANGASWAMY",
+        "22-Feb-2024",
+        "22-Feb-2024",
+        "787240",
+        "4.53",
+        "7(2)",
+        "808398",
+        "4.65",
+        "0",
+        "0",
+        "Salzer Electronics Limited",
+        "19-Mar-2026 10:29",
+        "-",
+        "567608",
+        "NSE",
+        "17-Mar-2026",
+        "Promoters",
+        "1196198",
+        "-",
+        "21158",
+        "Equity Shares",
+        "12123686",
+        "Equity Shares",
+        "0",
+        "0",
+        "SALZERELEC",
+        "-",
+        "Sell",
+        null,
+        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196198_1637376_19032026102915_WEB.xml",
+        "8.81 KB"
+      ],
+      "xbrl": [],
+      "industry": [
+        "Industrials",
+        "Capital Goods",
+        "Electrical Equipment",
+        "Other Electrical Equipment"
+      ],
+      "marketData": [
+        545.7,
+        17682737,
+        5964282685.12,
+        "17.9",
+        1167.55,
+        528
+      ]
+    },
+    {
+      "api": [
+        "Market Purchase",
+        "DORAISWAMY VISHNURANGASWAMY",
+        "22-Feb-2024",
+        "22-Feb-2024",
+        "808398",
+        "4.65",
+        "7(2)",
+        "787240",
+        "4.53",
+        "0",
+        "0",
+        "Salzer Electronics Limited",
+        "19-Mar-2026 10:29",
+        "-",
+        "567607",
+        "NSE",
+        "17-Mar-2026",
+        "Promoters",
+        "1196198",
+        "-",
+        "21158",
+        "Equity Shares",
+        "12099555",
+        "Equity Shares",
+        "0",
+        "0",
+        "SALZERELEC",
+        "-",
+        "Buy",
+        null,
+        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196198_1637376_19032026102915_WEB.xml",
+        "8.81 KB"
+      ],
+      "xbrl": [],
+      "industry": [
+        "Industrials",
+        "Capital Goods",
+        "Electrical Equipment",
+        "Other Electrical Equipment"
+      ],
+      "marketData": [
+        545.7,
+        17682737,
+        5964282685.12,
+        "17.9",
+        1167.55,
+        528
+      ]
+    },
+    {
       "api": [
         "Market Purchase",
         "Atukuri Soujanya",
@@ -95,16 +2032,15 @@
         "Fertilizers"
       ],
       "marketData": [
-        25.5,
+        25.6,
         92519813,
-        894431406.35,
+        911969277.06,
         "13.51",
         62.84,
         25.36
       ]
     },
     {
-      "symbol": "SURYODAY",
       "api": [
         "Market Purchase",
         "Baskar Babu Ramachandran",
@@ -147,224 +2083,15 @@
         "Other Bank"
       ],
       "marketData": [
-        129.26,
+        127.45,
         106289824,
-        8312149920.46,
+        8231124785.85,
         "19.73",
         161.48,
         100
       ]
     },
     {
-      "symbol": "ADSL",
-      "api": [
-        "Market Sale",
-        "Amit Jayantilal Vora",
-        "04-Mar-2026",
-        "04-Mar-2026",
-        "4233",
-        "0",
-        "7(2)",
-        "6233",
-        "0",
-        "0",
-        "0",
-        "Allied Digital Services Limited",
-        "18-Mar-2026 20:20",
-        "-",
-        "567593",
-        "NSE",
-        "04-Mar-2026",
-        "-",
-        "1196189",
-        "-",
-        "2000",
-        "Equity Shares",
-        "220000",
-        "Equity Shares",
-        "0",
-        "0",
-        "ADSL",
-        "-",
-        "Sell",
-        null,
-        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196189_1637319_18032026082010_WEB.xml",
-        "23.52 KB"
-      ],
-      "xbrl": [],
-      "industry": [
-        "Information Technology",
-        "Information Technology",
-        "IT - Services",
-        "IT Enabled Services"
-      ],
-      "marketData": [
-        100.96,
-        56514128,
-        2775165532.76,
-        "16.41",
-        226.55,
-        95.1
-      ]
-    },
-    {
-      "symbol": "ADSL",
-      "api": [
-        "Market Sale",
-        "Amit Jayantilal Vora",
-        "25-Feb-2026",
-        "25-Feb-2026",
-        "6233",
-        "0",
-        "7(2)",
-        "8233",
-        "0",
-        "0",
-        "0",
-        "Allied Digital Services Limited",
-        "18-Mar-2026 20:20",
-        "-",
-        "567592",
-        "NSE",
-        "27-Feb-2026",
-        "-",
-        "1196189",
-        "-",
-        "2000",
-        "Equity Shares",
-        "235000",
-        "Equity Shares",
-        "0",
-        "0",
-        "ADSL",
-        "-",
-        "Sell",
-        null,
-        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196189_1637319_18032026082010_WEB.xml",
-        "23.52 KB"
-      ],
-      "xbrl": [],
-      "industry": [
-        "Information Technology",
-        "Information Technology",
-        "IT - Services",
-        "IT Enabled Services"
-      ],
-      "marketData": [
-        100.96,
-        56514128,
-        2775165532.76,
-        "16.41",
-        226.55,
-        95.1
-      ]
-    },
-    {
-      "symbol": "ADSL",
-      "api": [
-        "Market Sale",
-        "Amit Jayantilal Vora",
-        "17-Feb-2026",
-        "17-Feb-2026",
-        "8233",
-        "0",
-        "7(2)",
-        "10233",
-        "0",
-        "0",
-        "0",
-        "Allied Digital Services Limited",
-        "18-Mar-2026 20:20",
-        "-",
-        "567591",
-        "NSE",
-        "17-Feb-2026",
-        "-",
-        "1196189",
-        "-",
-        "2000",
-        "Equity Shares",
-        "242000",
-        "Equity Shares",
-        "0",
-        "0",
-        "ADSL",
-        "-",
-        "Sell",
-        null,
-        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196189_1637319_18032026082010_WEB.xml",
-        "23.52 KB"
-      ],
-      "xbrl": [],
-      "industry": [
-        "Information Technology",
-        "Information Technology",
-        "IT - Services",
-        "IT Enabled Services"
-      ],
-      "marketData": [
-        100.96,
-        56514128,
-        2775165532.76,
-        "16.41",
-        226.55,
-        95.1
-      ]
-    },
-    {
-      "symbol": "ADSL",
-      "api": [
-        "Market Sale",
-        "Amit Jayantilal Vora",
-        "12-Feb-2026",
-        "12-Feb-2026",
-        "10233",
-        "0",
-        "7(2)",
-        "12233",
-        "0",
-        "0",
-        "0",
-        "Allied Digital Services Limited",
-        "18-Mar-2026 20:20",
-        "-",
-        "567590",
-        "NSE",
-        "13-Feb-2026",
-        "-",
-        "1196189",
-        "-",
-        "2000",
-        "Equity Shares",
-        "250000",
-        "Equity Shares",
-        "0",
-        "0",
-        "ADSL",
-        "-",
-        "Sell",
-        null,
-        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196189_1637319_18032026082010_WEB.xml",
-        "23.52 KB"
-      ],
-      "xbrl": [],
-      "industry": [
-        "Information Technology",
-        "Information Technology",
-        "IT - Services",
-        "IT Enabled Services"
-      ],
-      "marketData": [
-        100.96,
-        56514128,
-        2775165532.76,
-        "16.41",
-        226.55,
-        95.1
-      ]
-    },
-    {
-      "symbol": "ADSL",
       "api": [
         "Market Sale",
         "Amit Jayantilal Vora",
@@ -407,68 +2134,15 @@
         "IT Enabled Services"
       ],
       "marketData": [
-        100.96,
+        99.98,
         56514128,
-        2775165532.76,
+        2761427089.53,
         "16.41",
         226.55,
         95.1
       ]
     },
     {
-      "symbol": "ADSL",
-      "api": [
-        "Market Sale",
-        "Amit Jayantilal Vora",
-        "17-Mar-2026",
-        "17-Mar-2026",
-        "1233",
-        "0",
-        "7(2)",
-        "3233",
-        "0",
-        "0",
-        "0",
-        "Allied Digital Services Limited",
-        "18-Mar-2026 20:20",
-        "-",
-        "567595",
-        "NSE",
-        "18-Mar-2026",
-        "-",
-        "1196189",
-        "-",
-        "2000",
-        "Equity Shares",
-        "195000",
-        "Equity Shares",
-        "0",
-        "0",
-        "ADSL",
-        "-",
-        "Sell",
-        null,
-        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196189_1637319_18032026082010_WEB.xml",
-        "23.52 KB"
-      ],
-      "xbrl": [],
-      "industry": [
-        "Information Technology",
-        "Information Technology",
-        "IT - Services",
-        "IT Enabled Services"
-      ],
-      "marketData": [
-        100.96,
-        56514128,
-        2775165532.76,
-        "16.41",
-        226.55,
-        95.1
-      ]
-    },
-    {
-      "symbol": "ADSL",
       "api": [
         "Market Sale",
         "Amit Jayantilal Vora",
@@ -511,120 +2185,270 @@
         "IT Enabled Services"
       ],
       "marketData": [
-        100.96,
+        99.98,
         56514128,
-        2775165532.76,
+        2761427089.53,
         "16.41",
         226.55,
         95.1
       ]
     },
     {
-      "symbol": "JSWENERGY",
       "api": [
         "Market Sale",
-        "JSW Energy Employees Welfare Trust",
-        "12-Mar-2026",
-        "12-Mar-2026",
-        "1113512",
-        "0.06",
+        "Amit Jayantilal Vora",
+        "17-Mar-2026",
+        "17-Mar-2026",
+        "1233",
+        "0",
         "7(2)",
-        "1117130",
-        "0.06",
+        "3233",
         "0",
         "0",
-        "JSW Energy Limited",
-        "18-Mar-2026 19:16",
+        "0",
+        "Allied Digital Services Limited",
+        "18-Mar-2026 20:20",
         "-",
-        "567576",
-        "NSE",
-        "16-Mar-2026",
-        "Other",
-        "1196183",
-        "-",
-        "3618",
-        "Equity Shares",
-        "1892075",
-        "Equity Shares",
-        "0",
-        "0",
-        "JSWENERGY",
-        "-",
-        "Sell",
-        null,
-        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196183_1637294_18032026071643_WEB.xml",
-        "18.73 KB"
-      ],
-      "xbrl": [],
-      "industry": [
-        "Utilities",
-        "Power",
-        "Power",
-        "Power Generation"
-      ],
-      "marketData": [
-        507.65,
-        1757292260,
-        273047636428.97,
-        "34.55",
-        579,
-        427.75
-      ]
-    },
-    {
-      "symbol": "JSWENERGY",
-      "api": [
-        "Market Sale",
-        "JSW Energy Employees Welfare Trust",
-        "16-Mar-2026",
-        "16-Mar-2026",
-        "1103020",
-        "0.06",
-        "7(2)",
-        "1103338",
-        "0.06",
-        "0",
-        "0",
-        "JSW Energy Limited",
-        "18-Mar-2026 19:16",
-        "-",
-        "567578",
+        "567595",
         "NSE",
         "18-Mar-2026",
-        "Other",
-        "1196183",
         "-",
-        "318",
+        "1196189",
+        "-",
+        "2000",
         "Equity Shares",
-        "159145",
+        "195000",
         "Equity Shares",
         "0",
         "0",
-        "JSWENERGY",
+        "ADSL",
         "-",
         "Sell",
         null,
-        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196183_1637294_18032026071643_WEB.xml",
-        "18.73 KB"
+        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196189_1637319_18032026082010_WEB.xml",
+        "23.52 KB"
       ],
       "xbrl": [],
       "industry": [
-        "Utilities",
-        "Power",
-        "Power",
-        "Power Generation"
+        "Information Technology",
+        "Information Technology",
+        "IT - Services",
+        "IT Enabled Services"
       ],
       "marketData": [
-        507.65,
-        1757292260,
-        273047636428.97,
-        "34.55",
-        579,
-        427.75
+        99.98,
+        56514128,
+        2761427089.53,
+        "16.41",
+        226.55,
+        95.1
       ]
     },
     {
-      "symbol": "JSWENERGY",
+      "api": [
+        "Market Sale",
+        "Amit Jayantilal Vora",
+        "04-Mar-2026",
+        "04-Mar-2026",
+        "4233",
+        "0",
+        "7(2)",
+        "6233",
+        "0",
+        "0",
+        "0",
+        "Allied Digital Services Limited",
+        "18-Mar-2026 20:20",
+        "-",
+        "567593",
+        "NSE",
+        "04-Mar-2026",
+        "-",
+        "1196189",
+        "-",
+        "2000",
+        "Equity Shares",
+        "220000",
+        "Equity Shares",
+        "0",
+        "0",
+        "ADSL",
+        "-",
+        "Sell",
+        null,
+        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196189_1637319_18032026082010_WEB.xml",
+        "23.52 KB"
+      ],
+      "xbrl": [],
+      "industry": [
+        "Information Technology",
+        "Information Technology",
+        "IT - Services",
+        "IT Enabled Services"
+      ],
+      "marketData": [
+        99.98,
+        56514128,
+        2761427089.53,
+        "16.41",
+        226.55,
+        95.1
+      ]
+    },
+    {
+      "api": [
+        "Market Sale",
+        "Amit Jayantilal Vora",
+        "25-Feb-2026",
+        "25-Feb-2026",
+        "6233",
+        "0",
+        "7(2)",
+        "8233",
+        "0",
+        "0",
+        "0",
+        "Allied Digital Services Limited",
+        "18-Mar-2026 20:20",
+        "-",
+        "567592",
+        "NSE",
+        "27-Feb-2026",
+        "-",
+        "1196189",
+        "-",
+        "2000",
+        "Equity Shares",
+        "235000",
+        "Equity Shares",
+        "0",
+        "0",
+        "ADSL",
+        "-",
+        "Sell",
+        null,
+        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196189_1637319_18032026082010_WEB.xml",
+        "23.52 KB"
+      ],
+      "xbrl": [],
+      "industry": [
+        "Information Technology",
+        "Information Technology",
+        "IT - Services",
+        "IT Enabled Services"
+      ],
+      "marketData": [
+        99.98,
+        56514128,
+        2761427089.53,
+        "16.41",
+        226.55,
+        95.1
+      ]
+    },
+    {
+      "api": [
+        "Market Sale",
+        "Amit Jayantilal Vora",
+        "17-Feb-2026",
+        "17-Feb-2026",
+        "8233",
+        "0",
+        "7(2)",
+        "10233",
+        "0",
+        "0",
+        "0",
+        "Allied Digital Services Limited",
+        "18-Mar-2026 20:20",
+        "-",
+        "567591",
+        "NSE",
+        "17-Feb-2026",
+        "-",
+        "1196189",
+        "-",
+        "2000",
+        "Equity Shares",
+        "242000",
+        "Equity Shares",
+        "0",
+        "0",
+        "ADSL",
+        "-",
+        "Sell",
+        null,
+        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196189_1637319_18032026082010_WEB.xml",
+        "23.52 KB"
+      ],
+      "xbrl": [],
+      "industry": [
+        "Information Technology",
+        "Information Technology",
+        "IT - Services",
+        "IT Enabled Services"
+      ],
+      "marketData": [
+        99.98,
+        56514128,
+        2761427089.53,
+        "16.41",
+        226.55,
+        95.1
+      ]
+    },
+    {
+      "api": [
+        "Market Sale",
+        "Amit Jayantilal Vora",
+        "12-Feb-2026",
+        "12-Feb-2026",
+        "10233",
+        "0",
+        "7(2)",
+        "12233",
+        "0",
+        "0",
+        "0",
+        "Allied Digital Services Limited",
+        "18-Mar-2026 20:20",
+        "-",
+        "567590",
+        "NSE",
+        "13-Feb-2026",
+        "-",
+        "1196189",
+        "-",
+        "2000",
+        "Equity Shares",
+        "250000",
+        "Equity Shares",
+        "0",
+        "0",
+        "ADSL",
+        "-",
+        "Sell",
+        null,
+        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196189_1637319_18032026082010_WEB.xml",
+        "23.52 KB"
+      ],
+      "xbrl": [],
+      "industry": [
+        "Information Technology",
+        "Information Technology",
+        "IT - Services",
+        "IT Enabled Services"
+      ],
+      "marketData": [
+        99.98,
+        56514128,
+        2761427089.53,
+        "16.41",
+        226.55,
+        95.1
+      ]
+    },
+    {
       "api": [
         "Market Sale",
         "JSW Energy Employees Welfare Trust",
@@ -667,16 +2491,117 @@
         "Power Generation"
       ],
       "marketData": [
-        507.65,
+        505.9,
         1757292260,
-        273047636428.97,
+        272213697834.95,
         "34.55",
         579,
         427.75
       ]
     },
     {
-      "symbol": "ZYDUSWELL",
+      "api": [
+        "Market Sale",
+        "JSW Energy Employees Welfare Trust",
+        "12-Mar-2026",
+        "12-Mar-2026",
+        "1113512",
+        "0.06",
+        "7(2)",
+        "1117130",
+        "0.06",
+        "0",
+        "0",
+        "JSW Energy Limited",
+        "18-Mar-2026 19:16",
+        "-",
+        "567576",
+        "NSE",
+        "16-Mar-2026",
+        "Other",
+        "1196183",
+        "-",
+        "3618",
+        "Equity Shares",
+        "1892075",
+        "Equity Shares",
+        "0",
+        "0",
+        "JSWENERGY",
+        "-",
+        "Sell",
+        null,
+        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196183_1637294_18032026071643_WEB.xml",
+        "18.73 KB"
+      ],
+      "xbrl": [],
+      "industry": [
+        "Utilities",
+        "Power",
+        "Power",
+        "Power Generation"
+      ],
+      "marketData": [
+        505.9,
+        1757292260,
+        272213697834.95,
+        "34.55",
+        579,
+        427.75
+      ]
+    },
+    {
+      "api": [
+        "Market Sale",
+        "JSW Energy Employees Welfare Trust",
+        "16-Mar-2026",
+        "16-Mar-2026",
+        "1103020",
+        "0.06",
+        "7(2)",
+        "1103338",
+        "0.06",
+        "0",
+        "0",
+        "JSW Energy Limited",
+        "18-Mar-2026 19:16",
+        "-",
+        "567578",
+        "NSE",
+        "18-Mar-2026",
+        "Other",
+        "1196183",
+        "-",
+        "318",
+        "Equity Shares",
+        "159145",
+        "Equity Shares",
+        "0",
+        "0",
+        "JSWENERGY",
+        "-",
+        "Sell",
+        null,
+        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196183_1637294_18032026071643_WEB.xml",
+        "18.73 KB"
+      ],
+      "xbrl": [],
+      "industry": [
+        "Utilities",
+        "Power",
+        "Power",
+        "Power Generation"
+      ],
+      "marketData": [
+        505.9,
+        1757292260,
+        272213697834.95,
+        "34.55",
+        579,
+        427.75
+      ]
+    },
+    {
       "api": [
         "Market Purchase",
         "Rinesh Gajjar",
@@ -719,120 +2644,15 @@
         "Packaged Foods"
       ],
       "marketData": [
-        417.65,
+        414.5,
         318160720,
-        40102217625.63,
+        39564577169.07,
         "65.96",
         530.9,
         319.27
       ]
     },
     {
-      "symbol": "IRB",
-      "api": [
-        "Market Purchase",
-        "IRB Holding Private Limited (Formerly known as Mhaiskar Ventures Private Limited)",
-        "18-Mar-2026",
-        "18-Mar-2026",
-        "1799723150",
-        "29.8",
-        "7(2)",
-        "1798623150",
-        "29.78",
-        "0",
-        "0",
-        "IRB Infrastructure Developers Limited",
-        "18-Mar-2026 18:47",
-        "-",
-        "567568",
-        "NSE",
-        "18-Mar-2026",
-        "Promoter Group",
-        "1196179",
-        "-",
-        "1100000",
-        "Equity Shares",
-        "46216720",
-        "Equity Shares",
-        "0",
-        "0",
-        "IRB",
-        "-",
-        "Buy",
-        null,
-        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196179_1637269_18032026064718_WEB.xml",
-        "12.32 KB"
-      ],
-      "xbrl": [],
-      "industry": [
-        "Industrials",
-        "Construction",
-        "Construction",
-        "Civil Construction"
-      ],
-      "marketData": [
-        41.29,
-        6039000000,
-        81623325219.48,
-        "32.81",
-        54.28,
-        38.3
-      ]
-    },
-    {
-      "symbol": "IRB",
-      "api": [
-        "Market Purchase",
-        "IRB Holding Private Limited (Formerly known as Mhaiskar Ventures Private Limited)",
-        "16-Mar-2026",
-        "16-Mar-2026",
-        "1797523150",
-        "29.77",
-        "7(2)",
-        "1796423150",
-        "29.75",
-        "0",
-        "0",
-        "IRB Infrastructure Developers Limited",
-        "18-Mar-2026 18:47",
-        "-",
-        "567566",
-        "NSE",
-        "18-Mar-2026",
-        "Promoter Group",
-        "1196179",
-        "-",
-        "1100000",
-        "Equity Shares",
-        "45346620",
-        "Equity Shares",
-        "0",
-        "0",
-        "IRB",
-        "-",
-        "Buy",
-        null,
-        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196179_1637269_18032026064718_WEB.xml",
-        "12.32 KB"
-      ],
-      "xbrl": [],
-      "industry": [
-        "Industrials",
-        "Construction",
-        "Construction",
-        "Civil Construction"
-      ],
-      "marketData": [
-        41.29,
-        6039000000,
-        81623325219.48,
-        "32.81",
-        54.28,
-        38.3
-      ]
-    },
-    {
-      "symbol": "IRB",
       "api": [
         "Market Purchase",
         "IRB Holding Private Limited (Formerly known as Mhaiskar Ventures Private Limited)",
@@ -875,16 +2695,117 @@
         "Civil Construction"
       ],
       "marketData": [
-        41.29,
+        41.63,
         6039000000,
-        81623325219.48,
+        82157457497.94,
         "32.81",
         54.28,
         38.3
       ]
     },
     {
-      "symbol": "KRITI",
+      "api": [
+        "Market Purchase",
+        "IRB Holding Private Limited (Formerly known as Mhaiskar Ventures Private Limited)",
+        "16-Mar-2026",
+        "16-Mar-2026",
+        "1797523150",
+        "29.77",
+        "7(2)",
+        "1796423150",
+        "29.75",
+        "0",
+        "0",
+        "IRB Infrastructure Developers Limited",
+        "18-Mar-2026 18:47",
+        "-",
+        "567566",
+        "NSE",
+        "18-Mar-2026",
+        "Promoter Group",
+        "1196179",
+        "-",
+        "1100000",
+        "Equity Shares",
+        "45346620",
+        "Equity Shares",
+        "0",
+        "0",
+        "IRB",
+        "-",
+        "Buy",
+        null,
+        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196179_1637269_18032026064718_WEB.xml",
+        "12.32 KB"
+      ],
+      "xbrl": [],
+      "industry": [
+        "Industrials",
+        "Construction",
+        "Construction",
+        "Civil Construction"
+      ],
+      "marketData": [
+        41.63,
+        6039000000,
+        82157457497.94,
+        "32.81",
+        54.28,
+        38.3
+      ]
+    },
+    {
+      "api": [
+        "Market Purchase",
+        "IRB Holding Private Limited (Formerly known as Mhaiskar Ventures Private Limited)",
+        "18-Mar-2026",
+        "18-Mar-2026",
+        "1799723150",
+        "29.8",
+        "7(2)",
+        "1798623150",
+        "29.78",
+        "0",
+        "0",
+        "IRB Infrastructure Developers Limited",
+        "18-Mar-2026 18:47",
+        "-",
+        "567568",
+        "NSE",
+        "18-Mar-2026",
+        "Promoter Group",
+        "1196179",
+        "-",
+        "1100000",
+        "Equity Shares",
+        "46216720",
+        "Equity Shares",
+        "0",
+        "0",
+        "IRB",
+        "-",
+        "Buy",
+        null,
+        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196179_1637269_18032026064718_WEB.xml",
+        "12.32 KB"
+      ],
+      "xbrl": [],
+      "industry": [
+        "Industrials",
+        "Construction",
+        "Construction",
+        "Civil Construction"
+      ],
+      "marketData": [
+        41.63,
+        6039000000,
+        82157457497.94,
+        "32.81",
+        54.28,
+        38.3
+      ]
+    },
+    {
       "api": [
         "Market Purchase",
         "PURNIMA MEHTA",
@@ -927,16 +2848,15 @@
         "Plastic Products - Industrial"
       ],
       "marketData": [
-        77.66,
+        74.01,
         52696000,
-        1172820430.95,
+        1115281854.57,
         null,
         177.51,
         72
       ]
     },
     {
-      "symbol": "GEMAROMA",
       "api": [
         "Market Purchase",
         "Kaksha Vipul Parekh",
@@ -979,16 +2899,15 @@
         "Specialty Chemicals"
       ],
       "marketData": [
-        166.9,
+        166.56,
         52237138,
-        1969743216.59,
+        1970923410.25,
         null,
         349.6,
         133
       ]
     },
     {
-      "symbol": "JARO",
       "api": [
         "Market Purchase",
         "Jaro Education Welfare Trust",
@@ -1031,16 +2950,15 @@
         "E-Learning"
       ],
       "marketData": [
-        467.35,
+        470.55,
         22176339,
-        1678623405.21,
+        1702508813.67,
         null,
         890,
         386
       ]
     },
     {
-      "symbol": "SANSTAR",
       "api": [
         "Market Purchase",
         "Sambhav Starch Products Pvt Ltd",
@@ -1083,68 +3001,15 @@
         "Other Agricultural Products"
       ],
       "marketData": [
-        82.77,
+        82.21,
         182244250,
-        4480976786.91,
+        4411332689.86,
         "77.88",
         107.29,
         79
       ]
     },
     {
-      "symbol": "HGS",
-      "api": [
-        "Market Sale",
-        "Mr. Srinivas Palakodeti",
-        "17-Mar-2026",
-        "17-Mar-2026",
-        "20910",
-        "0.04",
-        "7(2)",
-        "21910",
-        "0.04",
-        "0",
-        "0",
-        "Hinduja Global Solutions Limited",
-        "18-Mar-2026 18:02",
-        "-",
-        "567546",
-        "NSE",
-        "18-Mar-2026",
-        "Other",
-        "1196165",
-        "-",
-        "1000",
-        "Equity Shares",
-        "359540",
-        "Equity Shares",
-        "0",
-        "0",
-        "HGS",
-        "-",
-        "Sell",
-        null,
-        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196165_1637218_18032026060255_WEB.xml",
-        "8.49 KB"
-      ],
-      "xbrl": [],
-      "industry": [
-        "Services",
-        "Services",
-        "Commercial Services & Supplies",
-        "Business Process Outsourcing (BPO)/ Knowledge Process Outsourcing (KPO)"
-      ],
-      "marketData": [
-        361.1,
-        46520285,
-        5366222415.69,
-        null,
-        628.7,
-        342.05
-      ]
-    },
-    {
-      "symbol": "HGS",
       "api": [
         "Market Sale",
         "Mr. Srinivas Palakodeti",
@@ -1187,16 +3052,66 @@
         "Business Process Outsourcing (BPO)/ Knowledge Process Outsourcing (KPO)"
       ],
       "marketData": [
-        361.1,
+        360.1,
         46520285,
-        5366222415.69,
+        5368451530.52,
         null,
         628.7,
         342.05
       ]
     },
     {
-      "symbol": "PNGSREVA",
+      "api": [
+        "Market Sale",
+        "Mr. Srinivas Palakodeti",
+        "17-Mar-2026",
+        "17-Mar-2026",
+        "20910",
+        "0.04",
+        "7(2)",
+        "21910",
+        "0.04",
+        "0",
+        "0",
+        "Hinduja Global Solutions Limited",
+        "18-Mar-2026 18:02",
+        "-",
+        "567546",
+        "NSE",
+        "18-Mar-2026",
+        "Other",
+        "1196165",
+        "-",
+        "1000",
+        "Equity Shares",
+        "359540",
+        "Equity Shares",
+        "0",
+        "0",
+        "HGS",
+        "-",
+        "Sell",
+        null,
+        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196165_1637218_18032026060255_WEB.xml",
+        "8.49 KB"
+      ],
+      "xbrl": [],
+      "industry": [
+        "Services",
+        "Services",
+        "Commercial Services & Supplies",
+        "Business Process Outsourcing (BPO)/ Knowledge Process Outsourcing (KPO)"
+      ],
+      "marketData": [
+        360.1,
+        46520285,
+        5368451530.52,
+        null,
+        628.7,
+        342.05
+      ]
+    },
+    {
       "api": [
         "Market Purchase",
         "Govind Vishwanath Gadgil",
@@ -1239,16 +3154,15 @@
         "Gems Jewellery And Watches"
       ],
       "marketData": [
-        367.15,
+        365.4,
         31698400,
-        1987304778.48,
+        1988928614.6,
         null,
         433,
         360
       ]
     },
     {
-      "symbol": "PNGSREVA",
       "api": [
         "Market Purchase",
         "Renu Govind Gadgil",
@@ -1291,16 +3205,15 @@
         "Gems Jewellery And Watches"
       ],
       "marketData": [
-        367.15,
+        365.4,
         31698400,
-        1987304778.48,
+        1988928614.6,
         null,
         433,
         360
       ]
     },
     {
-      "symbol": "SANSTAR",
       "api": [
         "Market Purchase",
         "Sambhav Starch Products Pvt Ltd",
@@ -1343,16 +3256,15 @@
         "Other Agricultural Products"
       ],
       "marketData": [
-        82.77,
+        82.21,
         182244250,
-        4480976786.91,
+        4411332689.86,
         "77.88",
         107.29,
         79
       ]
     },
     {
-      "symbol": "NRL",
       "api": [
         "Market Purchase",
         "UNINAV DEVELOPERS PRIVATE LIMITED",
@@ -1395,16 +3307,15 @@
         "Trading - Metals"
       ],
       "marketData": [
-        50.1,
+        49.5,
         69068995,
-        932455385.63,
+        918496472.67,
         "22.87",
         94,
         48.12
       ]
     },
     {
-      "symbol": "PATINTLOG",
       "api": [
         "Market Purchase",
         "MR.MAHESH FOGLA",
@@ -1447,68 +3358,15 @@
         "Logistics Solution Provider"
       ],
       "marketData": [
-        9.74,
+        9.5,
         69585746,
-        430420190.82,
+        423349633.27,
         "7.89",
         18.51,
         9.25
       ]
     },
     {
-      "symbol": "LIBERTSHOE",
-      "api": [
-        "Market Purchase",
-        "Anupam Bansal",
-        "17-Mar-2026",
-        "17-Mar-2026",
-        "554205",
-        "3.25",
-        "7(2)",
-        "548960",
-        "3.22",
-        "0",
-        "0",
-        "Liberty Shoes Limited",
-        "18-Mar-2026 17:45",
-        "-",
-        "567529",
-        "NSE",
-        "18-Mar-2026",
-        "Promoters",
-        "1196153",
-        "-",
-        "5245",
-        "Equity Shares",
-        "1348389",
-        "Equity Shares",
-        "0",
-        "0",
-        "LIBERTSHOE",
-        "-",
-        "Buy",
-        null,
-        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196153_1637184_18032026054545_WEB.xml",
-        "18.70 KB"
-      ],
-      "xbrl": [],
-      "industry": [
-        "Consumer Discretionary",
-        "Consumer Durables",
-        "Consumer Durables",
-        "Footwear"
-      ],
-      "marketData": [
-        247.4,
-        17040000,
-        1714957779.89,
-        "37.79",
-        470,
-        217.1
-      ]
-    },
-    {
-      "symbol": "LIBERTSHOE",
       "api": [
         "Market Purchase",
         "Ayush Bansal",
@@ -1551,16 +3409,66 @@
         "Footwear"
       ],
       "marketData": [
-        247.4,
+        248.79,
         17040000,
-        1714957779.89,
+        1746498030.08,
         "37.79",
         470,
         217.1
       ]
     },
     {
-      "symbol": "LIBERTSHOE",
+      "api": [
+        "Market Purchase",
+        "Anupam Bansal",
+        "17-Mar-2026",
+        "17-Mar-2026",
+        "554205",
+        "3.25",
+        "7(2)",
+        "548960",
+        "3.22",
+        "0",
+        "0",
+        "Liberty Shoes Limited",
+        "18-Mar-2026 17:45",
+        "-",
+        "567529",
+        "NSE",
+        "18-Mar-2026",
+        "Promoters",
+        "1196153",
+        "-",
+        "5245",
+        "Equity Shares",
+        "1348389",
+        "Equity Shares",
+        "0",
+        "0",
+        "LIBERTSHOE",
+        "-",
+        "Buy",
+        null,
+        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196153_1637184_18032026054545_WEB.xml",
+        "18.70 KB"
+      ],
+      "xbrl": [],
+      "industry": [
+        "Consumer Discretionary",
+        "Consumer Durables",
+        "Consumer Durables",
+        "Footwear"
+      ],
+      "marketData": [
+        248.79,
+        17040000,
+        1746498030.08,
+        "37.79",
+        470,
+        217.1
+      ]
+    },
+    {
       "api": [
         "Market Purchase",
         "Anupam Bansal",
@@ -1603,16 +3511,15 @@
         "Footwear"
       ],
       "marketData": [
-        247.4,
+        248.79,
         17040000,
-        1714957779.89,
+        1746498030.08,
         "37.79",
         470,
         217.1
       ]
     },
     {
-      "symbol": "LIBERTSHOE",
       "api": [
         "Market Purchase",
         "Anupam Bansal",
@@ -1655,16 +3562,15 @@
         "Footwear"
       ],
       "marketData": [
-        247.4,
+        248.79,
         17040000,
-        1714957779.89,
+        1746498030.08,
         "37.79",
         470,
         217.1
       ]
     },
     {
-      "symbol": "LIBERTSHOE",
       "api": [
         "Market Purchase",
         "Anupam Bansal",
@@ -1707,16 +3613,15 @@
         "Footwear"
       ],
       "marketData": [
-        247.4,
+        248.79,
         17040000,
-        1714957779.89,
+        1746498030.08,
         "37.79",
         470,
         217.1
       ]
     },
     {
-      "symbol": "LAOPALA",
       "api": [
         "Market Purchase",
         "GENESIS EXPORTS PRIVATE LIMITED",
@@ -1759,68 +3664,15 @@
         "Glass - Consumer"
       ],
       "marketData": [
-        187,
+        185.84,
         111000000,
-        6995731710,
+        6905946918,
         "20.29",
         287,
         182.42
       ]
     },
     {
-      "symbol": "SHAILY",
-      "api": [
-        "Market Sale",
-        "Purnendu Mallick",
-        "17-Mar-2026",
-        "17-Mar-2026",
-        "588",
-        "0",
-        "7(2)",
-        "988",
-        "0",
-        "0",
-        "0",
-        "Shaily Engineering Plastics Limited",
-        "18-Mar-2026 17:26",
-        "-",
-        "567501",
-        "NSE",
-        "18-Mar-2026",
-        "-",
-        "1196142",
-        "-",
-        "400",
-        "Equity Shares",
-        "2153",
-        "Equity Shares",
-        "0",
-        "0",
-        "SHAILY",
-        "-",
-        "Sell",
-        null,
-        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196142_1637154_18032026052648_WEB.xml",
-        "14.89 KB"
-      ],
-      "xbrl": [],
-      "industry": [
-        "Industrials",
-        "Capital Goods",
-        "Industrial Products",
-        "Plastic Products - Industrial"
-      ],
-      "marketData": [
-        2362.6,
-        45955093,
-        60957774642.95,
-        "68.24",
-        2799.9,
-        1372.65
-      ]
-    },
-    {
-      "symbol": "SHAILY",
       "api": [
         "Market Sale",
         "Purnendu Mallick",
@@ -1863,40 +3715,39 @@
         "Plastic Products - Industrial"
       ],
       "marketData": [
-        2362.6,
+        2294.2,
         45955093,
-        60957774642.95,
+        59433830276.87,
         "68.24",
         2799.9,
         1372.65
       ]
     },
     {
-      "symbol": "SHAILY",
       "api": [
         "Market Sale",
-        "MUDALIYAR MOHAN RATHINAVEL",
+        "Purnendu Mallick",
         "17-Mar-2026",
         "17-Mar-2026",
-        "1585",
+        "588",
         "0",
         "7(2)",
-        "2350",
+        "988",
         "0",
         "0",
         "0",
         "Shaily Engineering Plastics Limited",
         "18-Mar-2026 17:26",
         "-",
-        "567503",
+        "567501",
         "NSE",
-        "17-Mar-2026",
+        "18-Mar-2026",
         "-",
         "1196142",
         "-",
-        "765",
+        "400",
         "Equity Shares",
-        "2015",
+        "2153",
         "Equity Shares",
         "0",
         "0",
@@ -1915,16 +3766,15 @@
         "Plastic Products - Industrial"
       ],
       "marketData": [
-        2362.6,
+        2294.2,
         45955093,
-        60957774642.95,
+        59433830276.87,
         "68.24",
         2799.9,
         1372.65
       ]
     },
     {
-      "symbol": "SHAILY",
       "api": [
         "Market Sale",
         "Purnendu Mallick",
@@ -1967,16 +3817,66 @@
         "Plastic Products - Industrial"
       ],
       "marketData": [
-        2362.6,
+        2294.2,
         45955093,
-        60957774642.95,
+        59433830276.87,
         "68.24",
         2799.9,
         1372.65
       ]
     },
     {
-      "symbol": "NAHARCAP",
+      "api": [
+        "Market Sale",
+        "MUDALIYAR MOHAN RATHINAVEL",
+        "17-Mar-2026",
+        "17-Mar-2026",
+        "1585",
+        "0",
+        "7(2)",
+        "2350",
+        "0",
+        "0",
+        "0",
+        "Shaily Engineering Plastics Limited",
+        "18-Mar-2026 17:26",
+        "-",
+        "567503",
+        "NSE",
+        "17-Mar-2026",
+        "-",
+        "1196142",
+        "-",
+        "765",
+        "Equity Shares",
+        "2015",
+        "Equity Shares",
+        "0",
+        "0",
+        "SHAILY",
+        "-",
+        "Sell",
+        null,
+        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196142_1637154_18032026052648_WEB.xml",
+        "14.89 KB"
+      ],
+      "xbrl": [],
+      "industry": [
+        "Industrials",
+        "Capital Goods",
+        "Industrial Products",
+        "Plastic Products - Industrial"
+      ],
+      "marketData": [
+        2294.2,
+        45955093,
+        59433830276.87,
+        "68.24",
+        2799.9,
+        1372.65
+      ]
+    },
+    {
       "api": [
         "Market Purchase",
         "CLOSETTRUNK PRIVATE LIMITED",
@@ -2019,16 +3919,15 @@
         "Investment Company"
       ],
       "marketData": [
-        222.94,
+        220.34,
         16746167,
-        1000608380.47,
+        991901193.52,
         "15.07",
         376.65,
         215
       ]
     },
     {
-      "symbol": "NAHARPOLY",
       "api": [
         "Market Purchase",
         "CLOSETTRUNK PRIVATE LIMITED",
@@ -2071,16 +3970,15 @@
         "Packaging"
       ],
       "marketData": [
-        238.01,
+        236.43,
         24587991,
-        1444735439.05,
+        1431624105.29,
         "9.86",
         389.95,
         189.26
       ]
     },
     {
-      "symbol": "DMART",
       "api": [
         "Market Sale",
         "Jude Fernandez",
@@ -2123,16 +4021,15 @@
         "Diversified Retail"
       ],
       "marketData": [
-        3800.7,
+        3808.2,
         650733068,
-        558290130087.17,
+        562386998742.99,
         "87.33",
         4949.5,
         3529
       ]
     },
     {
-      "symbol": "LIBAS",
       "api": [
         "Market Purchase",
         "Riyaz Ganji",
@@ -2175,16 +4072,15 @@
         "Garments & Apparels"
       ],
       "marketData": [
-        9.99,
+        9.88,
         26344580,
-        182379055.08,
+        181648808.62,
         "17.31",
         15.7,
         9.11
       ]
     },
     {
-      "symbol": "JINDALSAW",
       "api": [
         "Market Sale",
         "Samruddhi Employees Trust",
@@ -2227,16 +4123,15 @@
         "Iron & Steel Products"
       ],
       "marketData": [
-        189.85,
+        189.35,
         639508234,
-        43949884650.75,
+        44031015766.93,
         "14.74",
         286.4,
         153
       ]
     },
     {
-      "symbol": "ACTIVEINFR",
       "api": [
         "Market Purchase",
         "SHRADHA REALTY LIMITED",
@@ -2279,16 +4174,15 @@
         "Residential Commercial Projects"
       ],
       "marketData": [
-        171,
+        170,
         15015016,
-        735333426.62,
+        731033231.14,
         null,
         190,
         147.05
       ]
     },
     {
-      "symbol": "JUBLINGREA",
       "api": [
         "Market Purchase",
         "Jubilant Ingrevia Employees Welfare Trust",
@@ -2331,16 +4225,15 @@
         "Specialty Chemicals"
       ],
       "marketData": [
-        579.35,
+        571.3,
         159281139,
-        48587293857.78,
+        48008624094.04,
         "34.55",
         851.8,
         535.2
       ]
     },
     {
-      "symbol": "JUBLINGREA",
       "api": [
         "Market Purchase",
         "Jubilant Ingrevia Employees Welfare Trust",
@@ -2383,16 +4276,15 @@
         "Specialty Chemicals"
       ],
       "marketData": [
-        579.35,
+        571.3,
         159281139,
-        48587293857.78,
+        48008624094.04,
         "34.55",
         851.8,
         535.2
       ]
     },
     {
-      "symbol": "UGARSUGAR",
       "api": [
         "Market Purchase",
         "SACHIN RAJENDRA SHIRGAOKAR",
@@ -2435,16 +4327,15 @@
         "Sugar"
       ],
       "marketData": [
-        36.96,
+        37.19,
         112500000,
-        2161278504,
+        2186423248.5,
         "22.11",
         52.5,
         33.75
       ]
     },
     {
-      "symbol": "IOLCP",
       "api": [
         "Market Purchase",
         "Mayadevi Polycot Limited",
@@ -2487,16 +4378,15 @@
         "Pharmaceuticals"
       ],
       "marketData": [
-        72.76,
+        72.65,
         293527510,
-        8424287205.87,
+        8434701846.64,
         "18.72",
         126.66,
         57.5
       ]
     },
     {
-      "symbol": "HAPPYFORGE",
       "api": [
         "Market Purchase",
         "PANKAJ KUMAR GOYAL",
@@ -2539,16 +4429,15 @@
         "Castings & Forgings"
       ],
       "marketData": [
-        1252.3,
+        1246,
         94327921,
-        20582325073.13,
+        20572462126.85,
         "42.6",
         1370,
         724.1
       ]
     },
     {
-      "symbol": "HAPPYFORGE",
       "api": [
         "Market Sale",
         "PANKAJ KUMAR GOYAL",
@@ -2591,16 +4480,15 @@
         "Castings & Forgings"
       ],
       "marketData": [
-        1252.3,
+        1246,
         94327921,
-        20582325073.13,
+        20572462126.85,
         "42.6",
         1370,
         724.1
       ]
     },
     {
-      "symbol": "HAPPYFORGE",
       "api": [
         "Market Sale",
         "PANKAJ KUMAR GOYAL",
@@ -2643,16 +4531,15 @@
         "Castings & Forgings"
       ],
       "marketData": [
-        1252.3,
+        1246,
         94327921,
-        20582325073.13,
+        20572462126.85,
         "42.6",
         1370,
         724.1
       ]
     },
     {
-      "symbol": "PARACABLES",
       "api": [
         "Market Purchase",
         "Sanjay Aggarwal",
@@ -2695,16 +4582,15 @@
         "Cables - Electricals"
       ],
       "marketData": [
-        34.74,
+        34.23,
         305209814,
-        5203109334.82,
+        5107254701.13,
         "18.45",
         62.75,
         30.86
       ]
     },
     {
-      "symbol": "PARACABLES",
       "api": [
         "Market Purchase",
         "Sandeep Aggarwal",
@@ -2747,16 +4633,15 @@
         "Cables - Electricals"
       ],
       "marketData": [
-        34.74,
+        34.23,
         305209814,
-        5203109334.82,
+        5107254701.13,
         "18.45",
         62.75,
         30.86
       ]
     },
     {
-      "symbol": "IOLCP",
       "api": [
         "Market Purchase",
         "NCVI ENTERPRISES LIMITED",
@@ -2799,16 +4684,15 @@
         "Pharmaceuticals"
       ],
       "marketData": [
-        72.76,
+        72.65,
         293527510,
-        8424287205.87,
+        8434701846.64,
         "18.72",
         126.66,
         57.5
       ]
     },
     {
-      "symbol": "SOTL",
       "api": [
         "Market Purchase",
         "Siddharth G. Mehra",
@@ -2851,16 +4735,15 @@
         "Lubricants"
       ],
       "marketData": [
-        338.25,
+        340.75,
         68560415,
-        7109599665.46,
+        7251476377.19,
         "14.46",
         477.65,
         318.05
       ]
     },
     {
-      "symbol": "WHEELS",
       "api": [
         "Market Purchase",
         "Srivats Ram",
@@ -2903,16 +4786,15 @@
         "Auto Components & Equipments"
       ],
       "marketData": [
-        970,
+        990.5,
         24433012,
-        9477140953.38,
+        9672545921.49,
         "18.16",
-        994,
+        1002,
         569
       ]
     },
     {
-      "symbol": "MAYURUNIQ",
       "api": [
         "Market Purchase",
         "KIRAN PODDAR",
@@ -2955,16 +4837,15 @@
         "Leather And Leather Products"
       ],
       "marketData": [
-        501.8,
+        500.55,
         43452600,
-        8772075502.73,
+        8769452012.9,
         "12.65",
         629.9,
         441
       ]
     },
     {
-      "symbol": "DWARKESH",
       "api": [
         "Market Purchase",
         "GAUTAM R MORARKA",
@@ -3007,16 +4888,15 @@
         "Sugar"
       ],
       "marketData": [
-        37.47,
+        37.65,
         185301470,
-        3990026622.59,
+        4014518379.28,
         "34.88",
         52.6,
         32.13
       ]
     },
     {
-      "symbol": "DIGIKORE",
       "api": [
         "Market Sale",
         "SHREE MPJ CEMENT WORKS LLP",
@@ -3059,16 +4939,15 @@
         "Media & Entertainment"
       ],
       "marketData": [
-        77.95,
+        76.85,
         12665600,
-        328200685.99,
+        319990405.84,
         null,
         102.98,
         57.1
       ]
     },
     {
-      "symbol": "SHANKARA",
       "api": [
         "Market Purchase",
         "THE BALLYGUNGE FAMILY TRUST",
@@ -3111,16 +4990,15 @@
         "Speciality Retail"
       ],
       "marketData": [
-        111.34,
+        110.04,
         24249326,
-        1604783823.79,
+        1597433008.71,
         "4.68",
         1209.8,
         98.25
       ]
     },
     {
-      "symbol": "AGI",
       "api": [
         "Market Purchase",
         "Ms. Sumita Somany",
@@ -3163,68 +5041,15 @@
         "Packaging"
       ],
       "marketData": [
-        503.65,
+        501.85,
         64697381,
-        12760449848.21,
+        12776918213.94,
         "10.1",
         1009,
         478.2
       ]
     },
     {
-      "symbol": "BAJAJHCARE",
-      "api": [
-        "Market Purchase",
-        "ANIL CHAMPALAL JAIN",
-        "13-Mar-2026",
-        "13-Mar-2026",
-        "1466775",
-        "4.64",
-        "7(2)",
-        "1463775",
-        "4.64",
-        "0",
-        "0",
-        "Bajaj Healthcare Limited",
-        "18-Mar-2026 13:15",
-        "-",
-        "567433",
-        "NSE",
-        "16-Mar-2026",
-        "Promoter Group",
-        "1196082",
-        "-",
-        "3000",
-        "Equity Shares",
-        "874490",
-        "Equity Shares",
-        "0",
-        "0",
-        "BAJAJHCARE",
-        "-",
-        "Buy",
-        null,
-        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196082_1636971_18032026011552_WEB.xml",
-        "8.80 KB"
-      ],
-      "xbrl": [],
-      "industry": [
-        "Healthcare",
-        "Healthcare",
-        "Pharmaceuticals & Biotechnology",
-        "Pharmaceuticals"
-      ],
-      "marketData": [
-        304.4,
-        31583252,
-        3917331467.52,
-        "18.6",
-        745,
-        273.25
-      ]
-    },
-    {
-      "symbol": "BAJAJHCARE",
       "api": [
         "Market Purchase",
         "ANIL CHAMPALAL JAIN",
@@ -3267,16 +5092,66 @@
         "Pharmaceuticals"
       ],
       "marketData": [
-        304.4,
+        302.25,
         31583252,
-        3917331467.52,
+        3905730288.45,
         "18.6",
         745,
         273.25
       ]
     },
     {
-      "symbol": "JARO",
+      "api": [
+        "Market Purchase",
+        "ANIL CHAMPALAL JAIN",
+        "13-Mar-2026",
+        "13-Mar-2026",
+        "1466775",
+        "4.64",
+        "7(2)",
+        "1463775",
+        "4.64",
+        "0",
+        "0",
+        "Bajaj Healthcare Limited",
+        "18-Mar-2026 13:15",
+        "-",
+        "567433",
+        "NSE",
+        "16-Mar-2026",
+        "Promoter Group",
+        "1196082",
+        "-",
+        "3000",
+        "Equity Shares",
+        "874490",
+        "Equity Shares",
+        "0",
+        "0",
+        "BAJAJHCARE",
+        "-",
+        "Buy",
+        null,
+        "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196082_1636971_18032026011552_WEB.xml",
+        "8.80 KB"
+      ],
+      "xbrl": [],
+      "industry": [
+        "Healthcare",
+        "Healthcare",
+        "Pharmaceuticals & Biotechnology",
+        "Pharmaceuticals"
+      ],
+      "marketData": [
+        302.25,
+        31583252,
+        3905730288.45,
+        "18.6",
+        745,
+        273.25
+      ]
+    },
+    {
       "api": [
         "Market Purchase",
         "Jaro Education Welfare Trust",
@@ -3319,16 +5194,15 @@
         "E-Learning"
       ],
       "marketData": [
-        467.35,
+        470.55,
         22176339,
-        1678623405.21,
+        1702508813.67,
         null,
         890,
         386
       ]
     },
     {
-      "symbol": "AIAENG",
       "api": [
         "Market Sale",
         "Balkrishna Shah",
@@ -3371,16 +5245,15 @@
         "Castings & Forgings"
       ],
       "marketData": [
-        3577,
+        3573.1,
         93320370,
-        138467536648.63,
+        138928294907.71,
         "30.2",
         4206.1,
         3001.1
       ]
     },
     {
-      "symbol": "RILINFRA",
       "api": [
         "Market Purchase",
         "GIRISHKUMAR OCHCHHAVLAL RAVAL",
@@ -3423,16 +5296,15 @@
         "Civil Construction"
       ],
       "marketData": [
-        36,
+        37.3,
         18605000,
-        225272465.64,
+        228401249.89,
         "15.15",
         53.9,
         27.6
       ]
     },
     {
-      "symbol": "VSTL",
       "api": [
         "Market Purchase",
         "PRATIMA SANDHIR",
@@ -3475,16 +5347,15 @@
         "Iron & Steel Products"
       ],
       "marketData": [
-        111.2,
+        112.29,
         18962443,
-        528828053.96,
+        542143868.27,
         "19.99",
         204.99,
         100.8
       ]
     },
     {
-      "symbol": "VSTL",
       "api": [
         "Market Purchase",
         "VIJAY KUMAR KAUSHIK",
@@ -3527,16 +5398,15 @@
         "Iron & Steel Products"
       ],
       "marketData": [
-        111.2,
+        112.29,
         18962443,
-        528828053.96,
+        542143868.27,
         "19.99",
         204.99,
         100.8
       ]
     },
     {
-      "symbol": "SAJHOTELS",
       "api": [
         "Market Purchase",
         "LA TIM LIFE STYLE AND RESORTS LIMITED",
@@ -3588,7 +5458,6 @@
       ]
     },
     {
-      "symbol": "MAHSEAMLES",
       "api": [
         "Market Purchase",
         "Global Jindal Fin-Invest Limited",
@@ -3631,9 +5500,9 @@
         "Iron & Steel Products"
       ],
       "marketData": [
-        557,
+        554.2,
         133999252,
-        22500776826.15,
+        22375570564.86,
         "8.92",
         773.8,
         500.7

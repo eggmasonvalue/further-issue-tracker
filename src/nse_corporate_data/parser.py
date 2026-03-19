@@ -1,6 +1,6 @@
 import json
 import logging
-from typing import Any, Dict, Iterable, List, Optional
+from typing import Any, Dict, Iterable, List, Mapping, Optional
 from nse_xbrl_parser import parse_xbrl_file
 from nse_corporate_data.fetcher import MARKET_DATA_METADATA
 
@@ -67,6 +67,7 @@ def parse_filings_data(
     fetcher: Any,
     symbol_keys: Iterable[str],
     xbrl_keys: Iterable[str],
+    api_label_map: Optional[Mapping[str, str]] = None,
     enable_xbrl_processing: bool = True,
 ) -> Dict[str, Any]:
     """
@@ -82,6 +83,9 @@ def parse_filings_data(
         unique_api_keys.update(item.keys())
 
     sorted_api_keys = sorted(list(unique_api_keys))
+
+    api_label_map = api_label_map or {}
+    api_metadata = [api_label_map.get(key, key) for key in sorted_api_keys]
 
     # PASS 1: Fetch and parse all XBRL dicts, collect all unique XBRL keys
     records = []
@@ -126,7 +130,7 @@ def parse_filings_data(
 
     results = {
         "metadata": {
-            "api": sorted_api_keys,
+            "api": api_metadata,
             "xbrl": sorted_xbrl_keys,
             "industry": industry_metadata,
             "marketData": MARKET_DATA_METADATA,
@@ -155,7 +159,6 @@ def parse_filings_data(
 
         results["data"].append(
             {
-                "symbol": symbol,
                 "api": rec["base_row"],
                 "xbrl": xbrl_values,
                 "industry": industry_values,

@@ -28,6 +28,41 @@ DEFAULT_INSIDER_MODES = ("market",)
 DEFAULT_INSIDER_FULL_OUTPUT = "insider_trading_data.json"
 DEFAULT_INSIDER_SHORT_OUTPUT = "insider_trading_short.json"
 
+INSIDER_API_LABELS = {
+    "acqMode": "transactionMode",
+    "acqName": "personName",
+    "acqfromDt": "transactionStartDate",
+    "acqtoDt": "transactionEndDate",
+    "afterAcqSharesNo": "holdingAfterShares",
+    "afterAcqSharesPer": "holdingAfterPct",
+    "anex": "annexure",
+    "befAcqSharesNo": "holdingBeforeShares",
+    "befAcqSharesPer": "holdingBeforePct",
+    "buyQuantity": "reportedBuyQuantity",
+    "buyValue": "reportedBuyValue",
+    "company": "company",
+    "date": "filingDateTime",
+    "derivativeType": "derivativeType",
+    "did": "disclosureId",
+    "exchange": "exchange",
+    "intimDt": "intimationDate",
+    "personCategory": "personCategory",
+    "pid": "personId",
+    "remarks": "remarks",
+    "secAcq": "transactionQuantity",
+    "secType": "securityType",
+    "secVal": "transactionValue",
+    "securitiesTypePost": "postTransactionSecurityType",
+    "sellValue": "reportedSellValue",
+    "sellquantity": "reportedSellQuantity",
+    "symbol": "symbol",
+    "tdpDerivativeContractType": "derivativeContractType",
+    "tdpTransactionType": "transactionDirection",
+    "tkdAcqm": "additionalTransactionDetail",
+    "xbrl": "xbrlUrl",
+    "xbrlFileSize": "xbrlFileSize",
+}
+
 def _to_decimal(value: Any) -> Decimal | None:
     if value in (None, "", "-", "None"):
         return None
@@ -46,24 +81,24 @@ def _coerce_number(value: Decimal | None) -> int | float | None:
 
 
 def _trade_date(context: Mapping[str, Any]) -> str | None:
-    from_date = context.get("acqfromDt")
-    to_date = context.get("acqtoDt")
+    from_date = context.get("transactionStartDate")
+    to_date = context.get("transactionEndDate")
     if from_date and to_date and from_date != to_date:
         return f"{from_date} to {to_date}"
     return to_date or from_date
 
 
 def _price_per_share(context: Mapping[str, Any]) -> int | float | None:
-    transaction_value = _to_decimal(context.get("secVal"))
-    quantity = _to_decimal(context.get("secAcq"))
+    transaction_value = _to_decimal(context.get("transactionValue"))
+    quantity = _to_decimal(context.get("transactionQuantity"))
     if transaction_value is None or quantity in (None, Decimal("0")):
         return None
     return _coerce_number(transaction_value / quantity)
 
 
 def _holding_delta_pct(context: Mapping[str, Any]) -> int | float | None:
-    before = _to_decimal(context.get("befAcqSharesPer"))
-    after = _to_decimal(context.get("afterAcqSharesPer"))
+    before = _to_decimal(context.get("holdingBeforePct"))
+    after = _to_decimal(context.get("holdingAfterPct"))
     if before is None or after is None:
         return None
     return _coerce_number(after - before)
@@ -72,19 +107,14 @@ def _holding_delta_pct(context: Mapping[str, Any]) -> int | float | None:
 INSIDER_SHORT_FIELDS: Sequence[ShortField] = (
     ShortField("symbol", lambda context: context.get("symbol")),
     ShortField("company", lambda context: context.get("company")),
-    ShortField("acqMode", lambda context: context.get("acqMode")),
+    ShortField("transactionMode", lambda context: context.get("transactionMode")),
     ShortField("tradeDate", _trade_date),
     ShortField(
         "transactionValue",
-        lambda context: _coerce_number(_to_decimal(context.get("secVal"))),
+        lambda context: _coerce_number(_to_decimal(context.get("transactionValue"))),
     ),
     ShortField("pricePerShare", _price_per_share),
-    ShortField("currentPrice", lambda context: context.get("currentPrice")),
     ShortField("holdingDeltaPct", _holding_delta_pct),
-    ShortField("Macro", lambda context: context.get("Macro")),
-    ShortField("Sector", lambda context: context.get("Sector")),
-    ShortField("Industry", lambda context: context.get("Industry")),
-    ShortField("Basic Industry", lambda context: context.get("Basic Industry")),
 )
 
 

@@ -7,12 +7,63 @@ DEFAULT_PREF_SHORT_OUTPUT = "pref_short.json"
 DEFAULT_QIP_FULL_OUTPUT = "qip_data.json"
 DEFAULT_QIP_SHORT_OUTPUT = "qip_short.json"
 
+PREF_API_LABELS = {
+    "amountRaised": "amountRaised",
+    "appId": "applicationId",
+    "boardResDate": "boardResolutionDate",
+    "corporateIdentityNum": "corporateIdentityNumber",
+    "dateOfAllotmentOfShares": "allotmentDate",
+    "dateOfListing": "listingDate",
+    "dateOfSubmission": "submissionDate",
+    "dateOfTradingApproval": "tradingApprovalDate",
+    "isin": "isin",
+    "issueType": "issueType",
+    "nameOfTheCompany": "company",
+    "nseSymbol": "symbol",
+    "numberOfEquitySharesListed": "sharesListed",
+    "offerPricePerSecurity": "offerPrice",
+    "revisedFlag": "revisedFlag",
+    "stage": "filingStage",
+    "systemDate": "exchangeRecordDate",
+    "totalNumOfSharesAllotted": "sharesAllotted",
+    "xbrlFileSize": "xbrlFileSize",
+    "xmlFileName": "xbrlUrl",
+}
+
+QIP_API_LABELS = {
+    "appId": "applicationId",
+    "boardResolutionDate": "boardResolutionDate",
+    "companyName": "company",
+    "corporateIdentityNumber": "corporateIdentityNumber",
+    "dateOfListing": "listingDate",
+    "dateOfSubmission": "submissionDate",
+    "dateOfTradingApproval": "tradingApprovalDate",
+    "distPerShrsAvailed": "discountPerShare",
+    "dtOfAllotmentOfShares": "allotmentDate",
+    "dtOfBIDClosing": "bidClosingDate",
+    "dtOfBIDOpening": "bidOpeningDate",
+    "finalAmountOfIssueSize": "issueSize",
+    "isin": "isin",
+    "issPricePerUnit": "issuePrice",
+    "issue_type": "issueType",
+    "minIssPricePerUnit": "minimumIssuePrice",
+    "noOfAllottees": "allotteeCount",
+    "noOfEquitySharesListed": "sharesListed",
+    "noOfSharesAllotted": "sharesAllotted",
+    "nsesymbol": "symbol",
+    "relavantDt": "relevantDate",
+    "revisedFlag": "revisedFlag",
+    "stage": "filingStage",
+    "xbrlFileSize": "xbrlFileSize",
+    "xmlFileName": "xbrlUrl",
+}
+
 PREF_SHORT_FIELDS: Sequence[ShortField] = (
     ShortField("symbol", lambda context: context.get("symbol")),
-    ShortField("company", lambda context: context.get("nameOfTheCompany")),
+    ShortField("company", lambda context: context.get("company")),
     ShortField(
         "allotmentDate",
-        lambda context: context.get("dateOfAllotmentOfShares"),
+        lambda context: context.get("allotmentDate"),
     ),
     ShortField(
         "amountRaised",
@@ -20,15 +71,14 @@ PREF_SHORT_FIELDS: Sequence[ShortField] = (
     ),
     ShortField(
         "sharesAllotted",
-        lambda context: context.get("totalNumOfSharesAllotted")
+        lambda context: context.get("sharesAllotted")
         or context.get("Total number of shares allotted"),
     ),
     ShortField(
         "offerPrice",
-        lambda context: context.get("offerPricePerSecurity")
+        lambda context: context.get("offerPrice")
         or context.get("Offer price per security"),
     ),
-    ShortField("currentPrice", lambda context: context.get("currentPrice")),
     ShortField(
         "lockInShares",
         lambda context: context.get("Number of lock in shares"),
@@ -38,10 +88,6 @@ PREF_SHORT_FIELDS: Sequence[ShortField] = (
         lambda context: context.get("Period of lock in shares"),
     ),
     ShortField("revisedFlag", lambda context: context.get("revisedFlag")),
-    ShortField("Macro", lambda context: context.get("Macro")),
-    ShortField("Sector", lambda context: context.get("Sector")),
-    ShortField("Industry", lambda context: context.get("Industry")),
-    ShortField("Basic Industry", lambda context: context.get("Basic Industry")),
 )
 
 
@@ -62,7 +108,7 @@ def _normalize_allottee_list(value: Any) -> List[Any]:
 
 def _qip_participant_shares(context: Mapping[str, Any]) -> List[Any]:
     raw_values = _normalize_allottee_list(context.get("Number of shares allotted"))
-    no_of_allottees = context.get("noOfAllottees")
+    no_of_allottees = context.get("allotteeCount")
 
     try:
         expected_participants = int(no_of_allottees) if no_of_allottees is not None else None
@@ -76,43 +122,43 @@ def _qip_participant_shares(context: Mapping[str, Any]) -> List[Any]:
 
 QIP_SHORT_FIELDS: Sequence[ShortField] = (
     ShortField("symbol", lambda context: context.get("symbol")),
-    ShortField("company", lambda context: context.get("companyName")),
+    ShortField("company", lambda context: context.get("company")),
     ShortField(
         "allotmentDate",
-        lambda context: context.get("dtOfAllotmentOfShares")
+        lambda context: context.get("allotmentDate")
         or context.get("Date of allotment of shares"),
     ),
     ShortField(
         "relevantDate",
-        lambda context: context.get("relavantDt") or context.get("Relavant date"),
+        lambda context: context.get("relevantDate") or context.get("Relavant date"),
     ),
     ShortField(
         "issueSize",
-        lambda context: context.get("finalAmountOfIssueSize")
+        lambda context: context.get("issueSize")
         or context.get("Final amount of issue size"),
     ),
     ShortField(
         "issuePrice",
-        lambda context: context.get("issPricePerUnit")
+        lambda context: context.get("issuePrice")
         or context.get("Issue price per unit"),
     ),
     ShortField(
         "minimumIssuePrice",
-        lambda context: context.get("minIssPricePerUnit")
+        lambda context: context.get("minimumIssuePrice")
         or context.get("Minimum issue price per unit"),
     ),
     ShortField(
         "discountPerShare",
-        lambda context: context.get("distPerShrsAvailed")
+        lambda context: context.get("discountPerShare")
         or context.get("Discount per shares availed"),
     ),
     ShortField(
         "sharesAllotted",
-        lambda context: context.get("noOfSharesAllotted"),
+        lambda context: context.get("sharesAllotted"),
     ),
     ShortField(
-        "numberOfAllottees",
-        lambda context: context.get("noOfAllottees")
+        "allotteeCount",
+        lambda context: context.get("allotteeCount")
         or context.get("Number of allottees"),
     ),
     ShortField("revisedFlag", lambda context: context.get("revisedFlag")),
@@ -130,31 +176,6 @@ QIP_SHORT_FIELDS: Sequence[ShortField] = (
         lambda context: _normalize_allottee_list(
             context.get("Percentage of total issue size")
         ),
-    ),
-    ShortField("Macro", lambda context: context.get("Macro")),
-    ShortField("Sector", lambda context: context.get("Sector")),
-    ShortField("Industry", lambda context: context.get("Industry")),
-    ShortField("Basic Industry", lambda context: context.get("Basic Industry")),
-    ShortField("currentPrice", lambda context: context.get("currentPrice")),
-    ShortField(
-        "sharesOutstanding",
-        lambda context: context.get("sharesOutstanding"),
-    ),
-    ShortField(
-        "freeFloatMarketCap",
-        lambda context: context.get("freeFloatMarketCap"),
-    ),
-    ShortField(
-        "priceToEarnings",
-        lambda context: context.get("priceToEarnings"),
-    ),
-    ShortField(
-        "fiftyTwoWeekHigh",
-        lambda context: context.get("fiftyTwoWeekHigh"),
-    ),
-    ShortField(
-        "fiftyTwoWeekLow",
-        lambda context: context.get("fiftyTwoWeekLow"),
     ),
 )
 

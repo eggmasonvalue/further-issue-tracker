@@ -1,5 +1,9 @@
 # Changelog
 ## [Unreleased]
+- Removed redundant top-level `symbol` keys from full and shortened artifact rows; `symbol` now appears only in the metadata-aligned `api` or `record` arrays, while the shortener still accepts legacy full artifacts that carried `data[].symbol`.
+- Documented the current root sample-data invariant that `qip_data.json` contains only `QIP` `issueType` values and `pref_data.json` contains only `Preferential`, with both files using the metadata-driven columnar `api` layout.
+- Replaced raw NSE `metadata.api` labels in full PREF, QIP, and insider artifacts with canonical consumer-facing names.
+- Refactored all shortened artifacts to preserve the raw-artifact structure with separate `record`, `industry`, and `marketData` blocks, and exposed the full `marketData` block in each shortener.
 - Added `further-issues shorten --category qip`, producing a debloated `qip_short.json` that keeps issue economics, allottee detail, revision lineage, market data, and four-level industry context.
 - Extended `further-issues shorten` with category-specific default input/output paths for `pref` and `qip`.
 - Added ordered NSE series fallback (`EQ`, `BE`, `BZ`, `SM`, `ST`, `SZ`) for `getDetailedScripData()` when the default series returns an empty `equityResponse` shell.

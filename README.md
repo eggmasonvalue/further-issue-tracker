@@ -178,7 +178,6 @@ Output shape:
   },
   "data": [
     {
-      "symbol": "SYMBOL",
       "api": ["..."],
       "xbrl": ["..."],
       "industry": ["...", "...", "...", "..."],
@@ -188,15 +187,15 @@ Output shape:
 }
 ```
 
-- `metadata.api`: sorted keys observed in the NSE API payload
+- `metadata.api`: canonical consumer-facing labels aligned to the NSE API payload values
 - `metadata.xbrl`: sorted keys observed across parsed XBRL documents
 - `metadata.industry`: labels for the four-level industry classification
 - `metadata.marketData`: labels for the compact market-data block
-- `data[].symbol`: resolved NSE symbol for the row
 - `data[].api`: row values aligned to `metadata.api`
 - `data[].xbrl`: row values aligned to `metadata.xbrl`
 - `data[].industry`: classification values aligned to `metadata.industry`
 - `data[].marketData`: row values aligned to `metadata.marketData`
+- `symbol` is carried inside the metadata-aligned row arrays rather than duplicated as a standalone top-level key inside each `data[]` object
 - `currentPrice`: uses `closePrice`, then `lastPrice`, then `previousClose`, while treating zero-valued fields as missing
 - `marketData` fetches first try NSE series `EQ`; when NSE returns an empty `equityResponse` shell, the fetcher retries the remaining valid series in order until a usable payload is found
 - `sharesOutstanding`: total shares outstanding from `issuedSize`
@@ -208,22 +207,32 @@ Short insider-trading output shape:
 
 ```json
 {
-  "metadata": [
-    "symbol",
-    "company",
-    "acqMode",
-    "tradeDate",
-    "transactionValue",
-    "pricePerShare",
-    "currentPrice",
-    "holdingDeltaPct",
-    "Macro",
-    "Sector",
-    "Industry",
-    "Basic Industry"
-  ],
+  "metadata": {
+    "record": [
+      "symbol",
+      "company",
+      "transactionMode",
+      "tradeDate",
+      "transactionValue",
+      "pricePerShare",
+      "holdingDeltaPct"
+    ],
+    "industry": ["Macro", "Sector", "Industry", "Basic Industry"],
+    "marketData": [
+      "currentPrice",
+      "sharesOutstanding",
+      "freeFloatMarketCap",
+      "priceToEarnings",
+      "fiftyTwoWeekHigh",
+      "fiftyTwoWeekLow"
+    ]
+  },
   "data": [
-    ["SYMBOL", "Company", "Market Purchase", "18-Mar-2026", 1000, 100, 95, 0.3, "...", "...", "...", "..."]
+    {
+      "record": ["SYMBOL", "Company", "Market Purchase", "18-Mar-2026", 1000, 100, 0.3],
+      "industry": ["...", "...", "...", "..."],
+      "marketData": [95, 1000000, 123456789.0, "18.5", 150, 80]
+    }
   ]
 }
 ```
@@ -234,24 +243,34 @@ Short preferential-issue output shape:
 
 ```json
 {
-  "metadata": [
-    "symbol",
-    "company",
-    "allotmentDate",
-    "amountRaised",
-    "sharesAllotted",
-    "offerPrice",
-    "currentPrice",
-    "lockInShares",
-    "lockInPeriod",
-    "revisedFlag",
-    "Macro",
-    "Sector",
-    "Industry",
-    "Basic Industry"
-  ],
+  "metadata": {
+    "record": [
+      "symbol",
+      "company",
+      "allotmentDate",
+      "amountRaised",
+      "sharesAllotted",
+      "offerPrice",
+      "lockInShares",
+      "lockInPeriod",
+      "revisedFlag"
+    ],
+    "industry": ["Macro", "Sector", "Industry", "Basic Industry"],
+    "marketData": [
+      "currentPrice",
+      "sharesOutstanding",
+      "freeFloatMarketCap",
+      "priceToEarnings",
+      "fiftyTwoWeekHigh",
+      "fiftyTwoWeekLow"
+    ]
+  },
   "data": [
-    ["SYMBOL", "Company", "18-MAR-2026", "1000", "10", "95", 110, "4", "Equity shares for 6 months", null, "...", "...", "...", "..."]
+    {
+      "record": ["SYMBOL", "Company", "18-MAR-2026", "1000", "10", "95", "4", "Equity shares for 6 months", null],
+      "industry": ["...", "...", "...", "..."],
+      "marketData": [110, 1000000, 123456789.0, "18.5", 150, 80]
+    }
   ]
 }
 ```
@@ -262,61 +281,56 @@ Short QIP output shape:
 
 ```json
 {
-  "metadata": [
-    "symbol",
-    "company",
-    "allotmentDate",
-    "relevantDate",
-    "issueSize",
-    "issuePrice",
-    "minimumIssuePrice",
-    "discountPerShare",
-    "sharesAllotted",
-    "numberOfAllottees",
-    "revisedFlag",
-    "allotteeNames",
-    "allotteeCategories",
-    "allotteeSharesAllotted",
-    "allotteePctOfIssue",
-    "Macro",
-    "Sector",
-    "Industry",
-    "Basic Industry",
-    "currentPrice",
-    "sharesOutstanding",
-    "freeFloatMarketCap",
-    "priceToEarnings",
-    "fiftyTwoWeekHigh",
-    "fiftyTwoWeekLow"
-  ],
-  "data": [
-    [
-      "SYMBOL",
-      "Company",
-      "10-MAR-2026",
-      "02-MAR-2026",
-      "750000000",
-      "265",
-      "274.83",
-      "9.83",
-      "2830188",
-      "6",
-      null,
-      ["Investor A", "Investor B"],
-      ["Foreign Portfolio Investor", "Alternative Investment Fund"],
-      ["660000", "2170188"],
-      ["0.2332", "0.7668"],
-      "...",
-      "...",
-      "...",
-      "...",
-      305,
-      124997388,
-      9199184669.82,
-      "44.81",
-      321,
-      137
+  "metadata": {
+    "record": [
+      "symbol",
+      "company",
+      "allotmentDate",
+      "relevantDate",
+      "issueSize",
+      "issuePrice",
+      "minimumIssuePrice",
+      "discountPerShare",
+      "sharesAllotted",
+      "allotteeCount",
+      "revisedFlag",
+      "allotteeNames",
+      "allotteeCategories",
+      "allotteeSharesAllotted",
+      "allotteePctOfIssue"
+    ],
+    "industry": ["Macro", "Sector", "Industry", "Basic Industry"],
+    "marketData": [
+      "currentPrice",
+      "sharesOutstanding",
+      "freeFloatMarketCap",
+      "priceToEarnings",
+      "fiftyTwoWeekHigh",
+      "fiftyTwoWeekLow"
     ]
+  },
+  "data": [
+    {
+      "record": [
+        "SYMBOL",
+        "Company",
+        "10-MAR-2026",
+        "02-MAR-2026",
+        "750000000",
+        "265",
+        "274.83",
+        "9.83",
+        "2830188",
+        "6",
+        null,
+        ["Investor A", "Investor B"],
+        ["Foreign Portfolio Investor", "Alternative Investment Fund"],
+        ["660000", "2170188"],
+        ["0.2332", "0.7668"]
+      ],
+      "industry": ["...", "...", "...", "..."],
+      "marketData": [305, 124997388, 9199184669.82, "44.81", 321, 137]
+    }
   ]
 }
 ```

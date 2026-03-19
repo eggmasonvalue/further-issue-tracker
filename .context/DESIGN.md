@@ -18,10 +18,16 @@
 - Implemented: Declarative preferential short-output schema with `revisedFlag`, lock-in fields, pricing, size, current price, and four-level industry data
 - Implemented: Declarative QIP short-output schema with issue economics, investor participation details, revision lineage, market data, and four-level industry data
 - Implemented: Declarative insider short-output schema with compact signal-focused metadata and four-level industry fields
+- Implemented: Canonical consumer-facing API labels for PREF, QIP, and insider full artifacts
+- Implemented: Shortened artifacts now preserve the raw-artifact block structure with separate `record`, `industry`, and `marketData` arrays
 - Implemented: `further-issues shorten --category qip` for debloated QIP output
+- Implemented: Confirmed root full-artifact samples are columnar and use a single `issueType` per dataset: `qip_data.json` is all `QIP` and `pref_data.json` is all `Preferential`
+- Implemented: Removed redundant top-level `symbol` keys from full and shortened row objects; `symbol` now exists only inside metadata-aligned row arrays
 - Not implemented: Rights Issues workflow
 - Implemented: Replaced the single `CMP` field in canonical outputs with a richer `marketData` snapshot derived from `getDetailedScripData`
 - Known limitation: Insider trading XBRL parsing can fail until NSE fixes the published taxonomy/schema resolution; the workflow now defaults to skipping insider XBRL unless explicitly enabled
 
 ## Note:
-use "revisedFlag" to deduplicate filings while developing on top of this
+- use "revisedFlag" to deduplicate filings while developing on top of this
+- For insider trading, for market purchases and sales, warrants will not be a problem. however, for categories like "Preferential Offer" or "Conversion of security", it might be. The shortening math will not hold.
+Warrants are not an issue for pref and qip since we're looking only at "Listing stage"

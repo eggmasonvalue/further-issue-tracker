@@ -172,11 +172,12 @@ def test_further_issues_shorten_writes_expected_metadata(monkeypatch, tmp_path):
         "metadata": {
             "api": [
                 "amountRaised",
-                "dateOfAllotmentOfShares",
-                "nameOfTheCompany",
-                "offerPricePerSecurity",
+                "allotmentDate",
+                "company",
+                "offerPrice",
                 "revisedFlag",
-                "totalNumOfSharesAllotted",
+                "sharesAllotted",
+                "symbol",
             ],
             "xbrl": [
                 "Number of lock in shares",
@@ -194,7 +195,6 @@ def test_further_issues_shorten_writes_expected_metadata(monkeypatch, tmp_path):
         },
         "data": [
             {
-                "symbol": "ABC",
                 "api": [
                     "1000",
                     "18-MAR-2026",
@@ -202,6 +202,7 @@ def test_further_issues_shorten_writes_expected_metadata(monkeypatch, tmp_path):
                     "95",
                     "REV-1",
                     "10",
+                    "ABC",
                 ],
                 "xbrl": ["4", "Equity shares for 6 months"],
                 "industry": [
@@ -226,39 +227,49 @@ def test_further_issues_shorten_writes_expected_metadata(monkeypatch, tmp_path):
 
     assert result.exit_code == 0
     assert json.loads(result.output) == {"files": ["pref_short.json"]}
-    assert shortened["metadata"] == [
-        "symbol",
-        "company",
-        "allotmentDate",
-        "amountRaised",
-        "sharesAllotted",
-        "offerPrice",
-        "currentPrice",
-        "lockInShares",
-        "lockInPeriod",
-        "revisedFlag",
-        "Macro",
-        "Sector",
-        "Industry",
-        "Basic Industry",
-    ]
+    assert shortened["metadata"] == {
+        "record": [
+            "symbol",
+            "company",
+            "allotmentDate",
+            "amountRaised",
+            "sharesAllotted",
+            "offerPrice",
+            "lockInShares",
+            "lockInPeriod",
+            "revisedFlag",
+        ],
+        "industry": ["Macro", "Sector", "Industry", "Basic Industry"],
+        "marketData": [
+            "currentPrice",
+            "sharesOutstanding",
+            "freeFloatMarketCap",
+            "priceToEarnings",
+            "fiftyTwoWeekHigh",
+            "fiftyTwoWeekLow",
+        ],
+    }
     assert shortened["data"] == [
-        [
-            "ABC",
-            "ABC Limited",
-            "18-MAR-2026",
-            "1000",
-            "10",
-            "95",
-            110,
-            "4",
-            "Equity shares for 6 months",
-            "REV-1",
-            "Industrials",
-            "Capital Goods",
-            "Electrical Equipment",
-            "Other Electrical Equipment",
-        ]
+        {
+            "record": [
+                "ABC",
+                "ABC Limited",
+                "18-MAR-2026",
+                "1000",
+                "10",
+                "95",
+                "4",
+                "Equity shares for 6 months",
+                "REV-1",
+            ],
+            "industry": [
+                "Industrials",
+                "Capital Goods",
+                "Electrical Equipment",
+                "Other Electrical Equipment",
+            ],
+            "marketData": [110, 1000, 25000, "18.5", 150, 80],
+        }
     ]
 
 
@@ -273,16 +284,17 @@ def test_qip_shorten_writes_expected_metadata(monkeypatch, tmp_path):
     full_output = {
         "metadata": {
             "api": [
-                "companyName",
-                "distPerShrsAvailed",
-                "dtOfAllotmentOfShares",
-                "finalAmountOfIssueSize",
-                "issPricePerUnit",
-                "minIssPricePerUnit",
-                "noOfAllottees",
-                "noOfSharesAllotted",
-                "relavantDt",
+                "company",
+                "discountPerShare",
+                "allotmentDate",
+                "issueSize",
+                "issuePrice",
+                "minimumIssuePrice",
+                "allotteeCount",
+                "sharesAllotted",
+                "relevantDate",
                 "revisedFlag",
+                "symbol",
             ],
             "xbrl": [
                 "Category of allotees",
@@ -302,7 +314,6 @@ def test_qip_shorten_writes_expected_metadata(monkeypatch, tmp_path):
         },
         "data": [
             {
-                "symbol": "QIPX",
                 "api": [
                     "QIP Example Limited",
                     "9.83",
@@ -314,6 +325,7 @@ def test_qip_shorten_writes_expected_metadata(monkeypatch, tmp_path):
                     "2830188",
                     "02-MAR-2026",
                     None,
+                    "QIPX",
                 ],
                 "xbrl": [
                     ["Foreign Portfolio Investor", "Alternative Investment Fund"],
@@ -343,61 +355,61 @@ def test_qip_shorten_writes_expected_metadata(monkeypatch, tmp_path):
 
     assert result.exit_code == 0
     assert json.loads(result.output) == {"files": ["qip_short.json"]}
-    assert shortened["metadata"] == [
-        "symbol",
-        "company",
-        "allotmentDate",
-        "relevantDate",
-        "issueSize",
-        "issuePrice",
-        "minimumIssuePrice",
-        "discountPerShare",
-        "sharesAllotted",
-        "numberOfAllottees",
-        "revisedFlag",
-        "allotteeNames",
-        "allotteeCategories",
-        "allotteeSharesAllotted",
-        "allotteePctOfIssue",
-        "Macro",
-        "Sector",
-        "Industry",
-        "Basic Industry",
-        "currentPrice",
-        "sharesOutstanding",
-        "freeFloatMarketCap",
-        "priceToEarnings",
-        "fiftyTwoWeekHigh",
-        "fiftyTwoWeekLow",
-    ]
+    assert shortened["metadata"] == {
+        "record": [
+            "symbol",
+            "company",
+            "allotmentDate",
+            "relevantDate",
+            "issueSize",
+            "issuePrice",
+            "minimumIssuePrice",
+            "discountPerShare",
+            "sharesAllotted",
+            "allotteeCount",
+            "revisedFlag",
+            "allotteeNames",
+            "allotteeCategories",
+            "allotteeSharesAllotted",
+            "allotteePctOfIssue",
+        ],
+        "industry": ["Macro", "Sector", "Industry", "Basic Industry"],
+        "marketData": [
+            "currentPrice",
+            "sharesOutstanding",
+            "freeFloatMarketCap",
+            "priceToEarnings",
+            "fiftyTwoWeekHigh",
+            "fiftyTwoWeekLow",
+        ],
+    }
     assert shortened["data"] == [
-        [
-            "QIPX",
-            "QIP Example Limited",
-            "10-MAR-2026",
-            "02-MAR-2026",
-            "750000000",
-            "265",
-            "274.83",
-            "9.83",
-            "2830188",
-            "2",
-            None,
-            ["Investor A", "Investor B"],
-            ["Foreign Portfolio Investor", "Alternative Investment Fund"],
-            ["660000", "2170188"],
-            ["0.2332", "0.7668"],
-            "Consumer Discretionary",
-            "Realty",
-            "Realty",
-            "Residential, Commercial Projects",
-            305,
-            124997388,
-            9199184669.82,
-            "44.81",
-            321,
-            137,
-        ]
+        {
+            "record": [
+                "QIPX",
+                "QIP Example Limited",
+                "10-MAR-2026",
+                "02-MAR-2026",
+                "750000000",
+                "265",
+                "274.83",
+                "9.83",
+                "2830188",
+                "2",
+                None,
+                ["Investor A", "Investor B"],
+                ["Foreign Portfolio Investor", "Alternative Investment Fund"],
+                ["660000", "2170188"],
+                ["0.2332", "0.7668"],
+            ],
+            "industry": [
+                "Consumer Discretionary",
+                "Realty",
+                "Realty",
+                "Residential, Commercial Projects",
+            ],
+            "marketData": [305, 124997388, 9199184669.82, "44.81", 321, 137],
+        }
     ]
 
 
@@ -540,14 +552,15 @@ def test_insider_trading_shorten_writes_expected_metadata(monkeypatch, tmp_path)
     full_output = {
         "metadata": {
             "api": [
-                "acqMode",
-                "acqfromDt",
-                "acqtoDt",
-                "afterAcqSharesPer",
-                "befAcqSharesPer",
+                "transactionMode",
+                "transactionStartDate",
+                "transactionEndDate",
+                "holdingAfterPct",
+                "holdingBeforePct",
                 "company",
-                "secAcq",
-                "secVal",
+                "transactionQuantity",
+                "transactionValue",
+                "symbol",
             ],
             "xbrl": [],
             "industry": ["Macro", "Sector", "Industry", "Basic Industry"],
@@ -562,7 +575,6 @@ def test_insider_trading_shorten_writes_expected_metadata(monkeypatch, tmp_path)
         },
         "data": [
             {
-                "symbol": "ABC",
                 "api": [
                     "Market Purchase",
                     "18-Mar-2026",
@@ -572,6 +584,7 @@ def test_insider_trading_shorten_writes_expected_metadata(monkeypatch, tmp_path)
                     "ABC Limited",
                     "10",
                     "1000",
+                    "ABC",
                 ],
                 "xbrl": [],
                 "industry": ["Industrials", "Capital Goods", "Electrical Equipment", "Other Electrical Equipment"],
@@ -591,33 +604,43 @@ def test_insider_trading_shorten_writes_expected_metadata(monkeypatch, tmp_path)
 
     assert result.exit_code == 0
     assert json.loads(result.output) == {"files": ["insider_trading_short.json"]}
-    assert shortened["metadata"] == [
-        "symbol",
-        "company",
-        "acqMode",
-        "tradeDate",
-        "transactionValue",
-        "pricePerShare",
-        "currentPrice",
-        "holdingDeltaPct",
-        "Macro",
-        "Sector",
-        "Industry",
-        "Basic Industry",
-    ]
+    assert shortened["metadata"] == {
+        "record": [
+            "symbol",
+            "company",
+            "transactionMode",
+            "tradeDate",
+            "transactionValue",
+            "pricePerShare",
+            "holdingDeltaPct",
+        ],
+        "industry": ["Macro", "Sector", "Industry", "Basic Industry"],
+        "marketData": [
+            "currentPrice",
+            "sharesOutstanding",
+            "freeFloatMarketCap",
+            "priceToEarnings",
+            "fiftyTwoWeekHigh",
+            "fiftyTwoWeekLow",
+        ],
+    }
     assert shortened["data"] == [
-        [
-            "ABC",
-            "ABC Limited",
-            "Market Purchase",
-            "18-Mar-2026",
-            1000,
-            100,
-            95,
-            0.3,
-            "Industrials",
-            "Capital Goods",
-            "Electrical Equipment",
-            "Other Electrical Equipment",
-        ]
+        {
+            "record": [
+                "ABC",
+                "ABC Limited",
+                "Market Purchase",
+                "18-Mar-2026",
+                1000,
+                100,
+                0.3,
+            ],
+            "industry": [
+                "Industrials",
+                "Capital Goods",
+                "Electrical Equipment",
+                "Other Electrical Equipment",
+            ],
+            "marketData": [95, 1000, 25000, "18.5", 150, 80],
+        }
     ]

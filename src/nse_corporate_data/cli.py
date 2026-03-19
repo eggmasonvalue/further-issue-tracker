@@ -14,11 +14,14 @@ from nse_corporate_data.further_issues import (
     DEFAULT_QIP_FULL_OUTPUT,
     DEFAULT_QIP_SHORT_OUTPUT,
     build_qip_short_output,
+    PREF_API_LABELS,
+    QIP_API_LABELS,
 )
 from nse_corporate_data.insider import (
     DEFAULT_INSIDER_FULL_OUTPUT,
     DEFAULT_INSIDER_MODES,
     DEFAULT_INSIDER_SHORT_OUTPUT,
+    INSIDER_API_LABELS,
     INSIDER_MODES,
     build_insider_short_output,
     filter_insider_filings_by_mode,
@@ -155,6 +158,10 @@ def fetch_further_issues(from_date, to_date, categories):
         )
 
         categories_to_fetch = [category.upper() for category in categories]
+        label_maps = {
+            "PREF": PREF_API_LABELS,
+            "QIP": QIP_API_LABELS,
+        }
 
         output_files = []
         for cat in categories_to_fetch:
@@ -166,6 +173,7 @@ def fetch_further_issues(from_date, to_date, categories):
                 fetcher=fetcher,
                 symbol_keys=("nseSymbol", "nsesymbol"),
                 xbrl_keys=("xmlFileName",),
+                api_label_map=label_maps[cat],
                 enable_xbrl_processing=True,
             )
 
@@ -297,6 +305,7 @@ def fetch_insider_trading(from_date, to_date, modes):
             fetcher=fetcher,
             symbol_keys=("symbol",),
             xbrl_keys=("xbrl",),
+            api_label_map=INSIDER_API_LABELS,
             enable_xbrl_processing=settings.enable_insider_trading_xbrl,
         )
 

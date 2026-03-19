@@ -67,14 +67,14 @@ def test_parse_filings_data_supports_custom_symbol_and_xbrl_keys(tmp_path, monke
         fetcher=FakeFetcher(xml_path),
         symbol_keys=("symbol",),
         xbrl_keys=("xbrl",),
+        api_label_map={"acqMode": "transactionMode", "company": "company", "symbol": "symbol", "xbrl": "xbrlUrl"},
         enable_xbrl_processing=True,
     )
 
-    assert result["metadata"]["api"] == ["acqMode", "company", "symbol", "xbrl"]
+    assert result["metadata"]["api"] == ["transactionMode", "company", "symbol", "xbrlUrl"]
     assert result["metadata"]["xbrl"] == ["Field A", "Field B"]
     assert result["data"] == [
         {
-            "symbol": "ABC",
             "api": ["Market Purchase", "Example Corp", "ABC", "https://example.com/it.xml"],
             "xbrl": ["value-a", "value-b"],
             "industry": ["M", "S", "I", "B"],
@@ -103,6 +103,7 @@ def test_parse_filings_data_logs_and_continues_on_xbrl_parse_failure(tmp_path, m
         fetcher=FakeFetcher(xml_path),
         symbol_keys=("symbol",),
         xbrl_keys=("xbrl",),
+        api_label_map={"company": "company", "symbol": "symbol", "xbrl": "xbrlUrl"},
         enable_xbrl_processing=True,
     )
 
@@ -131,6 +132,7 @@ def test_parse_filings_data_skips_xbrl_download_when_disabled(tmp_path, monkeypa
         fetcher=fetcher,
         symbol_keys=("symbol",),
         xbrl_keys=("xbrl",),
+        api_label_map={"company": "company", "symbol": "symbol", "xbrl": "xbrlUrl"},
         enable_xbrl_processing=False,
     )
 
@@ -169,6 +171,7 @@ def test_parse_filings_data_skips_market_data_for_non_market_acq_modes(monkeypat
         fetcher=fetcher,
         symbol_keys=("symbol",),
         xbrl_keys=("xbrl",),
+        api_label_map={"company": "company", "symbol": "symbol", "acqMode": "transactionMode"},
         enable_xbrl_processing=False,
     )
 
