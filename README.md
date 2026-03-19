@@ -9,6 +9,7 @@ The project currently supports:
 - Further issue filings for preferential allotments (`PREF`)
 - Further issue filings for qualified institutional placements (`QIP`)
 - Preferential-issue short-form signal output derived from the full JSON (`further-issues shorten`)
+- QIP short-form debloated output derived from the full JSON (`further-issues shorten --category qip`)
 - Insider trading disclosures (`insider-trading fetch`)
 - Insider trading short-form signal output derived from the full JSON (`insider-trading shorten`)
 
@@ -23,7 +24,7 @@ For fetch workflows, the CLI:
 
 For insider trading, the CLI also provides a pure local shortening step that reads the full insider artifact and emits a compact signal-focused JSON with only the most important fields for top-down analysis.
 
-For further issues, the CLI currently provides a pure local shortening step for preferential allotments. It reads the full `pref_data.json` artifact and emits a compact JSON focused on amount raised, pricing, lock-in terms, revision lineage, and four-level industry context.
+For further issues, the CLI provides pure local shortening steps for both preferential allotments and QIPs. The preferential shortener reads `pref_data.json` and emits a compact JSON focused on amount raised, pricing, lock-in terms, revision lineage, and four-level industry context. The QIP shortener reads `qip_data.json` and emits a debloated issue-plus-allottee view that preserves pricing, size, revision lineage, investor participation detail, four-level industry context, and market data.
 
 For insider trading specifically, XBRL processing is configurable and disabled by default because the API payload is already rich enough for the current use case.
 
@@ -61,22 +62,24 @@ Defaults:
 - `--to-date`: current local date when the command runs
 - `--category`: both `pref` and `qip`
 
-### Preferential issue shorten
+### Further issue shorten
 
 ```bash
-uv run nse-corporate-data further-issues shorten [--input pref_data.json] [--output pref_short.json]
+uv run nse-corporate-data further-issues shorten [--category pref|qip] [--input FILE] [--output FILE]
 ```
 
 Example:
 
 ```bash
 uv run nse-corporate-data further-issues shorten
+uv run nse-corporate-data further-issues shorten --category qip
 ```
 
 Defaults:
 
-- `--input`: `pref_data.json`
-- `--output`: `pref_short.json`
+- `--category`: `pref`
+- `--input`: `pref_data.json` for `pref`, `qip_data.json` for `qip`
+- `--output`: `pref_short.json` for `pref`, `qip_short.json` for `qip`
 
 ### Insider trading fetch
 
@@ -152,6 +155,7 @@ Data files:
 - `pref_data.json`
 - `pref_short.json`
 - `qip_data.json`
+- `qip_short.json`
 - `insider_trading_data.json`
 - `insider_trading_short.json`
 
@@ -254,6 +258,71 @@ Short preferential-issue output shape:
 
 `revisedFlag` is intentionally preserved. When it is non-null, the filing may have a revised or duplicate lineage that downstream consumers may need to collapse explicitly.
 
+Short QIP output shape:
+
+```json
+{
+  "metadata": [
+    "symbol",
+    "company",
+    "allotmentDate",
+    "relevantDate",
+    "issueSize",
+    "issuePrice",
+    "minimumIssuePrice",
+    "discountPerShare",
+    "sharesAllotted",
+    "numberOfAllottees",
+    "revisedFlag",
+    "allotteeNames",
+    "allotteeCategories",
+    "allotteeSharesAllotted",
+    "allotteePctOfIssue",
+    "Macro",
+    "Sector",
+    "Industry",
+    "Basic Industry",
+    "currentPrice",
+    "sharesOutstanding",
+    "freeFloatMarketCap",
+    "priceToEarnings",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow"
+  ],
+  "data": [
+    [
+      "SYMBOL",
+      "Company",
+      "10-MAR-2026",
+      "02-MAR-2026",
+      "750000000",
+      "265",
+      "274.83",
+      "9.83",
+      "2830188",
+      "6",
+      null,
+      ["Investor A", "Investor B"],
+      ["Foreign Portfolio Investor", "Alternative Investment Fund"],
+      ["660000", "2170188"],
+      ["0.2332", "0.7668"],
+      "...",
+      "...",
+      "...",
+      "...",
+      305,
+      124997388,
+      9199184669.82,
+      "44.81",
+      321,
+      137
+    ]
+  ]
+}
+```
+
+The QIP short artifact is driven by a declarative field list in `src/nse_corporate_data/further_issues.py`, so debloating or reintroducing metadata is a one-registry edit.
+
 ## Insider trading XBRL note
 
 The insider trading workflow can download and parse linked XML through `nse-xbrl-parser`, but this is disabled by default. If enabled, current NSE insider-trading taxonomy resolution may still fail upstream; when that happens, the command continues and writes API, industry, and market-data fields with empty XBRL fields.
@@ -261,7 +330,7 @@ The insider trading workflow can download and parse linked XML through `nse-xbrl
 ## Project Structure
 
 - `src/nse_corporate_data/cli.py`: Click CLI entrypoint and input validation
-- `src/nse_corporate_data/further_issues.py`: preferential-issue short-output schema
+- `src/nse_corporate_data/further_issues.py`: preferential-issue and QIP short-output schemas
 - `src/nse_corporate_data/fetcher.py`: NSE session management, filing fetches, XBRL downloads
 - `src/nse_corporate_data/insider.py`: insider-mode mapping and shortened insider-output schema
 - `src/nse_corporate_data/parser.py`: XBRL parsing and JSON serialization

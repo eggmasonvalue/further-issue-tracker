@@ -1,5 +1,7 @@
 # Changelog
 ## [Unreleased]
+- Added `further-issues shorten --category qip`, producing a debloated `qip_short.json` that keeps issue economics, allottee detail, revision lineage, market data, and four-level industry context.
+- Extended `further-issues shorten` with category-specific default input/output paths for `pref` and `qip`.
 - Added ordered NSE series fallback (`EQ`, `BE`, `BZ`, `SM`, `ST`, `SZ`) for `getDetailedScripData()` when the default series returns an empty `equityResponse` shell.
 - Replaced the canonical `CMP` field with a richer `marketData` block containing `currentPrice`, `sharesOutstanding`, `freeFloatMarketCap`, `priceToEarnings`, `fiftyTwoWeekHigh`, and `fiftyTwoWeekLow`.
 - Switched canonical market enrichment from `nse.quote()` to `nse.getDetailedScripData()`.

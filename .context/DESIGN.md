@@ -16,9 +16,10 @@
 - Implemented: Grouped CLI workflows (`further-issues fetch|shorten`, `insider-trading fetch|shorten`)
 - Implemented: Canonical machine-facing `--category` and `--mode` CLI tokens with internal mapping to NSE values
 - Implemented: Declarative preferential short-output schema with `revisedFlag`, lock-in fields, pricing, size, current price, and four-level industry data
+- Implemented: Declarative QIP short-output schema with issue economics, investor participation details, revision lineage, market data, and four-level industry data
 - Implemented: Declarative insider short-output schema with compact signal-focused metadata and four-level industry fields
+- Implemented: `further-issues shorten --category qip` for debloated QIP output
 - Not implemented: Rights Issues workflow
-- Not implemented: QIP short-output helper
 - Implemented: Replaced the single `CMP` field in canonical outputs with a richer `marketData` snapshot derived from `getDetailedScripData`
 - Known limitation: Insider trading XBRL parsing can fail until NSE fixes the published taxonomy/schema resolution; the workflow now defaults to skipping insider XBRL unless explicitly enabled
 

@@ -262,6 +262,145 @@ def test_further_issues_shorten_writes_expected_metadata(monkeypatch, tmp_path):
     ]
 
 
+def test_qip_shorten_writes_expected_metadata(monkeypatch, tmp_path):
+    runner = CliRunner()
+
+    def fail_fetcher():
+        raise AssertionError("shorten should not instantiate NSEFetcher")
+
+    monkeypatch.setattr(cli_module, "NSEFetcher", fail_fetcher)
+
+    full_output = {
+        "metadata": {
+            "api": [
+                "companyName",
+                "distPerShrsAvailed",
+                "dtOfAllotmentOfShares",
+                "finalAmountOfIssueSize",
+                "issPricePerUnit",
+                "minIssPricePerUnit",
+                "noOfAllottees",
+                "noOfSharesAllotted",
+                "relavantDt",
+                "revisedFlag",
+            ],
+            "xbrl": [
+                "Category of allotees",
+                "Name of allottees",
+                "Number of shares allotted",
+                "Percentage of total issue size",
+            ],
+            "industry": ["Macro", "Sector", "Industry", "Basic Industry"],
+            "marketData": [
+                "currentPrice",
+                "sharesOutstanding",
+                "freeFloatMarketCap",
+                "priceToEarnings",
+                "fiftyTwoWeekHigh",
+                "fiftyTwoWeekLow",
+            ],
+        },
+        "data": [
+            {
+                "symbol": "QIPX",
+                "api": [
+                    "QIP Example Limited",
+                    "9.83",
+                    "10-MAR-2026",
+                    "750000000",
+                    "265",
+                    "274.83",
+                    "2",
+                    "2830188",
+                    "02-MAR-2026",
+                    None,
+                ],
+                "xbrl": [
+                    ["Foreign Portfolio Investor", "Alternative Investment Fund"],
+                    ["Investor A", "Investor B"],
+                    ["2830188", "660000", "2170188"],
+                    ["0.2332", "0.7668"],
+                ],
+                "industry": [
+                    "Consumer Discretionary",
+                    "Realty",
+                    "Realty",
+                    "Residential, Commercial Projects",
+                ],
+                "marketData": [305, 124997388, 9199184669.82, "44.81", 321, 137],
+            }
+        ],
+    }
+
+    with runner.isolated_filesystem(temp_dir=tmp_path):
+        input_path = Path("qip_data.json")
+        input_path.write_text(json.dumps(full_output), encoding="utf-8")
+        result = runner.invoke(
+            cli_module.cli,
+            ["further-issues", "shorten", "--category", "qip"],
+        )
+        shortened = json.loads(Path("qip_short.json").read_text(encoding="utf-8"))
+
+    assert result.exit_code == 0
+    assert json.loads(result.output) == {"files": ["qip_short.json"]}
+    assert shortened["metadata"] == [
+        "symbol",
+        "company",
+        "allotmentDate",
+        "relevantDate",
+        "issueSize",
+        "issuePrice",
+        "minimumIssuePrice",
+        "discountPerShare",
+        "sharesAllotted",
+        "numberOfAllottees",
+        "revisedFlag",
+        "allotteeNames",
+        "allotteeCategories",
+        "allotteeSharesAllotted",
+        "allotteePctOfIssue",
+        "Macro",
+        "Sector",
+        "Industry",
+        "Basic Industry",
+        "currentPrice",
+        "sharesOutstanding",
+        "freeFloatMarketCap",
+        "priceToEarnings",
+        "fiftyTwoWeekHigh",
+        "fiftyTwoWeekLow",
+    ]
+    assert shortened["data"] == [
+        [
+            "QIPX",
+            "QIP Example Limited",
+            "10-MAR-2026",
+            "02-MAR-2026",
+            "750000000",
+            "265",
+            "274.83",
+            "9.83",
+            "2830188",
+            "2",
+            None,
+            ["Investor A", "Investor B"],
+            ["Foreign Portfolio Investor", "Alternative Investment Fund"],
+            ["660000", "2170188"],
+            ["0.2332", "0.7668"],
+            "Consumer Discretionary",
+            "Realty",
+            "Realty",
+            "Residential, Commercial Projects",
+            305,
+            124997388,
+            9199184669.82,
+            "44.81",
+            321,
+            137,
+        ]
+    ]
+
+
 def test_insider_trading_fetch_uses_default_to_date(monkeypatch, tmp_path):
     runner = CliRunner()
     saved = []

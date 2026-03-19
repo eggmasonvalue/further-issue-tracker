@@ -11,6 +11,9 @@ from nse_corporate_data.further_issues import (
     DEFAULT_PREF_FULL_OUTPUT,
     DEFAULT_PREF_SHORT_OUTPUT,
     build_pref_short_output,
+    DEFAULT_QIP_FULL_OUTPUT,
+    DEFAULT_QIP_SHORT_OUTPUT,
+    build_qip_short_output,
 )
 from nse_corporate_data.insider import (
     DEFAULT_INSIDER_FULL_OUTPUT,
@@ -178,35 +181,66 @@ def fetch_further_issues(from_date, to_date, categories):
 
 @further_issues.command("shorten")
 @click.option(
+    "--category",
+    "category",
+    default="pref",
+    show_default=True,
+    type=click.Choice(FURTHER_ISSUE_CATEGORIES, case_sensitive=False),
+    help="Further-issue category to shorten.",
+)
+@click.option(
     "--input",
     "input_path",
-    default=DEFAULT_PREF_FULL_OUTPUT,
-    show_default=True,
     type=click.Path(dir_okay=False, path_type=Path),
-    help="Path to the full preferential-issue JSON artifact.",
+    help="Path to the full further-issue JSON artifact.",
 )
 @click.option(
     "--output",
     "output_path",
-    default=DEFAULT_PREF_SHORT_OUTPUT,
-    show_default=True,
     type=click.Path(dir_okay=False, path_type=Path),
-    help="Path for the shortened preferential-issue JSON artifact.",
+    help="Path for the shortened further-issue JSON artifact.",
 )
-def shorten_further_issues(input_path: Path, output_path: Path):
-    """Read a full preferential-issue artifact and emit a shortened JSON."""
+def shorten_further_issues(
+    category: str,
+    input_path: Optional[Path],
+    output_path: Optional[Path],
+):
+    """Read a full further-issue artifact and emit a shortened JSON."""
+
+    normalized_category = category.lower()
+    builders = {
+        "pref": (
+            build_pref_short_output,
+            Path(DEFAULT_PREF_FULL_OUTPUT),
+            Path(DEFAULT_PREF_SHORT_OUTPUT),
+            "preferential-issue",
+        ),
+        "qip": (
+            build_qip_short_output,
+            Path(DEFAULT_QIP_FULL_OUTPUT),
+            Path(DEFAULT_QIP_SHORT_OUTPUT),
+            "QIP",
+        ),
+    }
+    build_short_output_fn, default_input_path, default_output_path, label = builders[
+        normalized_category
+    ]
+    resolved_input_path = input_path or default_input_path
+    resolved_output_path = output_path or default_output_path
 
     def work(fetcher: Optional[NSEFetcher]) -> dict[str, Any]:
         del fetcher
-        logger.info(f"Shortening preferential-issue data from {input_path} to {output_path}")
-        with input_path.open("r", encoding="utf-8") as handle:
-            full_output = json.load(handle)
-        shortened_output = build_pref_short_output(full_output)
-        save_to_json(shortened_output, str(output_path))
         logger.info(
-            f"Successfully saved shortened preferential issue data to {output_path}"
+            f"Shortening {label} data from {resolved_input_path} to {resolved_output_path}"
         )
-        return {"files": [str(output_path)]}
+        with resolved_input_path.open("r", encoding="utf-8") as handle:
+            full_output = json.load(handle)
+        shortened_output = build_short_output_fn(full_output)
+        save_to_json(shortened_output, str(resolved_output_path))
+        logger.info(
+            f"Successfully saved shortened {label} data to {resolved_output_path}"
+        )
+        return {"files": [str(resolved_output_path)]}
 
     execute_silently(work, with_fetcher=False)
 
