@@ -1,5 +1,6 @@
 import json
 from datetime import datetime
+from pathlib import Path
 from types import SimpleNamespace
 
 from click.testing import CliRunner
@@ -21,12 +22,26 @@ class DummyFetcher:
         return [
             {
                 "symbol": "ABC",
+                "company": "ABC Limited",
                 "acqMode": "Market Purchase",
+                "acqfromDt": "18-Mar-2026",
+                "acqtoDt": "18-Mar-2026",
+                "secVal": "1000",
+                "secAcq": "10",
+                "befAcqSharesPer": "1.00",
+                "afterAcqSharesPer": "1.10",
                 "xbrl": "https://example.com/test.xml",
             },
             {
                 "symbol": "XYZ",
+                "company": "XYZ Limited",
                 "acqMode": "Market Sale",
+                "acqfromDt": "18-Mar-2026",
+                "acqtoDt": "18-Mar-2026",
+                "secVal": "500",
+                "secAcq": "5",
+                "befAcqSharesPer": "2.00",
+                "afterAcqSharesPer": "1.80",
                 "xbrl": "https://example.com/test-2.xml",
             },
         ]
@@ -35,7 +50,13 @@ class DummyFetcher:
         self.closed = True
 
 
-def test_further_issues_defaults_to_both_and_today(monkeypatch, tmp_path):
+EMPTY_PARSED = {
+    "metadata": {"api": [], "xbrl": [], "industry": [], "CMP": ["CMP"]},
+    "data": [],
+}
+
+
+def test_further_issues_fetch_defaults_to_both_and_today(monkeypatch, tmp_path):
     runner = CliRunner()
     saved = []
     fetchers = []
@@ -46,17 +67,15 @@ def test_further_issues_defaults_to_both_and_today(monkeypatch, tmp_path):
         return fetcher
 
     monkeypatch.setattr(cli_module, "NSEFetcher", fetcher_factory)
+    monkeypatch.setattr(cli_module, "parse_filings_data", lambda **kwargs: EMPTY_PARSED)
     monkeypatch.setattr(
-        cli_module,
-        "parse_filings_data",
-        lambda **kwargs: {"metadata": {"api": [], "xbrl": [], "industry": [], "CMP": ["CMP"]}, "data": []},
+        cli_module, "save_to_json", lambda data, output_path: saved.append(output_path)
     )
-    monkeypatch.setattr(cli_module, "save_to_json", lambda data, output_path: saved.append(output_path))
 
     with runner.isolated_filesystem(temp_dir=tmp_path):
         result = runner.invoke(
             cli_module.cli,
-            ["further-issues", "--from-date", "01-03-2026"],
+            ["further-issues", "fetch", "--from-date", "01-03-2026"],
         )
 
     assert result.exit_code == 0
@@ -71,7 +90,65 @@ def test_further_issues_defaults_to_both_and_today(monkeypatch, tmp_path):
     assert fetchers[0].closed is True
 
 
-def test_insider_trading_uses_default_to_date(monkeypatch, tmp_path):
+def test_further_issues_fetch_filters_by_repeatable_category(monkeypatch, tmp_path):
+    runner = CliRunner()
+    fetchers = []
+
+    def fetcher_factory():
+        fetcher = DummyFetcher()
+        fetchers.append(fetcher)
+        return fetcher
+
+    monkeypatch.setattr(cli_module, "NSEFetcher", fetcher_factory)
+    monkeypatch.setattr(cli_module, "parse_filings_data", lambda **kwargs: EMPTY_PARSED)
+    monkeypatch.setattr(cli_module, "save_to_json", lambda data, output_path: None)
+
+    with runner.isolated_filesystem(temp_dir=tmp_path):
+        result = runner.invoke(
+            cli_module.cli,
+            ["further-issues", "fetch", "--from-date", "01-03-2026", "--category", "pref"],
+        )
+
+    assert result.exit_code == 0
+    today = datetime.now().strftime("%d-%m-%Y")
+    assert fetchers[0].calls == [
+        ("further_issues", "PREF", "01-03-2026", today),
+    ]
+
+
+def test_further_issues_fetch_rejects_inverted_date_range(monkeypatch, tmp_path):
+    runner = CliRunner()
+    saved = []
+
+    monkeypatch.setattr(cli_module, "NSEFetcher", DummyFetcher)
+    monkeypatch.setattr(cli_module, "parse_filings_data", lambda **kwargs: EMPTY_PARSED)
+    monkeypatch.setattr(
+        cli_module, "save_to_json", lambda data, output_path: saved.append(output_path)
+    )
+
+    with runner.isolated_filesystem(temp_dir=tmp_path):
+        result = runner.invoke(
+            cli_module.cli,
+            [
+                "further-issues",
+                "fetch",
+                "--from-date",
+                "18-03-2026",
+                "--to-date",
+                "17-03-2026",
+            ],
+        )
+
+    assert result.exit_code == 0
+    output = json.loads(result.output)
+    assert (
+        output["error"]
+        == "Execution failed: from-date 18-03-2026 cannot be after to-date 17-03-2026"
+    )
+    assert saved == []
+
+
+def test_insider_trading_fetch_uses_default_to_date(monkeypatch, tmp_path):
     runner = CliRunner()
     saved = []
     fetchers = []
@@ -86,21 +163,21 @@ def test_insider_trading_uses_default_to_date(monkeypatch, tmp_path):
     monkeypatch.setattr(
         cli_module,
         "parse_filings_data",
-        lambda **kwargs: parse_calls.append(kwargs) or {"metadata": {"api": [], "xbrl": [], "industry": [], "CMP": ["CMP"]}, "data": []},
+        lambda **kwargs: parse_calls.append(kwargs) or EMPTY_PARSED,
     )
-    monkeypatch.setattr(cli_module, "save_to_json", lambda data, output_path: saved.append(output_path))
+    monkeypatch.setattr(
+        cli_module, "save_to_json", lambda data, output_path: saved.append(output_path)
+    )
     monkeypatch.setattr(
         cli_module,
         "get_settings",
-        lambda: SimpleNamespace(
-            enable_insider_trading_xbrl=False,
-        ),
+        lambda: SimpleNamespace(enable_insider_trading_xbrl=False),
     )
 
     with runner.isolated_filesystem(temp_dir=tmp_path):
         result = runner.invoke(
             cli_module.cli,
-            ["insider-trading", "--from-date", "18-09-2025"],
+            ["insider-trading", "fetch", "--from-date", "18-09-2025"],
         )
 
     assert result.exit_code == 0
@@ -116,7 +193,7 @@ def test_insider_trading_uses_default_to_date(monkeypatch, tmp_path):
     assert fetchers[0].closed is True
 
 
-def test_insider_trading_filters_by_mode(monkeypatch, tmp_path):
+def test_insider_trading_fetch_filters_by_mode(monkeypatch, tmp_path):
     runner = CliRunner()
     parse_calls = []
 
@@ -124,15 +201,13 @@ def test_insider_trading_filters_by_mode(monkeypatch, tmp_path):
     monkeypatch.setattr(
         cli_module,
         "parse_filings_data",
-        lambda **kwargs: parse_calls.append(kwargs) or {"metadata": {"api": [], "xbrl": [], "industry": [], "CMP": ["CMP"]}, "data": []},
+        lambda **kwargs: parse_calls.append(kwargs) or EMPTY_PARSED,
     )
     monkeypatch.setattr(cli_module, "save_to_json", lambda data, output_path: None)
     monkeypatch.setattr(
         cli_module,
         "get_settings",
-        lambda: SimpleNamespace(
-            enable_insider_trading_xbrl=False,
-        ),
+        lambda: SimpleNamespace(enable_insider_trading_xbrl=False),
     )
 
     with runner.isolated_filesystem(temp_dir=tmp_path):
@@ -140,6 +215,7 @@ def test_insider_trading_filters_by_mode(monkeypatch, tmp_path):
             cli_module.cli,
             [
                 "insider-trading",
+                "fetch",
                 "--from-date",
                 "18-09-2025",
                 "--mode",
@@ -153,11 +229,11 @@ def test_insider_trading_filters_by_mode(monkeypatch, tmp_path):
     assert [row["symbol"] for row in parse_calls[0]["filings"]] == ["ABC"]
 
 
-def test_insider_trading_help_lists_mode_choices(tmp_path):
+def test_insider_trading_fetch_help_lists_mode_choices(tmp_path):
     runner = CliRunner()
 
     with runner.isolated_filesystem(temp_dir=tmp_path):
-        result = runner.invoke(cli_module.cli, ["insider-trading", "--help"])
+        result = runner.invoke(cli_module.cli, ["insider-trading", "fetch", "--help"])
 
     assert result.exit_code == 0
     assert "market-buy" in result.output
@@ -166,7 +242,7 @@ def test_insider_trading_help_lists_mode_choices(tmp_path):
     assert "--mode" in result.output
 
 
-def test_insider_trading_filters_by_single_mode(monkeypatch, tmp_path):
+def test_insider_trading_fetch_filters_by_single_mode(monkeypatch, tmp_path):
     runner = CliRunner()
     parse_calls = []
 
@@ -174,15 +250,13 @@ def test_insider_trading_filters_by_single_mode(monkeypatch, tmp_path):
     monkeypatch.setattr(
         cli_module,
         "parse_filings_data",
-        lambda **kwargs: parse_calls.append(kwargs) or {"metadata": {"api": [], "xbrl": [], "industry": [], "CMP": ["CMP"]}, "data": []},
+        lambda **kwargs: parse_calls.append(kwargs) or EMPTY_PARSED,
     )
     monkeypatch.setattr(cli_module, "save_to_json", lambda data, output_path: None)
     monkeypatch.setattr(
         cli_module,
         "get_settings",
-        lambda: SimpleNamespace(
-            enable_insider_trading_xbrl=False,
-        ),
+        lambda: SimpleNamespace(enable_insider_trading_xbrl=False),
     )
 
     with runner.isolated_filesystem(temp_dir=tmp_path):
@@ -190,6 +264,7 @@ def test_insider_trading_filters_by_single_mode(monkeypatch, tmp_path):
             cli_module.cli,
             [
                 "insider-trading",
+                "fetch",
                 "--from-date",
                 "18-09-2025",
                 "--mode",
@@ -201,61 +276,88 @@ def test_insider_trading_filters_by_single_mode(monkeypatch, tmp_path):
     assert [row["symbol"] for row in parse_calls[0]["filings"]] == ["ABC"]
 
 
-def test_further_issues_filters_by_repeatable_category(monkeypatch, tmp_path):
+def test_insider_trading_shorten_writes_expected_metadata(monkeypatch, tmp_path):
     runner = CliRunner()
-    fetchers = []
 
-    def fetcher_factory():
-        fetcher = DummyFetcher()
-        fetchers.append(fetcher)
-        return fetcher
+    def fail_fetcher():
+        raise AssertionError("shorten should not instantiate NSEFetcher")
 
-    monkeypatch.setattr(cli_module, "NSEFetcher", fetcher_factory)
-    monkeypatch.setattr(
-        cli_module,
-        "parse_filings_data",
-        lambda **kwargs: {"metadata": {"api": [], "xbrl": [], "industry": [], "CMP": ["CMP"]}, "data": []},
-    )
-    monkeypatch.setattr(cli_module, "save_to_json", lambda data, output_path: None)
+    monkeypatch.setattr(cli_module, "NSEFetcher", fail_fetcher)
 
-    with runner.isolated_filesystem(temp_dir=tmp_path):
-        result = runner.invoke(
-            cli_module.cli,
-            ["further-issues", "--from-date", "01-03-2026", "--category", "pref"],
-        )
-
-    assert result.exit_code == 0
-    today = datetime.now().strftime("%d-%m-%Y")
-    assert fetchers[0].calls == [
-        ("further_issues", "PREF", "01-03-2026", today),
-    ]
-
-
-def test_further_issues_rejects_inverted_date_range(monkeypatch, tmp_path):
-    runner = CliRunner()
-    saved = []
-
-    monkeypatch.setattr(cli_module, "NSEFetcher", DummyFetcher)
-    monkeypatch.setattr(
-        cli_module,
-        "parse_filings_data",
-        lambda **kwargs: {"metadata": {"api": [], "xbrl": [], "industry": [], "CMP": ["CMP"]}, "data": []},
-    )
-    monkeypatch.setattr(cli_module, "save_to_json", lambda data, output_path: saved.append(output_path))
-
-    with runner.isolated_filesystem(temp_dir=tmp_path):
-        result = runner.invoke(
-            cli_module.cli,
-            [
-                "further-issues",
-                "--from-date",
-                "18-03-2026",
-                "--to-date",
-                "17-03-2026",
+    full_output = {
+        "metadata": {
+            "api": [
+                "acqMode",
+                "acqfromDt",
+                "acqtoDt",
+                "afterAcqSharesPer",
+                "befAcqSharesPer",
+                "company",
+                "secAcq",
+                "secVal",
             ],
+            "xbrl": [],
+            "industry": ["Macro", "Sector", "Industry", "Basic Industry"],
+            "CMP": ["CMP"],
+        },
+        "data": [
+            {
+                "symbol": "ABC",
+                "api": [
+                    "Market Purchase",
+                    "18-Mar-2026",
+                    "18-Mar-2026",
+                    "1.30",
+                    "1.00",
+                    "ABC Limited",
+                    "10",
+                    "1000",
+                ],
+                "xbrl": [],
+                "industry": ["Industrials", "Capital Goods", "Electrical Equipment", "Other Electrical Equipment"],
+                "CMP": 95,
+            }
+        ],
+    }
+
+    with runner.isolated_filesystem(temp_dir=tmp_path):
+        input_path = Path("insider_trading_data.json")
+        input_path.write_text(json.dumps(full_output), encoding="utf-8")
+        result = runner.invoke(
+            cli_module.cli,
+            ["insider-trading", "shorten"],
         )
+        shortened = json.loads(Path("insider_trading_short.json").read_text(encoding="utf-8"))
 
     assert result.exit_code == 0
-    output = json.loads(result.output)
-    assert output["error"] == "Execution failed: from-date 18-03-2026 cannot be after to-date 17-03-2026"
-    assert saved == []
+    assert json.loads(result.output) == {"files": ["insider_trading_short.json"]}
+    assert shortened["metadata"] == [
+        "symbol",
+        "company",
+        "acqMode",
+        "tradeDate",
+        "transactionValue",
+        "pricePerShare",
+        "CMP",
+        "holdingDeltaPct",
+        "Macro",
+        "Sector",
+        "Industry",
+        "Basic Industry",
+    ]
+    assert shortened["data"] == [
+        [
+            "ABC",
+            "ABC Limited",
+            "Market Purchase",
+            "18-Mar-2026",
+            1000,
+            100,
+            95,
+            0.3,
+            "Industrials",
+            "Capital Goods",
+            "Electrical Equipment",
+            "Other Electrical Equipment",
+        ]
+    ]

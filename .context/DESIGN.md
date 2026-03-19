@@ -12,8 +12,9 @@
 - Implemented: CMP field priority of `close`, then `lastPrice`, then `previousClose`
 - Implemented: Tenacity-based retry mechanism for resilient API requests
 - Implemented: CLI execution with structured JSON output; internal stdout/stderr redirected to log file
-- Implemented: Coherent top-level CLI workflows (`further-issues`, `insider-trading`)
+- Implemented: Grouped CLI workflows (`further-issues fetch`, `insider-trading fetch`, `insider-trading shorten`)
 - Implemented: Canonical machine-facing `--category` and `--mode` CLI tokens with internal mapping to NSE values
+- Implemented: Declarative insider short-output schema with compact signal-focused metadata and four-level industry fields
 - Not implemented: Rights Issues workflow
 - Known limitation: Insider trading XBRL parsing can fail until NSE fixes the published taxonomy/schema resolution; the workflow now defaults to skipping insider XBRL unless explicitly enabled
 

@@ -1,14 +1,18 @@
 import sys
 import json
 import logging
+from pathlib import Path
 import click
 from datetime import datetime
-from typing import Any, Callable
+from typing import Any, Callable, Optional
 
 from nse_corporate_data.fetcher import NSEFetcher
 from nse_corporate_data.insider import (
+    DEFAULT_INSIDER_FULL_OUTPUT,
     DEFAULT_INSIDER_MODES,
+    DEFAULT_INSIDER_SHORT_OUTPUT,
     INSIDER_MODES,
+    build_insider_short_output,
     filter_insider_filings_by_mode,
 )
 from nse_corporate_data.parser import parse_filings_data, save_to_json
@@ -61,17 +65,22 @@ def validate_date_range(from_date: str, to_date: str) -> None:
         raise ValueError(f"from-date {from_date} cannot be after to-date {to_date}")
 
 
-def execute_silently(work: Callable[[NSEFetcher], dict[str, Any]]) -> None:
+def execute_silently(
+    work: Callable[[Optional[NSEFetcher]], dict[str, Any]],
+    *,
+    with_fetcher: bool = True,
+) -> None:
     original_stdout = sys.stdout
     original_stderr = sys.stderr
     sys.stdout = LogWriter(logging.INFO)
     sys.stderr = LogWriter(logging.ERROR)
 
     result: dict[str, Any] = {}
-    fetcher = None
+    fetcher: Optional[NSEFetcher] = None
 
     try:
-        fetcher = NSEFetcher()
+        if with_fetcher:
+            fetcher = NSEFetcher()
         result = work(fetcher)
     except Exception as e:
         error_msg = f"Execution failed: {e}"
@@ -95,7 +104,13 @@ def cli():
     pass
 
 
-@cli.command()
+@cli.group("further-issues")
+def further_issues():
+    """Further-issue filings workflows."""
+    pass
+
+
+@further_issues.command("fetch")
 @click.option(
     "--from-date",
     required=True,
@@ -118,13 +133,14 @@ def cli():
     type=click.Choice(FURTHER_ISSUE_CATEGORIES, case_sensitive=False),
     help="Issue categories to fetch. Repeat the option to include multiple categories.",
 )
-def further_issues(from_date, to_date, categories):
+def fetch_further_issues(from_date, to_date, categories):
     """
     Fetch corporate filings for selected further-issue categories within a date range and parse the XBRL contents.
 
     Returns a JSON object with the status and output details.
     """
-    def work(fetcher: NSEFetcher) -> dict[str, Any]:
+    def work(fetcher: Optional[NSEFetcher]) -> dict[str, Any]:
+        assert fetcher is not None
         validate_date_range(from_date, to_date)
         logger.info(
             f"Starting further-issues command for {categories} from {from_date} to {to_date}"
@@ -155,7 +171,13 @@ def further_issues(from_date, to_date, categories):
     execute_silently(work)
 
 
-@cli.command("insider-trading")
+@cli.group("insider-trading")
+def insider_trading():
+    """Insider-trading workflows."""
+    pass
+
+
+@insider_trading.command("fetch")
 @click.option(
     "--from-date",
     required=True,
@@ -181,11 +203,12 @@ def further_issues(from_date, to_date, categories):
         "Repeat the option to include multiple modes."
     ),
 )
-def insider_trading(from_date, to_date, modes):
+def fetch_insider_trading(from_date, to_date, modes):
     """Fetch insider trading disclosures and normalize the result into JSON."""
     settings = get_settings()
 
-    def work(fetcher: NSEFetcher) -> dict[str, Any]:
+    def work(fetcher: Optional[NSEFetcher]) -> dict[str, Any]:
+        assert fetcher is not None
         validate_date_range(from_date, to_date)
         logger.info(
             f"Starting insider-trading command from {from_date} to {to_date}"
@@ -203,12 +226,47 @@ def insider_trading(from_date, to_date, modes):
             enable_xbrl_processing=settings.enable_insider_trading_xbrl,
         )
 
-        output_filename = "insider_trading_data.json"
+        output_filename = DEFAULT_INSIDER_FULL_OUTPUT
         save_to_json(parsed_records, output_filename)
         logger.info(f"Successfully saved insider trading data to {output_filename}")
         return {"files": [output_filename]}
 
     execute_silently(work)
+
+
+@insider_trading.command("shorten")
+@click.option(
+    "--input",
+    "input_path",
+    default=DEFAULT_INSIDER_FULL_OUTPUT,
+    show_default=True,
+    type=click.Path(dir_okay=False, path_type=Path),
+    help="Path to the full insider-trading JSON artifact.",
+)
+@click.option(
+    "--output",
+    "output_path",
+    default=DEFAULT_INSIDER_SHORT_OUTPUT,
+    show_default=True,
+    type=click.Path(dir_okay=False, path_type=Path),
+    help="Path for the shortened insider-trading JSON artifact.",
+)
+def shorten_insider_trading(input_path: Path, output_path: Path):
+    """Read a full insider-trading artifact and emit a shortened signal-focused JSON."""
+
+    def work(fetcher: Optional[NSEFetcher]) -> dict[str, Any]:
+        del fetcher
+        logger.info(f"Shortening insider-trading data from {input_path} to {output_path}")
+        with input_path.open("r", encoding="utf-8") as handle:
+            full_output = json.load(handle)
+        shortened_output = build_insider_short_output(full_output)
+        save_to_json(shortened_output, str(output_path))
+        logger.info(
+            f"Successfully saved shortened insider trading data to {output_path}"
+        )
+        return {"files": [str(output_path)]}
+
+    execute_silently(work, with_fetcher=False)
 
 
 if __name__ == "__main__":

@@ -4,13 +4,14 @@ CLI tool for collecting NSE corporate data, downloading linked XBRL documents, a
 
 ## What it does
 
-The project currently fetches and parses:
+The project currently supports:
 
 - Further issue filings for preferential allotments (`PREF`)
 - Further issue filings for qualified institutional placements (`QIP`)
-- Insider trading disclosures (`insider-trading`)
+- Insider trading disclosures (`insider-trading fetch`)
+- Insider trading short-form signal output derived from the full JSON (`insider-trading shorten`)
 
-For each workflow, the CLI:
+For fetch workflows, the CLI:
 
 1. Calls the relevant NSE API for a date range.
 2. Downloads the linked XBRL document when one is present.
@@ -18,6 +19,8 @@ For each workflow, the CLI:
 4. Fetches four-level industry mapping (Macro, Sector, Industry, Basic Industry) from `eggmasonvalue/stock-industry-map-in`.
 5. Fetches Current Market Price (CMP) for stock symbols only when it materially matters, currently insider `acqMode` values `Market Purchase` and `Market Sale`.
 6. Writes normalized JSON output files for downstream processing.
+
+For insider trading, the CLI also provides a pure local shortening step that reads the full insider artifact and emits a compact signal-focused JSON with only the most important fields for top-down analysis.
 
 For insider trading specifically, XBRL processing is configurable and disabled by default because the API payload is already rich enough for the current use case.
 
@@ -41,13 +44,13 @@ uv sync
 ### Further issues
 
 ```bash
-uv run nse-corporate-data further-issues --from-date DD-MM-YYYY [--to-date DD-MM-YYYY] [--category pref|qip...]
+uv run nse-corporate-data further-issues fetch --from-date DD-MM-YYYY [--to-date DD-MM-YYYY] [--category pref|qip...]
 ```
 
 Example:
 
 ```bash
-uv run nse-corporate-data further-issues --from-date 01-03-2026
+uv run nse-corporate-data further-issues fetch --from-date 01-03-2026
 ```
 
 Defaults:
@@ -55,16 +58,16 @@ Defaults:
 - `--to-date`: current local date when the command runs
 - `--category`: both `pref` and `qip`
 
-### Insider trading
+### Insider trading fetch
 
 ```bash
-uv run nse-corporate-data insider-trading --from-date DD-MM-YYYY [--to-date DD-MM-YYYY] [--mode TOKEN...]
+uv run nse-corporate-data insider-trading fetch --from-date DD-MM-YYYY [--to-date DD-MM-YYYY] [--mode TOKEN...]
 ```
 
 Example:
 
 ```bash
-uv run nse-corporate-data insider-trading --from-date 18-09-2025
+uv run nse-corporate-data insider-trading fetch --from-date 18-09-2025
 ```
 
 Supported insider mode tokens:
@@ -92,6 +95,23 @@ Defaults:
 - `--mode`: `market`
 - Repeat `--mode` to include multiple tokens explicitly
 
+### Insider trading shorten
+
+```bash
+uv run nse-corporate-data insider-trading shorten [--input insider_trading_data.json] [--output insider_trading_short.json]
+```
+
+Example:
+
+```bash
+uv run nse-corporate-data insider-trading shorten
+```
+
+Defaults:
+
+- `--input`: `insider_trading_data.json`
+- `--output`: `insider_trading_short.json`
+
 ### Configuration
 
 - `NSE_CORPORATE_DATA_ENABLE_INSIDER_TRADING_XBRL=false` by default
@@ -112,6 +132,7 @@ Data files:
 - `pref_data.json`
 - `qip_data.json`
 - `insider_trading_data.json`
+- `insider_trading_short.json`
 
 Output shape:
 
@@ -145,6 +166,32 @@ Output shape:
 - `data[].industry`: classification values aligned to `metadata.industry`
 - `data[].CMP`: current market price for the symbol, using quote-field priority `close`, then `lastPrice`, then `previousClose`, while treating zero-valued quote fields as missing
 
+Short insider-trading output shape:
+
+```json
+{
+  "metadata": [
+    "symbol",
+    "company",
+    "acqMode",
+    "tradeDate",
+    "transactionValue",
+    "pricePerShare",
+    "CMP",
+    "holdingDeltaPct",
+    "Macro",
+    "Sector",
+    "Industry",
+    "Basic Industry"
+  ],
+  "data": [
+    ["SYMBOL", "Company", "Market Purchase", "18-Mar-2026", 1000, 100, 95, 0.3, "...", "...", "...", "..."]
+  ]
+}
+```
+
+The insider short artifact is driven by a declarative field list in `src/nse_corporate_data/insider.py`, so adding or removing metadata only requires editing that one registry.
+
 ## Insider trading XBRL note
 
 The insider trading workflow can download and parse linked XML through `nse-xbrl-parser`, but this is disabled by default. If enabled, current NSE insider-trading taxonomy resolution may still fail upstream; when that happens, the command continues and writes API, industry, and CMP data with empty XBRL fields.
@@ -153,6 +200,7 @@ The insider trading workflow can download and parse linked XML through `nse-xbrl
 
 - `src/nse_corporate_data/cli.py`: Click CLI entrypoint and input validation
 - `src/nse_corporate_data/fetcher.py`: NSE session management, filing fetches, XBRL downloads
+- `src/nse_corporate_data/insider.py`: insider-mode mapping and shortened insider-output schema
 - `src/nse_corporate_data/parser.py`: XBRL parsing and JSON serialization
 
 ## Testing
