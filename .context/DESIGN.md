@@ -4,6 +4,7 @@
 - Implemented: Track Preferential Allotments
 - Implemented: Track QIPs
 - Implemented: Track insider trading disclosures
+- Implemented: Improved insider trading percentage change calculation using raw shares differences for exact precision
 - Implemented: NSE Data Integration with XBRL download and parsing
 - Implemented: Four-level industry mapping (Macro, Sector, Industry, Basic Industry) integration
 - Implemented: Compact market-data snapshot fetching for stock symbols via `getDetailedScripData`

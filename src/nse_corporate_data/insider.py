@@ -26,7 +26,7 @@ INSIDER_MODE_TO_ACQ_MODE = {
     "preferential-offer": ("Preferential Offer",),
     "public-right": ("Public Right",),
     "pledge-release": ("Pledge Release",),
-    "pledge-revoke": ("Revokation of Pledge",),
+    "pledge-revoke": ("Revocation of Pledge",),
     "scheme": ("Scheme of Amalgamation/Merger/Demerger/Arrangement",),
 }
 
@@ -104,6 +104,13 @@ def _price_per_share(context: Mapping[str, Any]) -> int | float | None:
 
 
 def _holding_delta_pct(context: Mapping[str, Any]) -> int | float | None:
+    before_shares = _to_decimal(context.get("holdingBeforeShares"))
+    after_shares = _to_decimal(context.get("holdingAfterShares"))
+    shares_out = _to_decimal(context.get("sharesOutstanding"))
+
+    if before_shares is not None and after_shares is not None and shares_out:
+        return _coerce_number((after_shares - before_shares) / shares_out * Decimal("100"))
+
     before = _to_decimal(context.get("holdingBeforePct"))
     after = _to_decimal(context.get("holdingAfterPct"))
     if before is None or after is None:

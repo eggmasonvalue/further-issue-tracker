@@ -1,5 +1,6 @@
 # Changelog
 ## [Unreleased]
+- Improved the insider trading percentage change calculation to use precise raw shares differences, resolving previous precision loss caused by NSE's rounded percentages.
 - Expanded insider-trading `--mode` coverage to the broader NSE acquisition-mode enum, adding support for `Allotment`, `Beneficiary from Trusts`, `Block Deal`, `Buy Back`, `ESOS`, `Inheritance`, `Pledge Release`, and correctly spelled `Revocation of Pledge`.
 - Documented follow-up insider-trading input risks in `.context/DESIGN.md`: `transaction type` may need a dedicated user-facing filter, and `type of instrument` may need to be exposed as a filter dimension.
 - Removed redundant top-level `symbol` keys from full and shortened artifact rows; `symbol` now appears only in the metadata-aligned `api` or `record` arrays, while the shortener still accepts legacy full artifacts that carried `data[].symbol`.

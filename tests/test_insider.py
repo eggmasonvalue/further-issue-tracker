@@ -36,3 +36,27 @@ def test_filter_insider_filings_by_mode_supports_new_acquisition_modes():
     )
 
     assert [row["symbol"] for row in filtered] == ["AAA", "BBB", "CCC", "DDD", "EEE"]
+
+
+def test_holding_delta_pct():
+    from nse_corporate_data.insider import _holding_delta_pct
+    
+    # Test new shares-based calculation
+    context_shares = {
+        "holdingBeforeShares": "1000",
+        "holdingAfterShares": "1500",
+        "sharesOutstanding": "10000",
+        "holdingBeforePct": "10.00",
+        "holdingAfterPct": "15.00",
+    }
+    assert _holding_delta_pct(context_shares) == 5.0
+    
+    # Test fallback to pct-based calculation
+    context_pct_only = {
+        "holdingBeforePct": "10.00",
+        "holdingAfterPct": "15.55",
+    }
+    assert _holding_delta_pct(context_pct_only) == 5.55
+    
+    # Test missing data
+    assert _holding_delta_pct({}) is None
