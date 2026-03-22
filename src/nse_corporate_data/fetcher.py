@@ -3,6 +3,7 @@ import json
 import tempfile
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Sequence
+from urllib.parse import urlparse
 from nse import NSE
 
 from .retries import retry_exchange, should_retry_exception
@@ -107,7 +108,8 @@ class NSEFetcher:
         if not xbrl_url:
             return None
 
-        filename = xbrl_url.split("/")[-1]
+        parsed_url = urlparse(xbrl_url)
+        filename = Path(parsed_url.path).name
         save_path = self.download_folder / filename
 
         try:
