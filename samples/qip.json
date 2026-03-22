@@ -86,89 +86,12 @@
         "Residential, Commercial Projects"
       ],
       "marketData": [
-        306.3,
+        311.7,
         124997388,
-        9271666755.2,
-        "44.81",
-        321,
+        9412100795.63,
+        "45.63",
+        322.4,
         137
-      ]
-    },
-    {
-      "record": [
-        "E2E",
-        "E2E NETWORKS LIMITED",
-        "26-FEB-2026",
-        "25-FEB-2026",
-        "1070000000",
-        "2500",
-        "2499.07",
-        "130.6",
-        "428000",
-        "10",
-        null,
-        [
-          "JETHA GLOBAL MASTER FUND",
-          "MERCURY SERIES UNION MID AND SMALL CAP FUND",
-          "BANDHAN LARGE & MID CAP FUND",
-          "BANDHAN AGGRESSIVE HYBRID FUND",
-          "BANDHAN SMALL CAP FUND",
-          "BANDHAN INNOVATION FUND",
-          "ALCHEMY LONG TERM VENTURES FUND, SERIES 2",
-          "NIVESHAAY HEDGEHOGS FUND",
-          "NIVESHAAY SAMBHAV FUND",
-          "UNION FLEXI CAP FUND"
-        ],
-        [
-          "Foreign Portfolio Investor",
-          "Foreign Portfolio Investor",
-          "Mutual fund",
-          "Mutual fund",
-          "Mutual fund",
-          "Mutual fund",
-          "Alternative Investment Fund",
-          "Alternative Investment Fund",
-          "Alternative Investment Fund",
-          "Mutual fund"
-        ],
-        [
-          "80000",
-          "20000",
-          "58000",
-          "6000",
-          "80000",
-          "24000",
-          "40000",
-          "40000",
-          "40000",
-          "40000"
-        ],
-        [
-          "0.1869",
-          "0.0467",
-          "0.1355",
-          "0.014",
-          "0.1869",
-          "0.0561",
-          "0.0935",
-          "0.0935",
-          "0.0935",
-          "0.0935"
-        ]
-      ],
-      "industry": [
-        "Information Technology",
-        "Information Technology",
-        "IT - Services",
-        "IT Enabled Services"
-      ],
-      "marketData": [
-        2285.1,
-        20554989,
-        18901862231.67,
-        null,
-        3894.7,
-        1732.1
       ]
     }
   ]

@@ -1,0 +1,1499 @@
+{
+  "metadata": {
+    "record": [
+      "symbol",
+      "company",
+      "allotmentDate",
+      "amountRaised",
+      "sharesAllotted",
+      "offerPrice",
+      "lockInShares",
+      "lockInPeriod",
+      "revisedFlag"
+    ],
+    "industry": [
+      "Macro",
+      "Sector",
+      "Industry",
+      "Basic Industry"
+    ],
+    "marketData": [
+      "currentPrice",
+      "sharesOutstanding",
+      "freeFloatMarketCap",
+      "priceToEarnings",
+      "fiftyTwoWeekHigh",
+      "fiftyTwoWeekLow"
+    ]
+  },
+  "data": [
+    {
+      "record": [
+        "NEUEON",
+        "Neueon Corporation Limited",
+        "07-NOV-2025",
+        "508901000",
+        "508900968",
+        "1",
+        "508900968",
+        "Equity shares for 12 months",
+        null
+      ],
+      "industry": [
+        "Industrials",
+        "Capital Goods",
+        "Electrical Equipment",
+        "Heavy Electrical Equipment"
+      ],
+      "marketData": [
+        14.58,
+        56544552,
+        703650411.21,
+        null,
+        15.16,
+        5.76
+      ]
+    },
+    {
+      "record": [
+        "WOMANCART",
+        "WOMANCART LIMITED",
+        "03-JAN-2025",
+        "7960920000000",
+        "244200",
+        "326",
+        "244200",
+        "Equity shares for 6 months",
+        null
+      ],
+      "industry": [
+        "Consumer Discretionary",
+        "Consumer Services",
+        "Retailing",
+        "E-Retail/ E-Commerce"
+      ],
+      "marketData": [
+        165.3,
+        7045600,
+        392150077.4,
+        "12.11",
+        358,
+        141.5
+      ]
+    },
+    {
+      "record": [
+        "INDOTHAI",
+        "INDO THAI SECURITIES LIMITED",
+        "07-JAN-2026",
+        "15040000",
+        "400000",
+        "37.6",
+        "400000",
+        "Equity shares for 6 months",
+        null
+      ],
+      "industry": [
+        "Financial Services",
+        "Financial Services",
+        "Capital Markets",
+        "Stockbroking & Allied"
+      ],
+      "marketData": [
+        252.15,
+        128618190,
+        7364482034.03,
+        "88.05",
+        466.35,
+        143.65
+      ]
+    },
+    {
+      "record": [
+        "SABAR",
+        "SABAR FLEX INDIA LIMITED",
+        "20-DEC-2023",
+        "40280000",
+        "1869157",
+        "21.55",
+        "1869157",
+        "Equity shares for 6 months",
+        null
+      ],
+      "industry": [
+        "Industrials",
+        "Capital Goods",
+        "Industrial Products",
+        "Packaging"
+      ],
+      "marketData": [
+        8.65,
+        17250207,
+        0,
+        "22.26",
+        23.95,
+        3.8
+      ]
+    },
+    {
+      "record": [
+        "VIRINCHI",
+        "VIRINCHI LIMITED",
+        "05-FEB-2026",
+        "57960000",
+        "2070000",
+        "28",
+        "2070000",
+        "Equity shares for 18 months",
+        null
+      ],
+      "industry": [
+        "Information Technology",
+        "Information Technology",
+        "IT - Software",
+        "Software Products"
+      ],
+      "marketData": [
+        16.65,
+        102646896,
+        1076407052.64,
+        null,
+        32.69,
+        16.16
+      ]
+    },
+    {
+      "record": [
+        "VIRINCHI",
+        "VIRINCHI LIMITED",
+        "31-JAN-2026",
+        "26250000",
+        "1050000",
+        "25",
+        "1050000",
+        "Equity shares for 6 months",
+        null
+      ],
+      "industry": [
+        "Information Technology",
+        "Information Technology",
+        "IT - Software",
+        "Software Products"
+      ],
+      "marketData": [
+        16.65,
+        102646896,
+        1076407052.64,
+        null,
+        32.69,
+        16.16
+      ]
+    },
+    {
+      "record": [
+        "DBREALTY",
+        "Valor Estate Limited",
+        "02-FEB-2026",
+        "0",
+        "3202330",
+        "201.65",
+        "3202330",
+        "Equity shares for 6 months",
+        null
+      ],
+      "industry": [
+        "Consumer Discretionary",
+        "Consumer Services",
+        "Leisure Services",
+        "Hotels & Resorts"
+      ],
+      "marketData": [
+        98.07,
+        542406761,
+        24101342915.74,
+        "56.21",
+        252.67,
+        94.92
+      ]
+    },
+    {
+      "record": [
+        "INDOTHAI",
+        "INDO THAI SECURITIES LIMITED",
+        "10-JAN-2026",
+        "10000000",
+        "200000",
+        "50",
+        "200000",
+        "Equity shares for 6 months",
+        null
+      ],
+      "industry": [
+        "Financial Services",
+        "Financial Services",
+        "Capital Markets",
+        "Stockbroking & Allied"
+      ],
+      "marketData": [
+        252.15,
+        128618190,
+        7364482034.03,
+        "88.05",
+        466.35,
+        143.65
+      ]
+    },
+    {
+      "record": [
+        "ASIANHOTNR",
+        "ASIAN HOTELS (NORTH) LIMITED",
+        "03-FEB-2026",
+        "7649400000",
+        "23180000",
+        "330",
+        "23180000",
+        "Equity shares for 12 months",
+        null
+      ],
+      "industry": [
+        "Consumer Discretionary",
+        "Consumer Services",
+        "Leisure Services",
+        "Hotels & Resorts"
+      ],
+      "marketData": [
+        287.6,
+        42633229,
+        11571872544.96,
+        "30.61",
+        419.5,
+        247.5
+      ]
+    },
+    {
+      "record": [
+        "SABAR",
+        "Sabar Flex India Limited",
+        "18-FEB-2025",
+        "2400000",
+        "100000",
+        "24",
+        "100000",
+        "Equity shares for 6 months",
+        null
+      ],
+      "industry": [
+        "Industrials",
+        "Capital Goods",
+        "Industrial Products",
+        "Packaging"
+      ],
+      "marketData": [
+        8.65,
+        17250207,
+        0,
+        "22.26",
+        23.95,
+        3.8
+      ]
+    },
+    {
+      "record": [
+        "VIRINCHI",
+        "VIRINCHI LIMITED",
+        "03-FEB-2026",
+        "47999000",
+        "1714285",
+        "28",
+        "1714285",
+        "Equity shares for 18 months",
+        null
+      ],
+      "industry": [
+        "Information Technology",
+        "Information Technology",
+        "IT - Software",
+        "Software Products"
+      ],
+      "marketData": [
+        16.65,
+        102646896,
+        1076407052.64,
+        null,
+        32.69,
+        16.16
+      ]
+    },
+    {
+      "record": [
+        "WOMANCART",
+        "WOMANCART LIMITED",
+        "29-DEC-2025",
+        "11814400000000",
+        "923000",
+        "128",
+        [
+          "526200",
+          "396800"
+        ],
+        [
+          "Equity shares for 18 months",
+          "Equity shares for 6 months"
+        ],
+        null
+      ],
+      "industry": [
+        "Consumer Discretionary",
+        "Consumer Services",
+        "Retailing",
+        "E-Retail/ E-Commerce"
+      ],
+      "marketData": [
+        165.3,
+        7045600,
+        392150077.4,
+        "12.11",
+        358,
+        141.5
+      ]
+    },
+    {
+      "record": [
+        "LEXUS",
+        "Lexus Granito (India) Limited",
+        "27-FEB-2025",
+        "13560000",
+        "300000",
+        "45.2",
+        "300000",
+        "Equity shares for 6 months",
+        null
+      ],
+      "industry": [
+        "Consumer Discretionary",
+        "Consumer Durables",
+        "Consumer Durables",
+        "Ceramics"
+      ],
+      "marketData": [
+        28.82,
+        20490724,
+        260489550.92,
+        "27.98",
+        39.25,
+        22.32
+      ]
+    },
+    {
+      "record": [
+        "AURIONPRO",
+        "AURIONPRO SOLUTIONS LIMITED",
+        "19-DEC-2025",
+        "0",
+        "48134",
+        "0",
+        "48134",
+        "Equity shares for 6 months",
+        null
+      ],
+      "industry": [
+        "Information Technology",
+        "Information Technology",
+        "IT - Software",
+        "Computers - Software & Consulting"
+      ],
+      "marketData": [
+        815.5,
+        55213530,
+        26488012995.35,
+        "22.26",
+        1665.9,
+        805.8
+      ]
+    },
+    {
+      "record": [
+        "PCJEWELLER",
+        "PC Jeweller Limited",
+        "24-FEB-2026",
+        "602672000",
+        "107237000",
+        "5.62",
+        "107237000",
+        "Equity shares for 6 months",
+        null
+      ],
+      "industry": [
+        "Consumer Discretionary",
+        "Consumer Durables",
+        "Consumer Durables",
+        "Gems, Jewellery And Watches"
+      ],
+      "marketData": [
+        8.3,
+        7909513455,
+        29882932388.86,
+        "10.11",
+        19.65,
+        8.18
+      ]
+    },
+    {
+      "record": [
+        "BIRDYS",
+        "Grill Splendour Services Limited",
+        "20-FEB-2025",
+        "20524000",
+        "239745",
+        "85.61",
+        "239745",
+        "Equity shares for 6 months",
+        null
+      ],
+      "industry": [
+        "Consumer Discretionary",
+        "Consumer Services",
+        "Leisure Services",
+        "Restaurants"
+      ],
+      "marketData": [
+        109.1,
+        6308200,
+        411183240.34,
+        null,
+        154,
+        90.55
+      ]
+    },
+    {
+      "record": [
+        "TIRUPATIFL",
+        "Tirupati Forge Limited",
+        "06-JAN-2026",
+        "30000000",
+        "1250000",
+        "32",
+        "1250000",
+        "Equity shares for 6 months",
+        null
+      ],
+      "industry": [
+        "Industrials",
+        "Capital Goods",
+        "Industrial Products",
+        "Castings & Forgings"
+      ],
+      "marketData": [
+        46.88,
+        124280000,
+        2288813854.91,
+        "101.15",
+        52,
+        28.21
+      ]
+    },
+    {
+      "record": [
+        "MONEYBOXX",
+        "Moneyboxx Finance Limited",
+        "03-MAR-2026",
+        "334400000",
+        "4400000",
+        "76",
+        [
+          "3500000",
+          "900000"
+        ],
+        [
+          "Equity shares for 18 months",
+          "Equity shares for 6 months"
+        ],
+        null
+      ],
+      "industry": [
+        "Financial Services",
+        "Financial Services",
+        "Finance",
+        "Non Banking Financial Company (NBFC)"
+      ],
+      "marketData": [
+        62.25,
+        65409200,
+        2247076683.27,
+        null,
+        91.5,
+        44.02
+      ]
+    },
+    {
+      "record": [
+        "WOMANCART",
+        "WOMANCART LIMITED",
+        "23-DEC-2025",
+        "842400000000",
+        "36000",
+        "312",
+        "36000",
+        "Equity shares for 6 months",
+        null
+      ],
+      "industry": [
+        "Consumer Discretionary",
+        "Consumer Services",
+        "Retailing",
+        "E-Retail/ E-Commerce"
+      ],
+      "marketData": [
+        165.3,
+        7045600,
+        392150077.4,
+        "12.11",
+        358,
+        141.5
+      ]
+    },
+    {
+      "record": [
+        "PCJEWELLER",
+        "PC Jeweller Limited",
+        "31-JAN-2026",
+        "2880074000",
+        "512468600",
+        "5.62",
+        "512468600",
+        "Equity shares for 18 months",
+        null
+      ],
+      "industry": [
+        "Consumer Discretionary",
+        "Consumer Durables",
+        "Consumer Durables",
+        "Gems, Jewellery And Watches"
+      ],
+      "marketData": [
+        8.3,
+        7909513455,
+        29882932388.86,
+        "10.11",
+        19.65,
+        8.18
+      ]
+    },
+    {
+      "record": [
+        "SEPC",
+        "SEPC Limited",
+        "14-NOV-2025",
+        "4190000572000",
+        "3164653",
+        "13.24",
+        "0",
+        "Equity shares for 6 months",
+        null
+      ],
+      "industry": [
+        "Industrials",
+        "Construction",
+        "Construction",
+        "Civil Construction"
+      ],
+      "marketData": [
+        5.16,
+        1893220335,
+        6470815348.34,
+        "18.73",
+        15.93,
+        4.78
+      ]
+    },
+    {
+      "record": [
+        "APOLLO",
+        "APOLLO MICRO SYSTEMS LIMITED",
+        "22-DEC-2025",
+        "1333000",
+        "11696",
+        "114",
+        "11696",
+        "Equity shares for 6 months",
+        null
+      ],
+      "industry": [
+        "Industrials",
+        "Capital Goods",
+        "Aerospace & Defense",
+        "Aerospace & Defense"
+      ],
+      "marketData": [
+        198.63,
+        357292440,
+        26341911430.76,
+        "82.98",
+        354.7,
+        105.3
+      ]
+    },
+    {
+      "record": [
+        "APOLLO",
+        "APOLLO MICRO SYSTEMS LIMITED",
+        "02-DEC-2025",
+        "329350000",
+        "2889044",
+        "114",
+        "2889044",
+        "Equity shares for 6 months",
+        null
+      ],
+      "industry": [
+        "Industrials",
+        "Capital Goods",
+        "Aerospace & Defense",
+        "Aerospace & Defense"
+      ],
+      "marketData": [
+        198.63,
+        357292440,
+        26341911430.76,
+        "82.98",
+        354.7,
+        105.3
+      ]
+    },
+    {
+      "record": [
+        "PCJEWELLER",
+        "PC Jeweller Limited",
+        "22-JAN-2026",
+        "385251000",
+        "68550000",
+        "5.62",
+        "68550000",
+        "Equity shares for 6 months",
+        null
+      ],
+      "industry": [
+        "Consumer Discretionary",
+        "Consumer Durables",
+        "Consumer Durables",
+        "Gems, Jewellery And Watches"
+      ],
+      "marketData": [
+        8.3,
+        7909513455,
+        29882932388.86,
+        "10.11",
+        19.65,
+        8.18
+      ]
+    },
+    {
+      "record": [
+        "EMKAY",
+        "Emkay Global Financial Services Limited",
+        "19-FEB-2025",
+        "66653000",
+        "278300",
+        "239.5",
+        "278300",
+        "Equity shares for 18 months",
+        null
+      ],
+      "industry": [
+        "Financial Services",
+        "Financial Services",
+        "Capital Markets",
+        "Stockbroking & Allied"
+      ],
+      "marketData": [
+        222.67,
+        26189063,
+        1633804186.4,
+        "32.03",
+        409.9,
+        172.61
+      ]
+    },
+    {
+      "record": [
+        "RELIGARE",
+        "RELIGARE ENTERPRISES LIMITED",
+        "05-DEC-2025",
+        "35000007000000",
+        "1985816",
+        "235",
+        "1985816",
+        "Equity shares for 18 months",
+        null
+      ],
+      "industry": [
+        "Financial Services",
+        "Financial Services",
+        "Finance",
+        "Investment Company"
+      ],
+      "marketData": [
+        215.94,
+        332740479,
+        49959953189.89,
+        "57.43",
+        295,
+        196.51
+      ]
+    },
+    {
+      "record": [
+        "UGROCAP",
+        "Ugro Capital Limited",
+        "28-NOV-2025",
+        "416500000",
+        "2251325",
+        "185",
+        "2251325",
+        "Equity shares for 6 months",
+        null
+      ],
+      "industry": [
+        "Financial Services",
+        "Financial Services",
+        "Finance",
+        "Non Banking Financial Company (NBFC)"
+      ],
+      "marketData": [
+        94.3,
+        145240763,
+        5285063621.14,
+        "8.15",
+        196.06,
+        83.12
+      ]
+    },
+    {
+      "record": [
+        "AEROFLEX",
+        "Aeroflex Industries Limited",
+        "03-FEB-2026",
+        "550000000",
+        "3010398",
+        "182.7",
+        "3010398",
+        "Equity shares for 6 months",
+        null
+      ],
+      "industry": [
+        "Industrials",
+        "Capital Goods",
+        "Industrial Products",
+        "Iron & Steel Products"
+      ],
+      "marketData": [
+        233.75,
+        132330768,
+        10255070790.93,
+        "62.14",
+        262.4,
+        148.01
+      ]
+    },
+    {
+      "record": [
+        "TIL",
+        "TIL LIMITED",
+        "28-JAN-2025",
+        "60000000000000",
+        "3750000",
+        "160",
+        "3750000",
+        "Equity shares for 18 months",
+        null
+      ],
+      "industry": [
+        "Industrials",
+        "Capital Goods",
+        "Agricultural, Commercial & Construction Vehicles",
+        "Construction Vehicles"
+      ],
+      "marketData": [
+        187.24,
+        70352056,
+        4145804892.06,
+        null,
+        409,
+        177.04
+      ]
+    },
+    {
+      "record": [
+        "ZOTA",
+        "ZOTA HEALTH CARE LIMITED",
+        "20-JAN-2025",
+        "91197000",
+        "179169",
+        "509",
+        "179169",
+        "Equity shares for 6 months",
+        null
+      ],
+      "industry": [
+        "Healthcare",
+        "Healthcare",
+        "Pharmaceuticals & Biotechnology",
+        "Pharmaceuticals"
+      ],
+      "marketData": [
+        1097.4,
+        34060626,
+        16350713591.25,
+        null,
+        1740,
+        752
+      ]
+    },
+    {
+      "record": [
+        "GRANULES",
+        "GRANULES INDIA LIMITED",
+        "23-FEB-2025",
+        "3000000000",
+        "5128205",
+        "585",
+        "5128205",
+        "Equity shares for 6 months",
+        null
+      ],
+      "industry": [
+        "Healthcare",
+        "Healthcare",
+        "Pharmaceuticals & Biotechnology",
+        "Pharmaceuticals"
+      ],
+      "marketData": [
+        590.95,
+        247796921,
+        87271770618.8,
+        "26.46",
+        627,
+        422
+      ]
+    },
+    {
+      "record": [
+        "LLOYDSME",
+        "LLOYDS METALS AND ENERGY LIMITED",
+        "03-FEB-2026",
+        "74000000",
+        "805500",
+        "740",
+        "805500",
+        "Equity shares for 6 months",
+        null
+      ],
+      "industry": [
+        "Commodities",
+        "Metals & Mining",
+        "Minerals & Mining",
+        "Industrial Minerals"
+      ],
+      "marketData": [
+        1245.8,
+        545164538,
+        166081382458.06,
+        "25.83",
+        1612,
+        1015
+      ]
+    },
+    {
+      "record": [
+        "ARHAM",
+        "ARHAM TECHNOLOGIES LIMITED",
+        "07-FEB-2026",
+        "535674000",
+        "4892000",
+        "109.5",
+        "4892000",
+        "Equity shares for 6 months",
+        null
+      ],
+      "industry": [
+        "Consumer Discretionary",
+        "Consumer Durables",
+        "Consumer Durables",
+        "Consumer Electronics"
+      ],
+      "marketData": [
+        124.5,
+        21812000,
+        749517521.97,
+        "25.28",
+        161,
+        70.8
+      ]
+    },
+    {
+      "record": [
+        "MOXSH",
+        "Moxsh Overseas Educon Limited",
+        "19-JAN-2025",
+        "30208000",
+        "377600",
+        "80",
+        [
+          "12800",
+          "364800"
+        ],
+        [
+          "Equity shares for 18 months",
+          "Equity shares for 6 months"
+        ],
+        null
+      ],
+      "industry": [
+        "Consumer Discretionary",
+        "Consumer Services",
+        "Other Consumer Services",
+        "Education"
+      ],
+      "marketData": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "record": [
+        "CANARYS",
+        "CANARYS AUTOMATIONS LIMITED",
+        "20-NOV-2025",
+        "63500000",
+        "1548780",
+        "41",
+        [
+          "512194",
+          "1036586"
+        ],
+        [
+          "Equity shares for 18 months",
+          "Equity shares for 6 months"
+        ],
+        null
+      ],
+      "industry": [
+        "Information Technology",
+        "Information Technology",
+        "IT - Software",
+        "Computers - Software & Consulting"
+      ],
+      "marketData": [
+        18.15,
+        58744893,
+        445245050.03,
+        "8.36",
+        36.9,
+        18.05
+      ]
+    },
+    {
+      "record": [
+        "SWARAJ",
+        "SWARAJ SUITING LIMITED",
+        "06-FEB-2025",
+        "795650000",
+        "3371400",
+        "236",
+        "3371400",
+        "Equity shares for 6 months",
+        null
+      ],
+      "industry": [
+        "Consumer Discretionary",
+        "Textiles",
+        "Textiles & Apparels",
+        "Other Textile Products"
+      ],
+      "marketData": [
+        290.85,
+        25389660,
+        1843273050.11,
+        "18.29",
+        318.95,
+        138.5
+      ]
+    },
+    {
+      "record": [
+        "SDBL",
+        "Som Distilleries & Breweries Limited",
+        "25-APR-2025",
+        "224000000",
+        "2000000",
+        "112",
+        "18090147",
+        "Equity shares for 18 months",
+        null
+      ],
+      "industry": [
+        "Fast Moving Consumer Goods",
+        "Fast Moving Consumer Goods",
+        "Beverages",
+        "Breweries & Distilleries"
+      ],
+      "marketData": [
+        74.66,
+        207901312,
+        9493656596.68,
+        "16.35",
+        173.03,
+        70.5
+      ]
+    },
+    {
+      "record": [
+        "VISHNUINFR",
+        "VISHNUSURYA PROJECTS AND INFRA LIMITED",
+        "31-JAN-2026",
+        "229198000",
+        "1315867",
+        "174.18",
+        "1315867",
+        "Equity shares for 6 months",
+        null
+      ],
+      "industry": [
+        "Industrials",
+        "Construction",
+        "Construction",
+        "Civil Construction"
+      ],
+      "marketData": [
+        143.6,
+        25925538,
+        1386552941.78,
+        "11.78",
+        218.9,
+        135
+      ]
+    },
+    {
+      "record": [
+        "TI",
+        "Tilaknagar Industries Limited",
+        "24-NOV-2025",
+        "355260000",
+        "930000",
+        "382",
+        "930000",
+        "Equity shares for 18 months",
+        null
+      ],
+      "industry": [
+        "Fast Moving Consumer Goods",
+        "Fast Moving Consumer Goods",
+        "Beverages",
+        "Breweries & Distilleries"
+      ],
+      "marketData": [
+        434.4,
+        246838750,
+        43536829619.64,
+        "94.77",
+        549.7,
+        199.53
+      ]
+    },
+    {
+      "record": [
+        "AAGCV9984R",
+        "Visaman Global Sales Limited",
+        "29-JAN-2025",
+        "39999000",
+        "666666",
+        "60",
+        "666666",
+        "Equity shares for 18 months",
+        null
+      ],
+      "industry": [],
+      "marketData": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "record": [
+        "CROWN",
+        "CROWN LIFTERS LIMITED",
+        "18-AUG-2025",
+        "21440000",
+        "80000",
+        "268",
+        "80000",
+        "Equity shares for 6 months",
+        null
+      ],
+      "industry": [
+        "Industrials",
+        "Capital Goods",
+        "Industrial Manufacturing",
+        "Industrial Products"
+      ],
+      "marketData": [
+        116.63,
+        11590000,
+        421529041.76,
+        "13.49",
+        221.8,
+        108.45
+      ]
+    },
+    {
+      "record": [
+        "UNIHEALTH",
+        "Unihealth Hospitals Limited",
+        "12-JAN-2025",
+        "30200000",
+        "200000",
+        "151",
+        "200000",
+        "Equity shares for 18 months",
+        null
+      ],
+      "industry": [
+        "Healthcare",
+        "Healthcare",
+        "Healthcare Services",
+        "Hospital"
+      ],
+      "marketData": [
+        321.4,
+        15499952,
+        0,
+        "32.89",
+        321.4,
+        120
+      ]
+    },
+    {
+      "record": [
+        "CROWN",
+        "CROWN LIFTERS LIMITED",
+        "04-JUL-2025",
+        "62800000",
+        "234156",
+        "268",
+        "234156",
+        "Equity shares for 6 months",
+        null
+      ],
+      "industry": [
+        "Industrials",
+        "Capital Goods",
+        "Industrial Manufacturing",
+        "Industrial Products"
+      ],
+      "marketData": [
+        116.63,
+        11590000,
+        421529041.76,
+        "13.49",
+        221.8,
+        108.45
+      ]
+    },
+    {
+      "record": [
+        "MAGSON",
+        "MAGSON RETAIL AND DISTRIBUTION LIMITED",
+        "06-FEB-2026",
+        "61227000",
+        "875460",
+        "93.25",
+        "875460",
+        "Equity shares for 6 months",
+        null
+      ],
+      "industry": [
+        "Consumer Discretionary",
+        "Consumer Services",
+        "Retailing",
+        "Diversified Retail"
+      ],
+      "marketData": [
+        140,
+        12325168,
+        491750045.87,
+        "598.72",
+        166.1,
+        92.6
+      ]
+    },
+    {
+      "record": [
+        "RNPL",
+        "Renol Polychem Limited",
+        "23-JAN-2025",
+        "462897000",
+        "3454462",
+        "134",
+        "3454462",
+        "Equity shares for 6 months",
+        null
+      ],
+      "industry": [
+        "Commodities",
+        "Chemicals",
+        "Chemicals & Petrochemicals",
+        "Specialty Chemicals"
+      ],
+      "marketData": [
+        139.75,
+        11398462,
+        453577109.07,
+        null,
+        158,
+        69
+      ]
+    },
+    {
+      "record": [
+        "LLOYDSME",
+        "Lloyds Metals and Energy Limited",
+        "31-DEC-2025",
+        "11299023000",
+        "15268950",
+        "740",
+        [
+          "15000000",
+          "268950"
+        ],
+        [
+          "Equity shares for 18 months",
+          "Equity shares for 6 months"
+        ],
+        null
+      ],
+      "industry": [
+        "Commodities",
+        "Metals & Mining",
+        "Minerals & Mining",
+        "Industrial Minerals"
+      ],
+      "marketData": [
+        1245.8,
+        545164538,
+        166081382458.06,
+        "25.83",
+        1612,
+        1015
+      ]
+    },
+    {
+      "record": [
+        "VIAZ",
+        "Viaz Tyres Limited",
+        "18-FEB-2026",
+        "60900000",
+        "870000",
+        "70",
+        "870000",
+        "Equity shares for 18 months",
+        null
+      ],
+      "industry": [
+        "Consumer Discretionary",
+        "Automobile and Auto Components",
+        "Auto Components",
+        "Tyres & Rubber Products"
+      ],
+      "marketData": [
+        61.6,
+        14307000,
+        216192687.85,
+        "21.73",
+        99.55,
+        49.3
+      ]
+    },
+    {
+      "record": [
+        "OSIAHYPER",
+        "OSIA HYPER RETAIL LIMITED",
+        "21-APR-2025",
+        "346780000",
+        "12385000",
+        "28",
+        [
+          "5885000",
+          "6500000"
+        ],
+        [
+          "Equity shares for 6 months",
+          "Equity shares for 18 months"
+        ],
+        null
+      ],
+      "industry": [
+        "Consumer Discretionary",
+        "Consumer Services",
+        "Retailing",
+        "Diversified Retail"
+      ],
+      "marketData": [
+        4.99,
+        176958900,
+        344397375.79,
+        "5.17",
+        33.08,
+        4.99
+      ]
+    },
+    {
+      "record": [
+        "INOXGREEN",
+        "Inox Green Energy Services Limited",
+        "23-JAN-2026",
+        "3884050000",
+        "26786550",
+        "145",
+        "26786550",
+        "Equity shares for 6 months",
+        null
+      ],
+      "industry": [
+        "Utilities",
+        "Power",
+        "Power",
+        "Power Generation"
+      ],
+      "marketData": [
+        150.4,
+        401492045,
+        26226798632.68,
+        "69.06",
+        279,
+        104
+      ]
+    },
+    {
+      "record": [
+        "SEJALLTD",
+        "SEJAL GLASS LIMITED",
+        "17-DEC-2025",
+        "721500000",
+        "1300000",
+        "555",
+        "1300000",
+        "Equity shares for 6 months",
+        null
+      ],
+      "industry": [
+        "Industrials",
+        "Capital Goods",
+        "Industrial Products",
+        "Glass - Industrial"
+      ],
+      "marketData": [
+        481.75,
+        11400000,
+        1386275360.52,
+        "27.06",
+        1036.7,
+        324
+      ]
+    },
+    {
+      "record": [
+        "BBOX",
+        "Black Box Limited",
+        "11-FEB-2026",
+        "3410000",
+        "8179",
+        "417",
+        "8179",
+        "Equity shares for 6 months",
+        null
+      ],
+      "industry": [
+        "Information Technology",
+        "Information Technology",
+        "IT - Services",
+        "IT Enabled Services"
+      ],
+      "marketData": [
+        504.35,
+        170490722,
+        23355170920.49,
+        "40.01",
+        613.8,
+        320.85
+      ]
+    },
+    {
+      "record": [
+        "DJML",
+        "DJ MEDIAPRINTS & LOGISTICS LIMITED",
+        "21-NOV-2025",
+        "159600000",
+        "1400000",
+        "114",
+        [
+          "400000",
+          "1000000"
+        ],
+        [
+          "Equity shares for 6 months",
+          "Equity shares for 18 months"
+        ],
+        null
+      ],
+      "industry": [
+        "Services",
+        "Services",
+        "Transport Services",
+        "Logistics Solution Provider"
+      ],
+      "marketData": [
+        79.99,
+        34377851,
+        1200078524.08,
+        "33.33",
+        152.99,
+        52
+      ]
+    },
+    {
+      "record": [
+        "KPEL",
+        "K.P. Energy Limited",
+        "21-JAN-2026",
+        "283786000",
+        "688800",
+        "412",
+        "688800",
+        "Equity shares for 18 months",
+        null
+      ],
+      "industry": [
+        "Utilities",
+        "Power",
+        "Power",
+        "Power Generation"
+      ],
+      "marketData": [
+        279.2,
+        67595841,
+        10323701166.87,
+        "12.47",
+        583.7,
+        237.9
+      ]
+    }
+  ]
+}
