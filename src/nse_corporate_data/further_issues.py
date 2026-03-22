@@ -85,10 +85,12 @@ PREF_REFINED_FIELDS: Sequence[RefinedField] = (
     RefinedField(
         "lockInShares",
         lambda context: context.get("Number of lock in shares"),
+        requires="xbrl",
     ),
     RefinedField(
         "lockInPeriod",
         lambda context: context.get("Period of lock in shares"),
+        requires="xbrl",
     ),
     RefinedField("revisedFlag", lambda context: context.get("revisedFlag")),
 )
@@ -181,17 +183,24 @@ QIP_REFINED_FIELDS: Sequence[RefinedField] = (
     RefinedField(
         "allotteeNames",
         lambda context: _normalize_allottee_list(context.get("Name of allottees")),
+        requires="xbrl",
     ),
     RefinedField(
         "allotteeCategories",
         lambda context: _normalize_allottee_list(context.get("Category of allotees")),
+        requires="xbrl",
     ),
-    RefinedField("allotteeSharesAllotted", _qip_participant_shares),
+    RefinedField(
+        "allotteeSharesAllotted", 
+        _qip_participant_shares,
+        requires="xbrl",
+    ),
     RefinedField(
         "allotteePctOfIssue",
         lambda context: _normalize_allottee_list(
             context.get("Percentage of total issue size")
         ),
+        requires="xbrl",
     ),
 )
 

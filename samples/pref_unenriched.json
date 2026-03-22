@@ -1,0 +1,598 @@
+{
+  "metadata": {
+    "record": [
+      "symbol",
+      "company",
+      "allotmentDate",
+      "amountRaised",
+      "sharesAllotted",
+      "offerPrice",
+      "revisedFlag"
+    ]
+  },
+  "data": [
+    {
+      "record": [
+        "WOMANCART",
+        "WOMANCART LIMITED",
+        "29-DEC-2025",
+        "11814400000000",
+        "923000",
+        "128",
+        null
+      ]
+    },
+    {
+      "record": [
+        "INDOTHAI",
+        "INDO THAI SECURITIES LIMITED",
+        "07-JAN-2026",
+        "15040000",
+        "400000",
+        "37.6",
+        null
+      ]
+    },
+    {
+      "record": [
+        "SABAR",
+        "Sabar Flex India Limited",
+        "18-FEB-2025",
+        "2400000",
+        "100000",
+        "24",
+        null
+      ]
+    },
+    {
+      "record": [
+        "VIRINCHI",
+        "VIRINCHI LIMITED",
+        "31-JAN-2026",
+        "26250000",
+        "1050000",
+        "25",
+        null
+      ]
+    },
+    {
+      "record": [
+        "ASIANHOTNR",
+        "ASIAN HOTELS (NORTH) LIMITED",
+        "03-FEB-2026",
+        "7649400000",
+        "23180000",
+        "330",
+        null
+      ]
+    },
+    {
+      "record": [
+        "INDOTHAI",
+        "INDO THAI SECURITIES LIMITED",
+        "10-JAN-2026",
+        "10000000",
+        "200000",
+        "50",
+        null
+      ]
+    },
+    {
+      "record": [
+        "DBREALTY",
+        "Valor Estate Limited",
+        "02-FEB-2026",
+        "0",
+        "3202330",
+        "201.65",
+        null
+      ]
+    },
+    {
+      "record": [
+        "SABAR",
+        "SABAR FLEX INDIA LIMITED",
+        "20-DEC-2023",
+        "40280000",
+        "1869157",
+        "21.55",
+        null
+      ]
+    },
+    {
+      "record": [
+        "VIRINCHI",
+        "VIRINCHI LIMITED",
+        "05-FEB-2026",
+        "57960000",
+        "2070000",
+        "28",
+        null
+      ]
+    },
+    {
+      "record": [
+        "NEUEON",
+        "Neueon Corporation Limited",
+        "07-NOV-2025",
+        "508901000",
+        "508900968",
+        "1",
+        null
+      ]
+    },
+    {
+      "record": [
+        "VIRINCHI",
+        "VIRINCHI LIMITED",
+        "03-FEB-2026",
+        "47999000",
+        "1714285",
+        "28",
+        null
+      ]
+    },
+    {
+      "record": [
+        "WOMANCART",
+        "WOMANCART LIMITED",
+        "03-JAN-2025",
+        "7960920000000",
+        "244200",
+        "326",
+        null
+      ]
+    },
+    {
+      "record": [
+        "AURIONPRO",
+        "AURIONPRO SOLUTIONS LIMITED",
+        "19-DEC-2025",
+        "0",
+        "48134",
+        "0",
+        null
+      ]
+    },
+    {
+      "record": [
+        "WOMANCART",
+        "WOMANCART LIMITED",
+        "23-DEC-2025",
+        "842400000000",
+        "36000",
+        "312",
+        null
+      ]
+    },
+    {
+      "record": [
+        "BIRDYS",
+        "Grill Splendour Services Limited",
+        "20-FEB-2025",
+        "20524000",
+        "239745",
+        "85.61",
+        null
+      ]
+    },
+    {
+      "record": [
+        "MONEYBOXX",
+        "Moneyboxx Finance Limited",
+        "03-MAR-2026",
+        "334400000",
+        "4400000",
+        "76",
+        null
+      ]
+    },
+    {
+      "record": [
+        "TIRUPATIFL",
+        "Tirupati Forge Limited",
+        "06-JAN-2026",
+        "30000000",
+        "1250000",
+        "32",
+        null
+      ]
+    },
+    {
+      "record": [
+        "PCJEWELLER",
+        "PC Jeweller Limited",
+        "24-FEB-2026",
+        "602672000",
+        "107237000",
+        "5.62",
+        null
+      ]
+    },
+    {
+      "record": [
+        "LEXUS",
+        "Lexus Granito (India) Limited",
+        "27-FEB-2025",
+        "13560000",
+        "300000",
+        "45.2",
+        null
+      ]
+    },
+    {
+      "record": [
+        "APOLLO",
+        "APOLLO MICRO SYSTEMS LIMITED",
+        "22-DEC-2025",
+        "1333000",
+        "11696",
+        "114",
+        null
+      ]
+    },
+    {
+      "record": [
+        "SEPC",
+        "SEPC Limited",
+        "14-NOV-2025",
+        "4190000572000",
+        "3164653",
+        "13.24",
+        null
+      ]
+    },
+    {
+      "record": [
+        "APOLLO",
+        "APOLLO MICRO SYSTEMS LIMITED",
+        "02-DEC-2025",
+        "329350000",
+        "2889044",
+        "114",
+        null
+      ]
+    },
+    {
+      "record": [
+        "PCJEWELLER",
+        "PC Jeweller Limited",
+        "31-JAN-2026",
+        "2880074000",
+        "512468600",
+        "5.62",
+        null
+      ]
+    },
+    {
+      "record": [
+        "UGROCAP",
+        "Ugro Capital Limited",
+        "28-NOV-2025",
+        "416500000",
+        "2251325",
+        "185",
+        null
+      ]
+    },
+    {
+      "record": [
+        "EMKAY",
+        "Emkay Global Financial Services Limited",
+        "19-FEB-2025",
+        "66653000",
+        "278300",
+        "239.5",
+        null
+      ]
+    },
+    {
+      "record": [
+        "PCJEWELLER",
+        "PC Jeweller Limited",
+        "22-JAN-2026",
+        "385251000",
+        "68550000",
+        "5.62",
+        null
+      ]
+    },
+    {
+      "record": [
+        "RELIGARE",
+        "RELIGARE ENTERPRISES LIMITED",
+        "05-DEC-2025",
+        "35000007000000",
+        "1985816",
+        "235",
+        null
+      ]
+    },
+    {
+      "record": [
+        "ZOTA",
+        "ZOTA HEALTH CARE LIMITED",
+        "20-JAN-2025",
+        "91197000",
+        "179169",
+        "509",
+        null
+      ]
+    },
+    {
+      "record": [
+        "TIL",
+        "TIL LIMITED",
+        "28-JAN-2025",
+        "60000000000000",
+        "3750000",
+        "160",
+        null
+      ]
+    },
+    {
+      "record": [
+        "AEROFLEX",
+        "Aeroflex Industries Limited",
+        "03-FEB-2026",
+        "550000000",
+        "3010398",
+        "182.7",
+        null
+      ]
+    },
+    {
+      "record": [
+        "MOXSH",
+        "Moxsh Overseas Educon Limited",
+        "19-JAN-2025",
+        "30208000",
+        "377600",
+        "80",
+        null
+      ]
+    },
+    {
+      "record": [
+        "SWARAJ",
+        "SWARAJ SUITING LIMITED",
+        "06-FEB-2025",
+        "795650000",
+        "3371400",
+        "236",
+        null
+      ]
+    },
+    {
+      "record": [
+        "GRANULES",
+        "GRANULES INDIA LIMITED",
+        "23-FEB-2025",
+        "3000000000",
+        "5128205",
+        "585",
+        null
+      ]
+    },
+    {
+      "record": [
+        "ARHAM",
+        "ARHAM TECHNOLOGIES LIMITED",
+        "07-FEB-2026",
+        "535674000",
+        "4892000",
+        "109.5",
+        null
+      ]
+    },
+    {
+      "record": [
+        "CANARYS",
+        "CANARYS AUTOMATIONS LIMITED",
+        "20-NOV-2025",
+        "63500000",
+        "1548780",
+        "41",
+        null
+      ]
+    },
+    {
+      "record": [
+        "LLOYDSME",
+        "LLOYDS METALS AND ENERGY LIMITED",
+        "03-FEB-2026",
+        "74000000",
+        "805500",
+        "740",
+        null
+      ]
+    },
+    {
+      "record": [
+        "SDBL",
+        "Som Distilleries & Breweries Limited",
+        "25-APR-2025",
+        "224000000",
+        "2000000",
+        "112",
+        null
+      ]
+    },
+    {
+      "record": [
+        "VISHNUINFR",
+        "VISHNUSURYA PROJECTS AND INFRA LIMITED",
+        "31-JAN-2026",
+        "229198000",
+        "1315867",
+        "174.18",
+        null
+      ]
+    },
+    {
+      "record": [
+        "AAGCV9984R",
+        "Visaman Global Sales Limited",
+        "29-JAN-2025",
+        "39999000",
+        "666666",
+        "60",
+        null
+      ]
+    },
+    {
+      "record": [
+        "CROWN",
+        "CROWN LIFTERS LIMITED",
+        "18-AUG-2025",
+        "21440000",
+        "80000",
+        "268",
+        null
+      ]
+    },
+    {
+      "record": [
+        "TI",
+        "Tilaknagar Industries Limited",
+        "24-NOV-2025",
+        "355260000",
+        "930000",
+        "382",
+        null
+      ]
+    },
+    {
+      "record": [
+        "CROWN",
+        "CROWN LIFTERS LIMITED",
+        "04-JUL-2025",
+        "62800000",
+        "234156",
+        "268",
+        null
+      ]
+    },
+    {
+      "record": [
+        "UNIHEALTH",
+        "Unihealth Hospitals Limited",
+        "12-JAN-2025",
+        "30200000",
+        "200000",
+        "151",
+        null
+      ]
+    },
+    {
+      "record": [
+        "INOXGREEN",
+        "Inox Green Energy Services Limited",
+        "23-JAN-2026",
+        "3884050000",
+        "26786550",
+        "145",
+        null
+      ]
+    },
+    {
+      "record": [
+        "LLOYDSME",
+        "Lloyds Metals and Energy Limited",
+        "31-DEC-2025",
+        "11299023000",
+        "15268950",
+        "740",
+        null
+      ]
+    },
+    {
+      "record": [
+        "VIAZ",
+        "Viaz Tyres Limited",
+        "18-FEB-2026",
+        "60900000",
+        "870000",
+        "70",
+        null
+      ]
+    },
+    {
+      "record": [
+        "MAGSON",
+        "MAGSON RETAIL AND DISTRIBUTION LIMITED",
+        "06-FEB-2026",
+        "61227000",
+        "875460",
+        "93.25",
+        null
+      ]
+    },
+    {
+      "record": [
+        "RNPL",
+        "Renol Polychem Limited",
+        "23-JAN-2025",
+        "462897000",
+        "3454462",
+        "134",
+        null
+      ]
+    },
+    {
+      "record": [
+        "OSIAHYPER",
+        "OSIA HYPER RETAIL LIMITED",
+        "21-APR-2025",
+        "346780000",
+        "12385000",
+        "28",
+        null
+      ]
+    },
+    {
+      "record": [
+        "DJML",
+        "DJ MEDIAPRINTS & LOGISTICS LIMITED",
+        "21-NOV-2025",
+        "159600000",
+        "1400000",
+        "114",
+        null
+      ]
+    },
+    {
+      "record": [
+        "BBOX",
+        "Black Box Limited",
+        "11-FEB-2026",
+        "3410000",
+        "8179",
+        "417",
+        null
+      ]
+    },
+    {
+      "record": [
+        "KPEL",
+        "K.P. Energy Limited",
+        "21-JAN-2026",
+        "283786000",
+        "688800",
+        "412",
+        null
+      ]
+    },
+    {
+      "record": [
+        "SEJALLTD",
+        "SEJAL GLASS LIMITED",
+        "17-DEC-2025",
+        "721500000",
+        "1300000",
+        "555",
+        null
+      ]
+    }
+  ]
+}

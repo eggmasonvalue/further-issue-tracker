@@ -1,0 +1,62 @@
+{
+  "metadata": {
+    "api": [
+      "applicationId",
+      "boardResolutionDate",
+      "company",
+      "corporateIdentityNumber",
+      "listingDate",
+      "submissionDate",
+      "tradingApprovalDate",
+      "discountPerShare",
+      "allotmentDate",
+      "bidClosingDate",
+      "bidOpeningDate",
+      "issueSize",
+      "isin",
+      "issuePrice",
+      "issueType",
+      "minimumIssuePrice",
+      "allotteeCount",
+      "sharesListed",
+      "sharesAllotted",
+      "symbol",
+      "relevantDate",
+      "revisedFlag",
+      "filingStage",
+      "xbrlFileSize",
+      "xbrlUrl"
+    ]
+  },
+  "data": [
+    {
+      "api": [
+        "66862",
+        "12-MAR-2026",
+        "AGI INFRA LIMTED",
+        "L45200PB2005PLC028466",
+        "13-MAR-2026",
+        "11-MAR-2026",
+        "13-MAR-2026",
+        "9.83",
+        "10-MAR-2026",
+        "09-MAR-2026",
+        "04-MAR-2026",
+        "750000000",
+        "INE976R01033",
+        "265",
+        "QIP",
+        "274.83",
+        "6",
+        "2830188",
+        "2830188",
+        "AGIIL",
+        "02-MAR-2026",
+        null,
+        "Listing Stage",
+        "11.78 KB",
+        "https://nsearchives.nseindia.com/corporate/xbrl/QIP_LS_1634515_11032026012453_WEB.xml"
+      ]
+    }
+  ]
+}

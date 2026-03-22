@@ -33,21 +33,6 @@
       "additionalTransactionDetail",
       "xbrlUrl",
       "xbrlFileSize"
-    ],
-    "xbrl": [],
-    "industry": [
-      "Macro",
-      "Sector",
-      "Industry",
-      "Basic Industry"
-    ],
-    "marketData": [
-      "currentPrice",
-      "sharesOutstanding",
-      "freeFloatMarketCap",
-      "priceToEarnings",
-      "fiftyTwoWeekHigh",
-      "fiftyTwoWeekLow"
     ]
   },
   "data": [
@@ -85,21 +70,6 @@
         null,
         "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196442_1638416_21032026073034_WEB.xml",
         "8.50 KB"
-      ],
-      "xbrl": [],
-      "marketData": [
-        108.47,
-        213374246,
-        7378275883.27,
-        "28.75",
-        173.2,
-        105.13
-      ],
-      "industry": [
-        "Consumer Discretionary",
-        "Consumer Services",
-        "Leisure Services",
-        "Hotels & Resorts"
       ]
     },
     {
@@ -136,21 +106,6 @@
         null,
         "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196442_1638416_21032026073034_WEB.xml",
         "8.50 KB"
-      ],
-      "xbrl": [],
-      "marketData": [
-        108.47,
-        213374246,
-        7378275883.27,
-        "28.75",
-        173.2,
-        105.13
-      ],
-      "industry": [
-        "Consumer Discretionary",
-        "Consumer Services",
-        "Leisure Services",
-        "Hotels & Resorts"
       ]
     },
     {
@@ -187,21 +142,6 @@
         null,
         "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196440_1638408_21032026062141_WEB.xml",
         "5.37 KB"
-      ],
-      "xbrl": [],
-      "marketData": [
-        486.15,
-        22176339,
-        1735194109.46,
-        null,
-        890,
-        386
-      ],
-      "industry": [
-        "Consumer Discretionary",
-        "Consumer Services",
-        "Other Consumer Services",
-        "E-Learning"
       ]
     },
     {
@@ -238,21 +178,6 @@
         null,
         "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196438_1638393_21032026050716_WEB.xml",
         "5.49 KB"
-      ],
-      "xbrl": [],
-      "marketData": [
-        555.95,
-        241280945,
-        18146392428.89,
-        "27.68",
-        802.25,
-        316.95
-      ],
-      "industry": [
-        "Industrials",
-        "Capital Goods",
-        "Industrial Products",
-        "Iron & Steel Products"
       ]
     },
     {
@@ -289,21 +214,6 @@
         null,
         "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196436_1638389_21032026043808_WEB.xml",
         "5.48 KB"
-      ],
-      "xbrl": [],
-      "marketData": [
-        74.35,
-        12940138,
-        417232492.77,
-        "41.98",
-        216,
-        63.15
-      ],
-      "industry": [
-        "Commodities",
-        "Metals & Mining",
-        "Diversified Metals",
-        "Diversified Metals"
       ]
     },
     {
@@ -340,21 +250,6 @@
         null,
         "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196435_1638387_21032026043603_WEB.xml",
         "5.48 KB"
-      ],
-      "xbrl": [],
-      "marketData": [
-        74.35,
-        12940138,
-        417232492.77,
-        "41.98",
-        216,
-        63.15
-      ],
-      "industry": [
-        "Commodities",
-        "Metals & Mining",
-        "Diversified Metals",
-        "Diversified Metals"
       ]
     },
     {
@@ -391,21 +286,6 @@
         null,
         "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196433_1638376_21032026041204_WEB.xml",
         "5.49 KB"
-      ],
-      "xbrl": [],
-      "marketData": [
-        260.05,
-        56716120,
-        4145310429.08,
-        "13.71",
-        429.9,
-        233.55
-      ],
-      "industry": [
-        "Consumer Discretionary",
-        "Textiles",
-        "Textiles & Apparels",
-        "Garments & Apparels"
       ]
     },
     {
@@ -442,21 +322,6 @@
         null,
         "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196431_1638365_21032026032432_WEB.xml",
         "8.83 KB"
-      ],
-      "xbrl": [],
-      "marketData": [
-        312.95,
-        31583252,
-        3997250701.15,
-        "18.25",
-        745,
-        273.25
-      ],
-      "industry": [
-        "Healthcare",
-        "Healthcare",
-        "Pharmaceuticals & Biotechnology",
-        "Pharmaceuticals"
       ]
     },
     {
@@ -493,21 +358,6 @@
         null,
         "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196431_1638365_21032026032432_WEB.xml",
         "8.83 KB"
-      ],
-      "xbrl": [],
-      "marketData": [
-        312.95,
-        31583252,
-        3997250701.15,
-        "18.25",
-        745,
-        273.25
-      ],
-      "industry": [
-        "Healthcare",
-        "Healthcare",
-        "Pharmaceuticals & Biotechnology",
-        "Pharmaceuticals"
       ]
     },
     {
@@ -544,21 +394,6 @@
         null,
         "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196430_1638363_21032026032409_WEB.xml",
         "5.34 KB"
-      ],
-      "xbrl": [],
-      "marketData": [
-        73.94,
-        51260000,
-        1389392482.68,
-        "27.96",
-        114.75,
-        68.82
-      ],
-      "industry": [
-        "Consumer Discretionary",
-        "Consumer Services",
-        "Leisure Services",
-        "Hotels & Resorts"
       ]
     },
     {
@@ -595,21 +430,6 @@
         null,
         "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196427_1638346_21032026022243_WEB.xml",
         "8.55 KB"
-      ],
-      "xbrl": [],
-      "marketData": [
-        100.4,
-        17832900,
-        929240319.78,
-        "12.67",
-        195.45,
-        93
-      ],
-      "industry": [
-        "Industrials",
-        "Capital Goods",
-        "Electrical Equipment",
-        "Other Electrical Equipment"
       ]
     },
     {
@@ -646,21 +466,6 @@
         null,
         "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196427_1638346_21032026022243_WEB.xml",
         "8.55 KB"
-      ],
-      "xbrl": [],
-      "marketData": [
-        100.4,
-        17832900,
-        929240319.78,
-        "12.67",
-        195.45,
-        93
-      ],
-      "industry": [
-        "Industrials",
-        "Capital Goods",
-        "Electrical Equipment",
-        "Other Electrical Equipment"
       ]
     },
     {
@@ -697,21 +502,6 @@
         null,
         "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196425_1638341_21032026020713_WEB.xml",
         "5.35 KB"
-      ],
-      "xbrl": [],
-      "marketData": [
-        59.96,
-        104742475,
-        1829644675.67,
-        "20.91",
-        70.59,
-        38
-      ],
-      "industry": [
-        "Industrials",
-        "Capital Goods",
-        "Industrial Products",
-        "Plastic Products - Industrial"
       ]
     },
     {
@@ -748,21 +538,6 @@
         null,
         "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196423_1638337_21032026015442_WEB.xml",
         "5.35 KB"
-      ],
-      "xbrl": [],
-      "marketData": [
-        59.96,
-        104742475,
-        1829644675.67,
-        "20.91",
-        70.59,
-        38
-      ],
-      "industry": [
-        "Industrials",
-        "Capital Goods",
-        "Industrial Products",
-        "Plastic Products - Industrial"
       ]
     },
     {
@@ -799,21 +574,6 @@
         null,
         "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196420_1638330_21032026012444_WEB.xml",
         "5.48 KB"
-      ],
-      "xbrl": [],
-      "marketData": [
-        82.4,
-        182244250,
-        4432927758.72,
-        "76.88",
-        107.29,
-        79
-      ],
-      "industry": [
-        "Fast Moving Consumer Goods",
-        "Fast Moving Consumer Goods",
-        "Agricultural Food & other Products",
-        "Other Agricultural Products"
       ]
     },
     {
@@ -850,21 +610,6 @@
         null,
         "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196418_1638326_21032026125649_WEB.xml",
         "5.53 KB"
-      ],
-      "xbrl": [],
-      "marketData": [
-        538.25,
-        73445242,
-        10003367375.5,
-        "104.2",
-        698.4,
-        409.15
-      ],
-      "industry": [
-        "Commodities",
-        "Chemicals",
-        "Chemicals & Petrochemicals",
-        "Commodity Chemicals"
       ]
     },
     {
@@ -901,21 +646,6 @@
         null,
         "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196416_1638316_21032026125130_WEB.xml",
         "8.29 KB"
-      ],
-      "xbrl": [],
-      "marketData": [
-        814,
-        51439071,
-        16143050659.89,
-        "13.11",
-        1602,
-        705.1
-      ],
-      "industry": [
-        "Fast Moving Consumer Goods",
-        "Fast Moving Consumer Goods",
-        "Agricultural Food & other Products",
-        "Other Agricultural Products"
       ]
     },
     {
@@ -952,21 +682,6 @@
         null,
         "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196416_1638316_21032026125130_WEB.xml",
         "8.29 KB"
-      ],
-      "xbrl": [],
-      "marketData": [
-        814,
-        51439071,
-        16143050659.89,
-        "13.11",
-        1602,
-        705.1
-      ],
-      "industry": [
-        "Fast Moving Consumer Goods",
-        "Fast Moving Consumer Goods",
-        "Agricultural Food & other Products",
-        "Other Agricultural Products"
       ]
     },
     {
@@ -1003,21 +718,6 @@
         null,
         "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196414_1638308_21032026123729_WEB.xml",
         "5.33 KB"
-      ],
-      "xbrl": [],
-      "marketData": [
-        18.29,
-        51190625,
-        291206441.67,
-        "33.33",
-        40.24,
-        18
-      ],
-      "industry": [
-        "Commodities",
-        "Chemicals",
-        "Chemicals & Petrochemicals",
-        "Specialty Chemicals"
       ]
     },
     {
@@ -1054,21 +754,6 @@
         null,
         "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196412_1638299_21032026121843_WEB.xml",
         "5.48 KB"
-      ],
-      "xbrl": [],
-      "marketData": [
-        39.68,
-        185301470,
-        4238138766.45,
-        "35.31",
-        52.6,
-        32.13
-      ],
-      "industry": [
-        "Fast Moving Consumer Goods",
-        "Fast Moving Consumer Goods",
-        "Agricultural Food & other Products",
-        "Sugar"
       ]
     },
     {
@@ -1105,21 +790,6 @@
         null,
         "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196410_1638293_21032026120655_WEB.xml",
         "5.46 KB"
-      ],
-      "xbrl": [],
-      "marketData": [
-        169.8,
-        45232790,
-        4342972097.73,
-        "12.85",
-        239.39,
-        165.2
-      ],
-      "industry": [
-        "Commodities",
-        "Construction Materials",
-        "Cement & Cement Products",
-        "Cement & Cement Products"
       ]
     },
     {
@@ -1156,21 +826,6 @@
         null,
         "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196408_1638281_21032026110959_WEB.xml",
         "5.50 KB"
-      ],
-      "xbrl": [],
-      "marketData": [
-        37.75,
-        18605000,
-        237161845.77,
-        "15.52",
-        53.9,
-        27.6
-      ],
-      "industry": [
-        "Industrials",
-        "Construction",
-        "Construction",
-        "Civil Construction"
       ]
     },
     {
@@ -1207,21 +862,6 @@
         null,
         "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196406_1638277_21032026110437_WEB.xml",
         "5.49 KB"
-      ],
-      "xbrl": [],
-      "marketData": [
-        37.75,
-        18605000,
-        237161845.77,
-        "15.52",
-        53.9,
-        27.6
-      ],
-      "industry": [
-        "Industrials",
-        "Construction",
-        "Construction",
-        "Civil Construction"
       ]
     },
     {
@@ -1258,21 +898,6 @@
         null,
         "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196404_1638273_21032026103039_WEB.xml",
         "5.48 KB"
-      ],
-      "xbrl": [],
-      "marketData": [
-        721.95,
-        824419588,
-        231785403931.12,
-        "19.85",
-        884,
-        496.6
-      ],
-      "industry": [
-        "Commodities",
-        "Metals & Mining",
-        "Ferrous Metals",
-        "Iron & Steel"
       ]
     },
     {
@@ -1309,21 +934,6 @@
         null,
         "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196402_1638270_21032026100708_WEB.xml",
         "5.47 KB"
-      ],
-      "xbrl": [],
-      "marketData": [
-        500.65,
-        15543000,
-        2378871693,
-        "96.17",
-        633.25,
-        377.1
-      ],
-      "industry": [
-        "Industrials",
-        "Capital Goods",
-        "Industrial Products",
-        "Castings & Forgings"
       ]
     },
     {
@@ -1360,21 +970,6 @@
         null,
         "https://nsearchives.nseindia.com/corporate/xbrl/IT_1196400_1638267_21032026100429_WEB.xml",
         "5.47 KB"
-      ],
-      "xbrl": [],
-      "marketData": [
-        500.65,
-        15543000,
-        2378871693,
-        "96.17",
-        633.25,
-        377.1
-      ],
-      "industry": [
-        "Industrials",
-        "Capital Goods",
-        "Industrial Products",
-        "Castings & Forgings"
       ]
     }
   ]

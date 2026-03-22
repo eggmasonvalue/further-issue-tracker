@@ -58,93 +58,32 @@
   "data": [
     {
       "api": [
-        "508901000",
-        "65167",
+        "11814400000000",
+        "65482",
         "20-MAR-2026",
-        "L40109TG2006PLC049743",
-        "07-NOV-2025",
+        "L74999DL2018PLC336138",
+        "29-DEC-2025",
         null,
         "31-JAN-2026",
         null,
-        "INE333I01044",
+        "INE0Q9601016",
         "Preferential",
-        "Neueon Corporation Limited",
-        "NEUEON",
-        "56544552",
-        "1",
+        "WOMANCART LIMITED",
+        "WOMANCART",
+        "6691600",
+        "128",
         null,
         "Listing Stage",
         "20-MAR-2026",
-        "508900968",
-        "4.51 KB",
-        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1615466_31012026124422_WEB.xml"
+        "923000",
+        "5.04 KB",
+        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1615708_31012026055548_WEB.xml"
       ],
       "xbrl": [
-        "508901000",
-        "L40109TG2006PLC049743",
-        "2025-11-07",
+        "11814400000000",
+        "L74999DL2018PLC336138",
+        "2025-12-29",
         "2026-01-31",
-        "INE333I01044",
-        "NOTLISTED",
-        [
-          "xbrli:shares",
-          "iso4217:INR",
-          "xbrli:shares",
-          "iso4217:INR"
-        ],
-        "NEUEON",
-        "Neueon Corporation Limited",
-        "Application for listing of securities for allotment of 50,89,00,968 equity shares issued at Re. 1 each to M/s. Preca Structures Private Limited (Nominee of Resolution Applicants) in compliance with the Resolution Plan submitted by Resolution Applicants and approved by the Order passed by Honble NCLT, Hyderabad bench dated 23rd October, 2024 issued on preferential basis.",
-        "56544552",
-        "508900968",
-        "1",
-        "Equity shares for 12 months",
-        "532887",
-        "508900968"
-      ],
-      "marketData": [
-        14.58,
-        56544552,
-        703650411.21,
-        null,
-        15.16,
-        5.76
-      ],
-      "industry": [
-        "Industrials",
-        "Capital Goods",
-        "Electrical Equipment",
-        "Heavy Electrical Equipment"
-      ]
-    },
-    {
-      "api": [
-        "7960920000000",
-        "65560",
-        "20-MAR-2026",
-        "L74999DL2018PLC336138",
-        "03-JAN-2025",
-        null,
-        "19-FEB-2026",
-        null,
-        "INE0Q9601016",
-        "Preferential",
-        "WOMANCART LIMITED",
-        "WOMANCART",
-        "6691600",
-        "326",
-        null,
-        "Listing Stage",
-        "20-MAR-2026",
-        "244200",
-        "4.00 KB",
-        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1627765_19022026012740_WEB.xml"
-      ],
-      "xbrl": [
-        "7960920000000",
-        "L74999DL2018PLC336138",
-        "2025-01-03",
-        "2026-02-19",
         "INE0Q9601016",
         "NOTLISTED",
         [
@@ -157,11 +96,17 @@
         "WOMANCART LIMITED",
         null,
         "6691600",
-        "244200",
-        "326",
-        "Equity shares for 6 months",
+        [
+          "526200",
+          "396800"
+        ],
+        "128",
+        [
+          "Equity shares for 18 months",
+          "Equity shares for 6 months"
+        ],
         "000000",
-        "244200"
+        "923000"
       ],
       "marketData": [
         165.3,
@@ -237,6 +182,311 @@
         "Financial Services",
         "Capital Markets",
         "Stockbroking & Allied"
+      ]
+    },
+    {
+      "api": [
+        "2400000",
+        "56647",
+        "20-MAR-2026",
+        "L25209GJ2018PLC102720",
+        "18-FEB-2025",
+        "23-MAR-2026",
+        "11-APR-2025",
+        "23-MAR-2026",
+        "INE0DZ101013",
+        "Preferential",
+        "Sabar Flex India Limited",
+        "SABAR",
+        "17250207",
+        "24",
+        null,
+        "Listing Stage",
+        "20-MAR-2026",
+        "100000",
+        "3.98 KB",
+        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1412738_11042025051534_WEB.xml"
+      ],
+      "xbrl": [
+        "2400000",
+        "L25209GJ2018PLC102720",
+        "2025-02-18",
+        "2025-04-11",
+        "INE0DZ101013",
+        "NOTLISTED",
+        [
+          "xbrli:shares",
+          "iso4217:INR",
+          "xbrli:shares",
+          "iso4217:INR"
+        ],
+        "SABAR",
+        "Sabar Flex India Limited",
+        null,
+        "17250207",
+        "100000",
+        "24",
+        "Equity shares for 6 months",
+        "000000",
+        "100000"
+      ],
+      "marketData": [
+        8.65,
+        17250207,
+        0,
+        "22.26",
+        23.95,
+        3.8
+      ],
+      "industry": [
+        "Industrials",
+        "Capital Goods",
+        "Industrial Products",
+        "Packaging"
+      ]
+    },
+    {
+      "api": [
+        "26250000",
+        "66222",
+        "20-MAR-2026",
+        "L72200TG1990PLC011104",
+        "31-JAN-2026",
+        null,
+        "19-FEB-2026",
+        null,
+        "INE539B01017",
+        "Preferential",
+        "VIRINCHI LIMITED",
+        "VIRINCHI",
+        "102646896",
+        "25",
+        null,
+        "Listing Stage",
+        "20-MAR-2026",
+        "1050000",
+        "4.02 KB",
+        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1629421_24022026035110_WEB.xml"
+      ],
+      "xbrl": [
+        "26250000",
+        "L72200TG1990PLC011104",
+        "2026-01-31",
+        "2026-02-19",
+        "INE539B01017",
+        "NOTLISTED",
+        [
+          "xbrli:shares",
+          "iso4217:INR",
+          "xbrli:shares",
+          "iso4217:INR"
+        ],
+        "VIRINCHI",
+        "VIRINCHI LIMITED",
+        null,
+        "102646896",
+        "1050000",
+        "25",
+        "Equity shares for 6 months",
+        "532372",
+        "1050000"
+      ],
+      "marketData": [
+        16.65,
+        102646896,
+        1076407052.64,
+        null,
+        32.69,
+        16.16
+      ],
+      "industry": [
+        "Information Technology",
+        "Information Technology",
+        "IT - Software",
+        "Software Products"
+      ]
+    },
+    {
+      "api": [
+        "7649400000",
+        "66036",
+        "20-MAR-2026",
+        "L55101DL1980PLC011037",
+        "03-FEB-2026",
+        "23-MAR-2026",
+        "13-FEB-2026",
+        "23-MAR-2026",
+        "INE363A01022",
+        "Preferential",
+        "ASIAN HOTELS (NORTH) LIMITED",
+        "ASIANHOTNR",
+        "19453229",
+        "330",
+        null,
+        "Listing Stage",
+        "20-MAR-2026",
+        "23180000",
+        "4.36 KB",
+        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1625662_13022026081600_WEB.xml"
+      ],
+      "xbrl": [
+        "7649400000",
+        "L55101DL1980PLC011037",
+        "2026-02-03",
+        "2026-02-13",
+        "INE363A01022",
+        "NOTLISTED",
+        [
+          "xbrli:shares",
+          "iso4217:INR",
+          "xbrli:shares",
+          "iso4217:INR"
+        ],
+        "ASIANHOTNR",
+        "ASIAN HOTELS (NORTH) LIMITED",
+        "Company has made allotment of Equity shares in 5 tranches i.e. on 28.01.2026, 29.01.2026, 30.01.2026, 02.02.2026 and 03.02.2026 aggregating to the full allotment of 23180000 equity shares",
+        "19453229",
+        "23180000",
+        "330",
+        "Equity shares for 12 months",
+        "500023",
+        "23180000"
+      ],
+      "marketData": [
+        287.6,
+        42633229,
+        11571872544.96,
+        "30.61",
+        419.5,
+        247.5
+      ],
+      "industry": [
+        "Consumer Discretionary",
+        "Consumer Services",
+        "Leisure Services",
+        "Hotels & Resorts"
+      ]
+    },
+    {
+      "api": [
+        "10000000",
+        "65767",
+        "20-MAR-2026",
+        "L66120MP1995PLC008959",
+        "10-JAN-2026",
+        "23-MAR-2026",
+        "16-FEB-2026",
+        "23-MAR-2026",
+        "INE337M01021",
+        "Preferential",
+        "INDO THAI SECURITIES LIMITED",
+        "INDOTHAI",
+        "124923190",
+        "50",
+        null,
+        "Listing Stage",
+        "20-MAR-2026",
+        "200000",
+        "4.03 KB",
+        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1626912_17022026023418_WEB.xml"
+      ],
+      "xbrl": [
+        "10000000",
+        "L66120MP1995PLC008959",
+        "2026-01-10",
+        "2026-02-16",
+        "INE337M01021",
+        "NOTLISTED",
+        [
+          "xbrli:shares",
+          "iso4217:INR",
+          "xbrli:shares",
+          "iso4217:INR"
+        ],
+        "INDOTHAI",
+        "INDO THAI SECURITIES LIMITED",
+        null,
+        "124923190",
+        "200000",
+        "50",
+        "Equity shares for 6 months",
+        "533676",
+        "200000"
+      ],
+      "marketData": [
+        252.15,
+        128618190,
+        7364482034.03,
+        "88.05",
+        466.35,
+        143.65
+      ],
+      "industry": [
+        "Financial Services",
+        "Financial Services",
+        "Capital Markets",
+        "Stockbroking & Allied"
+      ]
+    },
+    {
+      "api": [
+        "0",
+        "66251",
+        "20-MAR-2026",
+        "L70200MH2007PLC166818",
+        "02-FEB-2026",
+        "23-MAR-2026",
+        "16-FEB-2026",
+        "23-MAR-2026",
+        "INE879I01012",
+        "Preferential",
+        "Valor Estate Limited",
+        "DBREALTY",
+        "539204431",
+        "201.65",
+        null,
+        "Listing Stage",
+        "20-MAR-2026",
+        "3202330",
+        "4.29 KB",
+        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1626400_16022026122451_WEB.xml"
+      ],
+      "xbrl": [
+        "0",
+        "L70200MH2007PLC166818",
+        "2026-02-02",
+        "2026-02-16",
+        "INE879I01012",
+        "NOTLISTED",
+        [
+          "xbrli:shares",
+          "iso4217:INR",
+          "xbrli:shares",
+          "iso4217:INR"
+        ],
+        "DBREALTY",
+        "Valor Estate Limited",
+        "Equity shares issued upon the conversion of CCPS allotted to the proposed allottee. Hence, there is no cash consideration received.",
+        "539204431",
+        "3202330",
+        "201.65",
+        "Equity shares for 6 months",
+        "533160",
+        "3202330"
+      ],
+      "marketData": [
+        98.07,
+        542406761,
+        24101342915.74,
+        "56.21",
+        252.67,
+        94.92
+      ],
+      "industry": [
+        "Consumer Discretionary",
+        "Consumer Services",
+        "Leisure Services",
+        "Hotels & Resorts"
       ]
     },
     {
@@ -363,33 +613,33 @@
     },
     {
       "api": [
-        "26250000",
-        "66222",
+        "508901000",
+        "65167",
         "20-MAR-2026",
-        "L72200TG1990PLC011104",
+        "L40109TG2006PLC049743",
+        "07-NOV-2025",
+        null,
         "31-JAN-2026",
         null,
-        "19-FEB-2026",
-        null,
-        "INE539B01017",
+        "INE333I01044",
         "Preferential",
-        "VIRINCHI LIMITED",
-        "VIRINCHI",
-        "102646896",
-        "25",
+        "Neueon Corporation Limited",
+        "NEUEON",
+        "56544552",
+        "1",
         null,
         "Listing Stage",
         "20-MAR-2026",
-        "1050000",
-        "4.02 KB",
-        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1629421_24022026035110_WEB.xml"
+        "508900968",
+        "4.51 KB",
+        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1615466_31012026124422_WEB.xml"
       ],
       "xbrl": [
-        "26250000",
-        "L72200TG1990PLC011104",
+        "508901000",
+        "L40109TG2006PLC049743",
+        "2025-11-07",
         "2026-01-31",
-        "2026-02-19",
-        "INE539B01017",
+        "INE333I01044",
         "NOTLISTED",
         [
           "xbrli:shares",
@@ -397,273 +647,29 @@
           "xbrli:shares",
           "iso4217:INR"
         ],
-        "VIRINCHI",
-        "VIRINCHI LIMITED",
-        null,
-        "102646896",
-        "1050000",
-        "25",
-        "Equity shares for 6 months",
-        "532372",
-        "1050000"
-      ],
-      "marketData": [
-        16.65,
-        102646896,
-        1076407052.64,
-        null,
-        32.69,
-        16.16
-      ],
-      "industry": [
-        "Information Technology",
-        "Information Technology",
-        "IT - Software",
-        "Software Products"
-      ]
-    },
-    {
-      "api": [
-        "0",
-        "66251",
-        "20-MAR-2026",
-        "L70200MH2007PLC166818",
-        "02-FEB-2026",
-        "23-MAR-2026",
-        "16-FEB-2026",
-        "23-MAR-2026",
-        "INE879I01012",
-        "Preferential",
-        "Valor Estate Limited",
-        "DBREALTY",
-        "539204431",
-        "201.65",
-        null,
-        "Listing Stage",
-        "20-MAR-2026",
-        "3202330",
-        "4.29 KB",
-        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1626400_16022026122451_WEB.xml"
-      ],
-      "xbrl": [
-        "0",
-        "L70200MH2007PLC166818",
-        "2026-02-02",
-        "2026-02-16",
-        "INE879I01012",
-        "NOTLISTED",
-        [
-          "xbrli:shares",
-          "iso4217:INR",
-          "xbrli:shares",
-          "iso4217:INR"
-        ],
-        "DBREALTY",
-        "Valor Estate Limited",
-        "Equity shares issued upon the conversion of CCPS allotted to the proposed allottee. Hence, there is no cash consideration received.",
-        "539204431",
-        "3202330",
-        "201.65",
-        "Equity shares for 6 months",
-        "533160",
-        "3202330"
-      ],
-      "marketData": [
-        98.07,
-        542406761,
-        24101342915.74,
-        "56.21",
-        252.67,
-        94.92
-      ],
-      "industry": [
-        "Consumer Discretionary",
-        "Consumer Services",
-        "Leisure Services",
-        "Hotels & Resorts"
-      ]
-    },
-    {
-      "api": [
-        "10000000",
-        "65767",
-        "20-MAR-2026",
-        "L66120MP1995PLC008959",
-        "10-JAN-2026",
-        "23-MAR-2026",
-        "16-FEB-2026",
-        "23-MAR-2026",
-        "INE337M01021",
-        "Preferential",
-        "INDO THAI SECURITIES LIMITED",
-        "INDOTHAI",
-        "124923190",
-        "50",
-        null,
-        "Listing Stage",
-        "20-MAR-2026",
-        "200000",
-        "4.03 KB",
-        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1626912_17022026023418_WEB.xml"
-      ],
-      "xbrl": [
-        "10000000",
-        "L66120MP1995PLC008959",
-        "2026-01-10",
-        "2026-02-16",
-        "INE337M01021",
-        "NOTLISTED",
-        [
-          "xbrli:shares",
-          "iso4217:INR",
-          "xbrli:shares",
-          "iso4217:INR"
-        ],
-        "INDOTHAI",
-        "INDO THAI SECURITIES LIMITED",
-        null,
-        "124923190",
-        "200000",
-        "50",
-        "Equity shares for 6 months",
-        "533676",
-        "200000"
-      ],
-      "marketData": [
-        252.15,
-        128618190,
-        7364482034.03,
-        "88.05",
-        466.35,
-        143.65
-      ],
-      "industry": [
-        "Financial Services",
-        "Financial Services",
-        "Capital Markets",
-        "Stockbroking & Allied"
-      ]
-    },
-    {
-      "api": [
-        "7649400000",
-        "66036",
-        "20-MAR-2026",
-        "L55101DL1980PLC011037",
-        "03-FEB-2026",
-        "23-MAR-2026",
-        "13-FEB-2026",
-        "23-MAR-2026",
-        "INE363A01022",
-        "Preferential",
-        "ASIAN HOTELS (NORTH) LIMITED",
-        "ASIANHOTNR",
-        "19453229",
-        "330",
-        null,
-        "Listing Stage",
-        "20-MAR-2026",
-        "23180000",
-        "4.36 KB",
-        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1625662_13022026081600_WEB.xml"
-      ],
-      "xbrl": [
-        "7649400000",
-        "L55101DL1980PLC011037",
-        "2026-02-03",
-        "2026-02-13",
-        "INE363A01022",
-        "NOTLISTED",
-        [
-          "xbrli:shares",
-          "iso4217:INR",
-          "xbrli:shares",
-          "iso4217:INR"
-        ],
-        "ASIANHOTNR",
-        "ASIAN HOTELS (NORTH) LIMITED",
-        "Company has made allotment of Equity shares in 5 tranches i.e. on 28.01.2026, 29.01.2026, 30.01.2026, 02.02.2026 and 03.02.2026 aggregating to the full allotment of 23180000 equity shares",
-        "19453229",
-        "23180000",
-        "330",
+        "NEUEON",
+        "Neueon Corporation Limited",
+        "Application for listing of securities for allotment of 50,89,00,968 equity shares issued at Re. 1 each to M/s. Preca Structures Private Limited (Nominee of Resolution Applicants) in compliance with the Resolution Plan submitted by Resolution Applicants and approved by the Order passed by Honble NCLT, Hyderabad bench dated 23rd October, 2024 issued on preferential basis.",
+        "56544552",
+        "508900968",
+        "1",
         "Equity shares for 12 months",
-        "500023",
-        "23180000"
+        "532887",
+        "508900968"
       ],
       "marketData": [
-        287.6,
-        42633229,
-        11571872544.96,
-        "30.61",
-        419.5,
-        247.5
-      ],
-      "industry": [
-        "Consumer Discretionary",
-        "Consumer Services",
-        "Leisure Services",
-        "Hotels & Resorts"
-      ]
-    },
-    {
-      "api": [
-        "2400000",
-        "56647",
-        "20-MAR-2026",
-        "L25209GJ2018PLC102720",
-        "18-FEB-2025",
-        "23-MAR-2026",
-        "11-APR-2025",
-        "23-MAR-2026",
-        "INE0DZ101013",
-        "Preferential",
-        "Sabar Flex India Limited",
-        "SABAR",
-        "17250207",
-        "24",
+        14.58,
+        56544552,
+        703650411.21,
         null,
-        "Listing Stage",
-        "20-MAR-2026",
-        "100000",
-        "3.98 KB",
-        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1412738_11042025051534_WEB.xml"
-      ],
-      "xbrl": [
-        "2400000",
-        "L25209GJ2018PLC102720",
-        "2025-02-18",
-        "2025-04-11",
-        "INE0DZ101013",
-        "NOTLISTED",
-        [
-          "xbrli:shares",
-          "iso4217:INR",
-          "xbrli:shares",
-          "iso4217:INR"
-        ],
-        "SABAR",
-        "Sabar Flex India Limited",
-        null,
-        "17250207",
-        "100000",
-        "24",
-        "Equity shares for 6 months",
-        "000000",
-        "100000"
-      ],
-      "marketData": [
-        8.65,
-        17250207,
-        0,
-        "22.26",
-        23.95,
-        3.8
+        15.16,
+        5.76
       ],
       "industry": [
         "Industrials",
         "Capital Goods",
-        "Industrial Products",
-        "Packaging"
+        "Electrical Equipment",
+        "Heavy Electrical Equipment"
       ]
     },
     {
@@ -729,32 +735,32 @@
     },
     {
       "api": [
-        "11814400000000",
-        "65482",
+        "7960920000000",
+        "65560",
         "20-MAR-2026",
         "L74999DL2018PLC336138",
-        "29-DEC-2025",
+        "03-JAN-2025",
         null,
-        "31-JAN-2026",
+        "19-FEB-2026",
         null,
         "INE0Q9601016",
         "Preferential",
         "WOMANCART LIMITED",
         "WOMANCART",
         "6691600",
-        "128",
+        "326",
         null,
         "Listing Stage",
         "20-MAR-2026",
-        "923000",
-        "5.04 KB",
-        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1615708_31012026055548_WEB.xml"
+        "244200",
+        "4.00 KB",
+        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1627765_19022026012740_WEB.xml"
       ],
       "xbrl": [
-        "11814400000000",
+        "7960920000000",
         "L74999DL2018PLC336138",
-        "2025-12-29",
-        "2026-01-31",
+        "2025-01-03",
+        "2026-02-19",
         "INE0Q9601016",
         "NOTLISTED",
         [
@@ -767,17 +773,11 @@
         "WOMANCART LIMITED",
         null,
         "6691600",
-        [
-          "526200",
-          "396800"
-        ],
-        "128",
-        [
-          "Equity shares for 18 months",
-          "Equity shares for 6 months"
-        ],
+        "244200",
+        "326",
+        "Equity shares for 6 months",
         "000000",
-        "923000"
+        "244200"
       ],
       "marketData": [
         165.3,
@@ -792,67 +792,6 @@
         "Consumer Services",
         "Retailing",
         "E-Retail/ E-Commerce"
-      ]
-    },
-    {
-      "api": [
-        "13560000",
-        "66851",
-        "19-MAR-2026",
-        "L26914GJ2008PLC053838",
-        "27-FEB-2025",
-        null,
-        "09-MAR-2026",
-        null,
-        "INE500X01013",
-        "Preferential",
-        "Lexus Granito (India) Limited",
-        "LEXUS",
-        "20490724",
-        "45.2",
-        null,
-        "Listing Stage",
-        "19-MAR-2026",
-        "300000",
-        "3.99 KB",
-        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1634014_09032026071427_WEB.xml"
-      ],
-      "xbrl": [
-        "13560000",
-        "L26914GJ2008PLC053838",
-        "2025-02-27",
-        "2026-03-09",
-        "INE500X01013",
-        "NOTLISTED",
-        [
-          "xbrli:shares",
-          "iso4217:INR",
-          "xbrli:shares",
-          "iso4217:INR"
-        ],
-        "LEXUS",
-        "Lexus Granito (India) Limited",
-        null,
-        "20490724",
-        "300000",
-        "45.2",
-        "Equity shares for 6 months",
-        "000000",
-        "300000"
-      ],
-      "marketData": [
-        28.82,
-        20490724,
-        260489550.92,
-        "27.98",
-        39.25,
-        22.32
-      ],
-      "industry": [
-        "Consumer Discretionary",
-        "Consumer Durables",
-        "Consumer Durables",
-        "Ceramics"
       ]
     },
     {
@@ -918,33 +857,33 @@
     },
     {
       "api": [
-        "602672000",
-        "66732",
+        "842400000000",
+        "65384",
         "19-MAR-2026",
-        "L36911DL2005PLC134929",
-        "24-FEB-2026",
-        null,
-        "07-MAR-2026",
-        null,
-        "INE785M01021",
+        "L74999DL2018PLC336138",
+        "23-DEC-2025",
+        "20-MAR-2026",
+        "10-JAN-2026",
+        "20-MAR-2026",
+        "INE0Q9601016",
         "Preferential",
-        "PC Jeweller Limited",
-        "PCJEWELLER",
-        "7328494855",
-        "5.62",
+        "WOMANCART LIMITED",
+        "WOMANCART",
+        "6691600",
+        "312",
         null,
         "Listing Stage",
         "19-MAR-2026",
-        "107237000",
-        "4.03 KB",
-        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1633569_07032026025922_WEB.xml"
+        "36000",
+        "4.00 KB",
+        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1598071_10012026123330_WEB.xml"
       ],
       "xbrl": [
-        "602672000",
-        "L36911DL2005PLC134929",
-        "2026-02-24",
-        "2026-03-07",
-        "INE785M01021",
+        "842400000000",
+        "L74999DL2018PLC336138",
+        "2025-12-23",
+        "2026-01-10",
+        "INE0Q9601016",
         "NOTLISTED",
         [
           "xbrli:shares",
@@ -952,29 +891,29 @@
           "xbrli:shares",
           "iso4217:INR"
         ],
-        "PCJEWELLER",
-        "PC Jeweller Limited",
+        "WOMANCART",
+        "WOMANCART LIMITED",
         null,
-        "7328494855",
-        "107237000",
-        "5.62",
+        "6691600",
+        "36000",
+        "312",
         "Equity shares for 6 months",
-        "534809",
-        "107237000"
+        "000000",
+        "36000"
       ],
       "marketData": [
-        8.3,
-        7909513455,
-        29882932388.86,
-        "10.11",
-        19.65,
-        8.18
+        165.3,
+        7045600,
+        392150077.4,
+        "12.11",
+        358,
+        141.5
       ],
       "industry": [
         "Consumer Discretionary",
-        "Consumer Durables",
-        "Consumer Durables",
-        "Gems, Jewellery And Watches"
+        "Consumer Services",
+        "Retailing",
+        "E-Retail/ E-Commerce"
       ]
     },
     {
@@ -1036,67 +975,6 @@
         "Consumer Services",
         "Leisure Services",
         "Restaurants"
-      ]
-    },
-    {
-      "api": [
-        "30000000",
-        "65715",
-        "19-MAR-2026",
-        "L27320GJ2012PLC071594",
-        "06-JAN-2026",
-        null,
-        "25-FEB-2026",
-        null,
-        "INE319Y01024",
-        "Preferential",
-        "Tirupati Forge Limited",
-        "TIRUPATIFL",
-        "124280000",
-        "32",
-        null,
-        "Listing Stage",
-        "19-MAR-2026",
-        "1250000",
-        "4.03 KB",
-        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1630046_25022026063115_WEB.xml"
-      ],
-      "xbrl": [
-        "30000000",
-        "L27320GJ2012PLC071594",
-        "2026-01-06",
-        "2026-02-25",
-        "INE319Y01024",
-        "NA",
-        [
-          "xbrli:shares",
-          "iso4217:INR",
-          "xbrli:shares",
-          "iso4217:INR"
-        ],
-        "TIRUPATIFL",
-        "Tirupati Forge Limited",
-        null,
-        "124280000",
-        "1250000",
-        "32",
-        "Equity shares for 6 months",
-        "000000",
-        "1250000"
-      ],
-      "marketData": [
-        46.88,
-        124280000,
-        2288813854.91,
-        "101.15",
-        52,
-        28.21
-      ],
-      "industry": [
-        "Industrials",
-        "Capital Goods",
-        "Industrial Products",
-        "Castings & Forgings"
       ]
     },
     {
@@ -1168,75 +1046,75 @@
     },
     {
       "api": [
-        "842400000000",
-        "65384",
+        "30000000",
+        "65715",
         "19-MAR-2026",
-        "L74999DL2018PLC336138",
-        "23-DEC-2025",
-        "20-MAR-2026",
-        "10-JAN-2026",
-        "20-MAR-2026",
-        "INE0Q9601016",
+        "L27320GJ2012PLC071594",
+        "06-JAN-2026",
+        null,
+        "25-FEB-2026",
+        null,
+        "INE319Y01024",
         "Preferential",
-        "WOMANCART LIMITED",
-        "WOMANCART",
-        "6691600",
-        "312",
+        "Tirupati Forge Limited",
+        "TIRUPATIFL",
+        "124280000",
+        "32",
         null,
         "Listing Stage",
         "19-MAR-2026",
-        "36000",
-        "4.00 KB",
-        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1598071_10012026123330_WEB.xml"
+        "1250000",
+        "4.03 KB",
+        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1630046_25022026063115_WEB.xml"
       ],
       "xbrl": [
-        "842400000000",
-        "L74999DL2018PLC336138",
-        "2025-12-23",
-        "2026-01-10",
-        "INE0Q9601016",
-        "NOTLISTED",
+        "30000000",
+        "L27320GJ2012PLC071594",
+        "2026-01-06",
+        "2026-02-25",
+        "INE319Y01024",
+        "NA",
         [
           "xbrli:shares",
           "iso4217:INR",
           "xbrli:shares",
           "iso4217:INR"
         ],
-        "WOMANCART",
-        "WOMANCART LIMITED",
+        "TIRUPATIFL",
+        "Tirupati Forge Limited",
         null,
-        "6691600",
-        "36000",
-        "312",
+        "124280000",
+        "1250000",
+        "32",
         "Equity shares for 6 months",
         "000000",
-        "36000"
+        "1250000"
       ],
       "marketData": [
-        165.3,
-        7045600,
-        392150077.4,
-        "12.11",
-        358,
-        141.5
+        46.88,
+        124280000,
+        2288813854.91,
+        "101.15",
+        52,
+        28.21
       ],
       "industry": [
-        "Consumer Discretionary",
-        "Consumer Services",
-        "Retailing",
-        "E-Retail/ E-Commerce"
+        "Industrials",
+        "Capital Goods",
+        "Industrial Products",
+        "Castings & Forgings"
       ]
     },
     {
       "api": [
-        "2880074000",
-        "66051",
-        "18-MAR-2026",
+        "602672000",
+        "66732",
+        "19-MAR-2026",
         "L36911DL2005PLC134929",
-        "31-JAN-2026",
-        "19-MAR-2026",
-        "11-FEB-2026",
-        "19-MAR-2026",
+        "24-FEB-2026",
+        null,
+        "07-MAR-2026",
+        null,
         "INE785M01021",
         "Preferential",
         "PC Jeweller Limited",
@@ -1245,16 +1123,16 @@
         "5.62",
         null,
         "Listing Stage",
-        "18-MAR-2026",
-        "512468600",
+        "19-MAR-2026",
+        "107237000",
         "4.03 KB",
-        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1623234_11022026035129_WEB.xml"
+        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1633569_07032026025922_WEB.xml"
       ],
       "xbrl": [
-        "2880074000",
+        "602672000",
         "L36911DL2005PLC134929",
-        "2026-01-31",
-        "2026-02-11",
+        "2026-02-24",
+        "2026-03-07",
         "INE785M01021",
         "NOTLISTED",
         [
@@ -1267,11 +1145,11 @@
         "PC Jeweller Limited",
         null,
         "7328494855",
-        "512468600",
+        "107237000",
         "5.62",
-        "Equity shares for 18 months",
+        "Equity shares for 6 months",
         "534809",
-        "512468600"
+        "107237000"
       ],
       "marketData": [
         8.3,
@@ -1290,33 +1168,33 @@
     },
     {
       "api": [
-        "4190000572000",
-        "65757",
-        "18-MAR-2026",
-        "L74210TN2000PLC045167",
-        "14-NOV-2025",
+        "13560000",
+        "66851",
+        "19-MAR-2026",
+        "L26914GJ2008PLC053838",
+        "27-FEB-2025",
         null,
-        "18-FEB-2026",
+        "09-MAR-2026",
         null,
-        "INE964H01014",
+        "INE500X01013",
         "Preferential",
-        "SEPC Limited",
-        "SEPC",
-        "1940158103",
-        "13.24",
+        "Lexus Granito (India) Limited",
+        "LEXUS",
+        "20490724",
+        "45.2",
         null,
         "Listing Stage",
-        "18-MAR-2026",
-        "3164653",
-        "4.36 KB",
-        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1631649_02032026023155_WEB.xml"
+        "19-MAR-2026",
+        "300000",
+        "3.99 KB",
+        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1634014_09032026071427_WEB.xml"
       ],
       "xbrl": [
-        "4190000572000",
-        "L74210TN2000PLC045167",
-        "2025-11-14",
-        "2026-02-18",
-        "INE964H01014",
+        "13560000",
+        "L26914GJ2008PLC053838",
+        "2025-02-27",
+        "2026-03-09",
+        "INE500X01013",
         "NOTLISTED",
         [
           "xbrli:shares",
@@ -1324,29 +1202,29 @@
           "xbrli:shares",
           "iso4217:INR"
         ],
-        "SEPC",
-        "SEPC Limited",
-        "This being conversion of CCD into Equity No lockin is applicable and the converted equity shares will rank-paripassu with other listed equity shares of the company.  Since Mandatorily asked selected minimum period. Shares listed as at 12/11/2025.",
-        "1940158103",
-        "0",
-        "13.24",
+        "LEXUS",
+        "Lexus Granito (India) Limited",
+        null,
+        "20490724",
+        "300000",
+        "45.2",
         "Equity shares for 6 months",
-        "532945",
-        "3164653"
+        "000000",
+        "300000"
       ],
       "marketData": [
-        5.16,
-        1893220335,
-        6470815348.34,
-        "18.73",
-        15.93,
-        4.78
+        28.82,
+        20490724,
+        260489550.92,
+        "27.98",
+        39.25,
+        22.32
       ],
       "industry": [
-        "Industrials",
-        "Construction",
-        "Construction",
-        "Civil Construction"
+        "Consumer Discretionary",
+        "Consumer Durables",
+        "Consumer Durables",
+        "Ceramics"
       ]
     },
     {
@@ -1412,6 +1290,67 @@
     },
     {
       "api": [
+        "4190000572000",
+        "65757",
+        "18-MAR-2026",
+        "L74210TN2000PLC045167",
+        "14-NOV-2025",
+        null,
+        "18-FEB-2026",
+        null,
+        "INE964H01014",
+        "Preferential",
+        "SEPC Limited",
+        "SEPC",
+        "1940158103",
+        "13.24",
+        null,
+        "Listing Stage",
+        "18-MAR-2026",
+        "3164653",
+        "4.36 KB",
+        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1631649_02032026023155_WEB.xml"
+      ],
+      "xbrl": [
+        "4190000572000",
+        "L74210TN2000PLC045167",
+        "2025-11-14",
+        "2026-02-18",
+        "INE964H01014",
+        "NOTLISTED",
+        [
+          "xbrli:shares",
+          "iso4217:INR",
+          "xbrli:shares",
+          "iso4217:INR"
+        ],
+        "SEPC",
+        "SEPC Limited",
+        "This being conversion of CCD into Equity No lockin is applicable and the converted equity shares will rank-paripassu with other listed equity shares of the company.  Since Mandatorily asked selected minimum period. Shares listed as at 12/11/2025.",
+        "1940158103",
+        "0",
+        "13.24",
+        "Equity shares for 6 months",
+        "532945",
+        "3164653"
+      ],
+      "marketData": [
+        5.16,
+        1893220335,
+        6470815348.34,
+        "18.73",
+        15.93,
+        4.78
+      ],
+      "industry": [
+        "Industrials",
+        "Construction",
+        "Construction",
+        "Civil Construction"
+      ]
+    },
+    {
+      "api": [
         "329350000",
         "64690",
         "18-MAR-2026",
@@ -1473,14 +1412,14 @@
     },
     {
       "api": [
-        "385251000",
-        "65977",
-        "17-MAR-2026",
+        "2880074000",
+        "66051",
+        "18-MAR-2026",
         "L36911DL2005PLC134929",
-        "22-JAN-2026",
-        "18-MAR-2026",
-        "09-FEB-2026",
-        "18-MAR-2026",
+        "31-JAN-2026",
+        "19-MAR-2026",
+        "11-FEB-2026",
+        "19-MAR-2026",
         "INE785M01021",
         "Preferential",
         "PC Jeweller Limited",
@@ -1489,16 +1428,16 @@
         "5.62",
         null,
         "Listing Stage",
-        "17-MAR-2026",
-        "68550000",
+        "18-MAR-2026",
+        "512468600",
         "4.03 KB",
-        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1621386_09022026013408_WEB.xml"
+        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1623234_11022026035129_WEB.xml"
       ],
       "xbrl": [
-        "385251000",
+        "2880074000",
         "L36911DL2005PLC134929",
-        "2026-01-22",
-        "2026-02-09",
+        "2026-01-31",
+        "2026-02-11",
         "INE785M01021",
         "NOTLISTED",
         [
@@ -1511,11 +1450,11 @@
         "PC Jeweller Limited",
         null,
         "7328494855",
-        "68550000",
+        "512468600",
         "5.62",
-        "Equity shares for 6 months",
+        "Equity shares for 18 months",
         "534809",
-        "68550000"
+        "512468600"
       ],
       "marketData": [
         8.3,
@@ -1530,128 +1469,6 @@
         "Consumer Durables",
         "Consumer Durables",
         "Gems, Jewellery And Watches"
-      ]
-    },
-    {
-      "api": [
-        "66653000",
-        "66766",
-        "17-MAR-2026",
-        "L67120MH1995PLC084899",
-        "19-FEB-2025",
-        null,
-        "11-MAR-2026",
-        null,
-        "INE296H01011",
-        "Preferential",
-        "Emkay Global Financial Services Limited",
-        "EMKAY",
-        "25910763",
-        "239.5",
-        null,
-        "Listing Stage",
-        "17-MAR-2026",
-        "278300",
-        "4.35 KB",
-        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1634631_11032026044836_WEB.xml"
-      ],
-      "xbrl": [
-        "66653000",
-        "L67120MH1995PLC084899",
-        "2025-02-19",
-        "2026-03-11",
-        "INE296H01011",
-        "NOTLISTED",
-        [
-          "xbrli:shares",
-          "iso4217:INR",
-          "xbrli:shares",
-          "iso4217:INR"
-        ],
-        "EMKAY",
-        "Emkay Global Financial Services Limited",
-        "Date of allotment of shares is 19.02.2026 however year 2026 option is not available in drop box, therefore we have selected the year as 2025 and date is mentioned as 19.02.2025. Kindly consider date as 19.02.2026",
-        "25910763",
-        "278300",
-        "239.5",
-        "Equity shares for 18 months",
-        "532737",
-        "278300"
-      ],
-      "marketData": [
-        222.67,
-        26189063,
-        1633804186.4,
-        "32.03",
-        409.9,
-        172.61
-      ],
-      "industry": [
-        "Financial Services",
-        "Financial Services",
-        "Capital Markets",
-        "Stockbroking & Allied"
-      ]
-    },
-    {
-      "api": [
-        "35000007000000",
-        "64485",
-        "17-MAR-2026",
-        "L74899DL1984PLC146935",
-        "05-DEC-2025",
-        "18-MAR-2026",
-        "24-DEC-2025",
-        "18-MAR-2026",
-        "INE621H01010",
-        "Preferential",
-        "RELIGARE ENTERPRISES LIMITED",
-        "RELIGARE",
-        "330754663",
-        "235",
-        null,
-        "Listing Stage",
-        "17-MAR-2026",
-        "1985816",
-        "4.01 KB",
-        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1594399_02012026043830_WEB.xml"
-      ],
-      "xbrl": [
-        "35000007000000",
-        "L74899DL1984PLC146935",
-        "2025-12-05",
-        "2025-12-24",
-        "INE621H01010",
-        "NOTLISTED",
-        [
-          "xbrli:shares",
-          "iso4217:INR",
-          "xbrli:shares",
-          "iso4217:INR"
-        ],
-        "RELIGARE",
-        "RELIGARE ENTERPRISES LIMITED",
-        null,
-        "330754663",
-        "1985816",
-        "235",
-        "Equity shares for 18 months",
-        "532915",
-        "1985816"
-      ],
-      "marketData": [
-        215.94,
-        332740479,
-        49959953189.89,
-        "57.43",
-        295,
-        196.51
-      ],
-      "industry": [
-        "Financial Services",
-        "Financial Services",
-        "Finance",
-        "Investment Company"
       ]
     },
     {
@@ -1717,33 +1534,33 @@
     },
     {
       "api": [
-        "550000000",
-        "66244",
-        "16-MAR-2026",
-        "L27509MH1993PLC074576",
-        "03-FEB-2026",
+        "66653000",
+        "66766",
+        "17-MAR-2026",
+        "L67120MH1995PLC084899",
+        "19-FEB-2025",
         null,
-        "19-FEB-2026",
+        "11-MAR-2026",
         null,
-        "INE024001021",
+        "INE296H01011",
         "Preferential",
-        "Aeroflex Industries Limited",
-        "AEROFLEX",
-        "129320370",
-        "182.7",
+        "Emkay Global Financial Services Limited",
+        "EMKAY",
+        "25910763",
+        "239.5",
         null,
         "Listing Stage",
-        "16-MAR-2026",
-        "3010398",
-        "4.32 KB",
-        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1627976_19022026052641_WEB.xml"
+        "17-MAR-2026",
+        "278300",
+        "4.35 KB",
+        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1634631_11032026044836_WEB.xml"
       ],
       "xbrl": [
-        "550000000",
-        "L27509MH1993PLC074576",
-        "2026-02-03",
-        "2026-02-19",
-        "INE024001021",
+        "66653000",
+        "L67120MH1995PLC084899",
+        "2025-02-19",
+        "2026-03-11",
+        "INE296H01011",
         "NOTLISTED",
         [
           "xbrli:shares",
@@ -1751,60 +1568,60 @@
           "xbrli:shares",
           "iso4217:INR"
         ],
-        "AEROFLEX",
-        "Aeroflex Industries Limited",
-        "The total amount raised is Rupees 54,99,99,714.60 (Indian Rupees Fifty Four Crores Ninety nine Lakhs Ninety nine Thousand seven hundred fourteen rupees and sixty paisa only).",
-        "129320370",
-        "3010398",
-        "182.7",
-        "Equity shares for 6 months",
-        "543972",
-        "3010398"
+        "EMKAY",
+        "Emkay Global Financial Services Limited",
+        "Date of allotment of shares is 19.02.2026 however year 2026 option is not available in drop box, therefore we have selected the year as 2025 and date is mentioned as 19.02.2025. Kindly consider date as 19.02.2026",
+        "25910763",
+        "278300",
+        "239.5",
+        "Equity shares for 18 months",
+        "532737",
+        "278300"
       ],
       "marketData": [
-        233.75,
-        132330768,
-        10255070790.93,
-        "62.14",
-        262.4,
-        148.01
+        222.67,
+        26189063,
+        1633804186.4,
+        "32.03",
+        409.9,
+        172.61
       ],
       "industry": [
-        "Industrials",
-        "Capital Goods",
-        "Industrial Products",
-        "Iron & Steel Products"
+        "Financial Services",
+        "Financial Services",
+        "Capital Markets",
+        "Stockbroking & Allied"
       ]
     },
     {
       "api": [
-        "60000000000000",
-        "65948",
-        "16-MAR-2026",
-        "L74999WB1974PLC041725",
-        "28-JAN-2025",
-        null,
-        "04-FEB-2026",
-        null,
-        "INE806C01018",
+        "385251000",
+        "65977",
+        "17-MAR-2026",
+        "L36911DL2005PLC134929",
+        "22-JAN-2026",
+        "18-MAR-2026",
+        "09-FEB-2026",
+        "18-MAR-2026",
+        "INE785M01021",
         "Preferential",
-        "TIL LIMITED",
-        "TIL",
-        "66602056",
-        "160",
+        "PC Jeweller Limited",
+        "PCJEWELLER",
+        "7328494855",
+        "5.62",
         null,
         "Listing Stage",
-        "16-MAR-2026",
-        "3750000",
-        "3.97 KB",
-        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1617729_04022026120040_WEB.xml"
+        "17-MAR-2026",
+        "68550000",
+        "4.03 KB",
+        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1621386_09022026013408_WEB.xml"
       ],
       "xbrl": [
-        "60000000000000",
-        "L74999WB1974PLC041725",
-        "2025-01-28",
-        "2026-02-04",
-        "INE806C01018",
+        "385251000",
+        "L36911DL2005PLC134929",
+        "2026-01-22",
+        "2026-02-09",
+        "INE785M01021",
         "NOTLISTED",
         [
           "xbrli:shares",
@@ -1812,29 +1629,90 @@
           "xbrli:shares",
           "iso4217:INR"
         ],
-        "TIL",
-        "TIL LIMITED",
+        "PCJEWELLER",
+        "PC Jeweller Limited",
         null,
-        "66602056",
-        "3750000",
-        "160",
-        "Equity shares for 18 months",
-        "505196",
-        "3750000"
+        "7328494855",
+        "68550000",
+        "5.62",
+        "Equity shares for 6 months",
+        "534809",
+        "68550000"
       ],
       "marketData": [
-        187.24,
-        70352056,
-        4145804892.06,
-        null,
-        409,
-        177.04
+        8.3,
+        7909513455,
+        29882932388.86,
+        "10.11",
+        19.65,
+        8.18
       ],
       "industry": [
-        "Industrials",
-        "Capital Goods",
-        "Agricultural, Commercial & Construction Vehicles",
-        "Construction Vehicles"
+        "Consumer Discretionary",
+        "Consumer Durables",
+        "Consumer Durables",
+        "Gems, Jewellery And Watches"
+      ]
+    },
+    {
+      "api": [
+        "35000007000000",
+        "64485",
+        "17-MAR-2026",
+        "L74899DL1984PLC146935",
+        "05-DEC-2025",
+        "18-MAR-2026",
+        "24-DEC-2025",
+        "18-MAR-2026",
+        "INE621H01010",
+        "Preferential",
+        "RELIGARE ENTERPRISES LIMITED",
+        "RELIGARE",
+        "330754663",
+        "235",
+        null,
+        "Listing Stage",
+        "17-MAR-2026",
+        "1985816",
+        "4.01 KB",
+        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1594399_02012026043830_WEB.xml"
+      ],
+      "xbrl": [
+        "35000007000000",
+        "L74899DL1984PLC146935",
+        "2025-12-05",
+        "2025-12-24",
+        "INE621H01010",
+        "NOTLISTED",
+        [
+          "xbrli:shares",
+          "iso4217:INR",
+          "xbrli:shares",
+          "iso4217:INR"
+        ],
+        "RELIGARE",
+        "RELIGARE ENTERPRISES LIMITED",
+        null,
+        "330754663",
+        "1985816",
+        "235",
+        "Equity shares for 18 months",
+        "532915",
+        "1985816"
+      ],
+      "marketData": [
+        215.94,
+        332740479,
+        49959953189.89,
+        "57.43",
+        295,
+        196.51
+      ],
+      "industry": [
+        "Financial Services",
+        "Financial Services",
+        "Finance",
+        "Investment Company"
       ]
     },
     {
@@ -1900,33 +1778,33 @@
     },
     {
       "api": [
-        "3000000000",
-        "66594",
-        "13-MAR-2026",
-        "L24110TG1991PLC012471",
-        "23-FEB-2025",
+        "60000000000000",
+        "65948",
+        "16-MAR-2026",
+        "L74999WB1974PLC041725",
+        "28-JAN-2025",
         null,
-        "05-MAR-2026",
+        "04-FEB-2026",
         null,
-        "INE101D01020",
+        "INE806C01018",
         "Preferential",
-        "GRANULES INDIA LIMITED",
-        "GRANULES",
-        "242668716",
-        "585",
+        "TIL LIMITED",
+        "TIL",
+        "66602056",
+        "160",
         null,
         "Listing Stage",
-        "13-MAR-2026",
-        "5128205",
-        "4.41 KB",
-        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1633725_09032026115829_WEB.xml"
+        "16-MAR-2026",
+        "3750000",
+        "3.97 KB",
+        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1617729_04022026120040_WEB.xml"
       ],
       "xbrl": [
-        "3000000000",
-        "L24110TG1991PLC012471",
-        "2025-02-23",
-        "2026-03-05",
-        "INE101D01020",
+        "60000000000000",
+        "L74999WB1974PLC041725",
+        "2025-01-28",
+        "2026-02-04",
+        "INE806C01018",
         "NOTLISTED",
         [
           "xbrli:shares",
@@ -1934,60 +1812,60 @@
           "xbrli:shares",
           "iso4217:INR"
         ],
-        "GRANULES",
-        "GRANULES INDIA LIMITED",
-        "The actual date of allotment of 51,28,205 equity shares was 23.02.2026. But  we are unable to find 2026 in the drop down list at row no. G17. hence we have selected 2025. <br></br> \n <br></br> \nPlease consider the allotment date as 23.02.2026.",
-        "242668716",
-        "5128205",
-        "585",
-        "Equity shares for 6 months",
-        "532482",
-        "5128205"
+        "TIL",
+        "TIL LIMITED",
+        null,
+        "66602056",
+        "3750000",
+        "160",
+        "Equity shares for 18 months",
+        "505196",
+        "3750000"
       ],
       "marketData": [
-        590.95,
-        247796921,
-        87271770618.8,
-        "26.46",
-        627,
-        422
+        187.24,
+        70352056,
+        4145804892.06,
+        null,
+        409,
+        177.04
       ],
       "industry": [
-        "Healthcare",
-        "Healthcare",
-        "Pharmaceuticals & Biotechnology",
-        "Pharmaceuticals"
+        "Industrials",
+        "Capital Goods",
+        "Agricultural, Commercial & Construction Vehicles",
+        "Construction Vehicles"
       ]
     },
     {
       "api": [
-        "74000000",
-        "66380",
-        "13-MAR-2026",
-        "L40300MH1977PLC019594",
+        "550000000",
+        "66244",
+        "16-MAR-2026",
+        "L27509MH1993PLC074576",
         "03-FEB-2026",
         null,
-        "18-FEB-2026",
+        "19-FEB-2026",
         null,
-        "INE281B01032",
+        "INE024001021",
         "Preferential",
-        "LLOYDS METALS AND ENERGY LIMITED",
-        "LLOYDSME",
-        "529090088",
-        "740",
+        "Aeroflex Industries Limited",
+        "AEROFLEX",
+        "129320370",
+        "182.7",
         null,
         "Listing Stage",
-        "13-MAR-2026",
-        "805500",
-        "4.03 KB",
-        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1627416_18022026040242_WEB.xml"
+        "16-MAR-2026",
+        "3010398",
+        "4.32 KB",
+        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1627976_19022026052641_WEB.xml"
       ],
       "xbrl": [
-        "74000000",
-        "L40300MH1977PLC019594",
+        "550000000",
+        "L27509MH1993PLC074576",
         "2026-02-03",
-        "2026-02-18",
-        "INE281B01032",
+        "2026-02-19",
+        "INE024001021",
         "NOTLISTED",
         [
           "xbrli:shares",
@@ -1995,90 +1873,29 @@
           "xbrli:shares",
           "iso4217:INR"
         ],
-        "LLOYDSME",
-        "LLOYDS METALS AND ENERGY LIMITED",
-        null,
-        "529090088",
-        "805500",
-        "740",
+        "AEROFLEX",
+        "Aeroflex Industries Limited",
+        "The total amount raised is Rupees 54,99,99,714.60 (Indian Rupees Fifty Four Crores Ninety nine Lakhs Ninety nine Thousand seven hundred fourteen rupees and sixty paisa only).",
+        "129320370",
+        "3010398",
+        "182.7",
         "Equity shares for 6 months",
-        "512455",
-        "805500"
+        "543972",
+        "3010398"
       ],
       "marketData": [
-        1245.8,
-        545164538,
-        166081382458.06,
-        "25.83",
-        1612,
-        1015
+        233.75,
+        132330768,
+        10255070790.93,
+        "62.14",
+        262.4,
+        148.01
       ],
       "industry": [
-        "Commodities",
-        "Metals & Mining",
-        "Minerals & Mining",
-        "Industrial Minerals"
-      ]
-    },
-    {
-      "api": [
-        "535674000",
-        "66415",
-        "13-MAR-2026",
-        "L52335CT2013PLC001207",
-        "07-FEB-2026",
-        null,
-        "20-FEB-2026",
-        null,
-        "INE0L2Y01011",
-        "Preferential",
-        "ARHAM TECHNOLOGIES LIMITED",
-        "ARHAM",
-        "16920000",
-        "109.5",
-        null,
-        "Listing Stage",
-        "13-MAR-2026",
-        "4892000",
-        "4.03 KB",
-        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1628513_20022026062716_WEB.xml"
-      ],
-      "xbrl": [
-        "535674000",
-        "L52335CT2013PLC001207",
-        "2026-02-07",
-        "2026-02-20",
-        "INE0L2Y01011",
-        "NOTLISTED",
-        [
-          "xbrli:shares",
-          "iso4217:INR",
-          "xbrli:shares",
-          "iso4217:INR"
-        ],
-        "ARHAM",
-        "ARHAM TECHNOLOGIES LIMITED",
-        null,
-        "16920000",
-        "4892000",
-        "109.5",
-        "Equity shares for 6 months",
-        "000000",
-        "4892000"
-      ],
-      "marketData": [
-        124.5,
-        21812000,
-        749517521.97,
-        "25.28",
-        161,
-        70.8
-      ],
-      "industry": [
-        "Consumer Discretionary",
-        "Consumer Durables",
-        "Consumer Durables",
-        "Consumer Electronics"
+        "Industrials",
+        "Capital Goods",
+        "Industrial Products",
+        "Iron & Steel Products"
       ]
     },
     {
@@ -2150,6 +1967,189 @@
     },
     {
       "api": [
+        "795650000",
+        "66274",
+        "13-MAR-2026",
+        "L18101RJ2003PLC018359",
+        "06-FEB-2025",
+        null,
+        "26-FEB-2026",
+        null,
+        "INE0GMR01016",
+        "Preferential",
+        "SWARAJ SUITING LIMITED",
+        "SWARAJ",
+        "22018260",
+        "236",
+        null,
+        "Listing Stage",
+        "13-MAR-2026",
+        "3371400",
+        "4.26 KB",
+        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1630552_26022026064851_WEB.xml"
+      ],
+      "xbrl": [
+        "795650000",
+        "L18101RJ2003PLC018359",
+        "2025-02-06",
+        "2026-02-26",
+        "INE0GMR01016",
+        "NOTLISTED",
+        [
+          "xbrli:shares",
+          "iso4217:INR",
+          "xbrli:shares",
+          "iso4217:INR"
+        ],
+        "SWARAJ",
+        "SWARAJ SUITING LIMITED",
+        "* Please note that the Date of Allotment of shares is 06-02-2026. We are unable to change the year to 2026 in this document.",
+        "22018260",
+        "3371400",
+        "236",
+        "Equity shares for 6 months",
+        "000000",
+        "3371400"
+      ],
+      "marketData": [
+        290.85,
+        25389660,
+        1843273050.11,
+        "18.29",
+        318.95,
+        138.5
+      ],
+      "industry": [
+        "Consumer Discretionary",
+        "Textiles",
+        "Textiles & Apparels",
+        "Other Textile Products"
+      ]
+    },
+    {
+      "api": [
+        "3000000000",
+        "66594",
+        "13-MAR-2026",
+        "L24110TG1991PLC012471",
+        "23-FEB-2025",
+        null,
+        "05-MAR-2026",
+        null,
+        "INE101D01020",
+        "Preferential",
+        "GRANULES INDIA LIMITED",
+        "GRANULES",
+        "242668716",
+        "585",
+        null,
+        "Listing Stage",
+        "13-MAR-2026",
+        "5128205",
+        "4.41 KB",
+        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1633725_09032026115829_WEB.xml"
+      ],
+      "xbrl": [
+        "3000000000",
+        "L24110TG1991PLC012471",
+        "2025-02-23",
+        "2026-03-05",
+        "INE101D01020",
+        "NOTLISTED",
+        [
+          "xbrli:shares",
+          "iso4217:INR",
+          "xbrli:shares",
+          "iso4217:INR"
+        ],
+        "GRANULES",
+        "GRANULES INDIA LIMITED",
+        "The actual date of allotment of 51,28,205 equity shares was 23.02.2026. But  we are unable to find 2026 in the drop down list at row no. G17. hence we have selected 2025. <br></br> \n <br></br> \nPlease consider the allotment date as 23.02.2026.",
+        "242668716",
+        "5128205",
+        "585",
+        "Equity shares for 6 months",
+        "532482",
+        "5128205"
+      ],
+      "marketData": [
+        590.95,
+        247796921,
+        87271770618.8,
+        "26.46",
+        627,
+        422
+      ],
+      "industry": [
+        "Healthcare",
+        "Healthcare",
+        "Pharmaceuticals & Biotechnology",
+        "Pharmaceuticals"
+      ]
+    },
+    {
+      "api": [
+        "535674000",
+        "66415",
+        "13-MAR-2026",
+        "L52335CT2013PLC001207",
+        "07-FEB-2026",
+        null,
+        "20-FEB-2026",
+        null,
+        "INE0L2Y01011",
+        "Preferential",
+        "ARHAM TECHNOLOGIES LIMITED",
+        "ARHAM",
+        "16920000",
+        "109.5",
+        null,
+        "Listing Stage",
+        "13-MAR-2026",
+        "4892000",
+        "4.03 KB",
+        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1628513_20022026062716_WEB.xml"
+      ],
+      "xbrl": [
+        "535674000",
+        "L52335CT2013PLC001207",
+        "2026-02-07",
+        "2026-02-20",
+        "INE0L2Y01011",
+        "NOTLISTED",
+        [
+          "xbrli:shares",
+          "iso4217:INR",
+          "xbrli:shares",
+          "iso4217:INR"
+        ],
+        "ARHAM",
+        "ARHAM TECHNOLOGIES LIMITED",
+        null,
+        "16920000",
+        "4892000",
+        "109.5",
+        "Equity shares for 6 months",
+        "000000",
+        "4892000"
+      ],
+      "marketData": [
+        124.5,
+        21812000,
+        749517521.97,
+        "25.28",
+        161,
+        70.8
+      ],
+      "industry": [
+        "Consumer Discretionary",
+        "Consumer Durables",
+        "Consumer Durables",
+        "Consumer Electronics"
+      ]
+    },
+    {
+      "api": [
         "63500000",
         "64431",
         "13-MAR-2026",
@@ -2217,33 +2217,33 @@
     },
     {
       "api": [
-        "795650000",
-        "66274",
+        "74000000",
+        "66380",
         "13-MAR-2026",
-        "L18101RJ2003PLC018359",
-        "06-FEB-2025",
+        "L40300MH1977PLC019594",
+        "03-FEB-2026",
         null,
-        "26-FEB-2026",
+        "18-FEB-2026",
         null,
-        "INE0GMR01016",
+        "INE281B01032",
         "Preferential",
-        "SWARAJ SUITING LIMITED",
-        "SWARAJ",
-        "22018260",
-        "236",
+        "LLOYDS METALS AND ENERGY LIMITED",
+        "LLOYDSME",
+        "529090088",
+        "740",
         null,
         "Listing Stage",
         "13-MAR-2026",
-        "3371400",
-        "4.26 KB",
-        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1630552_26022026064851_WEB.xml"
+        "805500",
+        "4.03 KB",
+        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1627416_18022026040242_WEB.xml"
       ],
       "xbrl": [
-        "795650000",
-        "L18101RJ2003PLC018359",
-        "2025-02-06",
-        "2026-02-26",
-        "INE0GMR01016",
+        "74000000",
+        "L40300MH1977PLC019594",
+        "2026-02-03",
+        "2026-02-18",
+        "INE281B01032",
         "NOTLISTED",
         [
           "xbrli:shares",
@@ -2251,29 +2251,29 @@
           "xbrli:shares",
           "iso4217:INR"
         ],
-        "SWARAJ",
-        "SWARAJ SUITING LIMITED",
-        "* Please note that the Date of Allotment of shares is 06-02-2026. We are unable to change the year to 2026 in this document.",
-        "22018260",
-        "3371400",
-        "236",
+        "LLOYDSME",
+        "LLOYDS METALS AND ENERGY LIMITED",
+        null,
+        "529090088",
+        "805500",
+        "740",
         "Equity shares for 6 months",
-        "000000",
-        "3371400"
+        "512455",
+        "805500"
       ],
       "marketData": [
-        290.85,
-        25389660,
-        1843273050.11,
-        "18.29",
-        318.95,
-        138.5
+        1245.8,
+        545164538,
+        166081382458.06,
+        "25.83",
+        1612,
+        1015
       ],
       "industry": [
-        "Consumer Discretionary",
-        "Textiles",
-        "Textiles & Apparels",
-        "Other Textile Products"
+        "Commodities",
+        "Metals & Mining",
+        "Minerals & Mining",
+        "Industrial Minerals"
       ]
     },
     {
@@ -2400,67 +2400,6 @@
     },
     {
       "api": [
-        "355260000",
-        "66786",
-        "12-MAR-2026",
-        "L15420PN1933PLC133303",
-        "24-NOV-2025",
-        null,
-        "06-MAR-2026",
-        null,
-        "INE133E01013",
-        "Preferential",
-        "Tilaknagar Industries Limited",
-        "TI",
-        "245908750",
-        "382",
-        null,
-        "Listing Stage",
-        "12-MAR-2026",
-        "930000",
-        "3.98 KB",
-        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1633161_06032026040904_WEB.xml"
-      ],
-      "xbrl": [
-        "355260000",
-        "L15420PN1933PLC133303",
-        "2025-11-24",
-        "2026-03-06",
-        "INE133E01013",
-        "NOTLISTED",
-        [
-          "xbrli:shares",
-          "iso4217:INR",
-          "xbrli:shares",
-          "iso4217:INR"
-        ],
-        "TI",
-        "Tilaknagar Industries Limited",
-        null,
-        "245908750",
-        "930000",
-        "382",
-        "Equity shares for 18 months",
-        "507205",
-        "930000"
-      ],
-      "marketData": [
-        434.4,
-        246838750,
-        43536829619.64,
-        "94.77",
-        549.7,
-        199.53
-      ],
-      "industry": [
-        "Fast Moving Consumer Goods",
-        "Fast Moving Consumer Goods",
-        "Beverages",
-        "Breweries & Distilleries"
-      ]
-    },
-    {
-      "api": [
         "39999000",
         "66234",
         "12-MAR-2026",
@@ -2578,33 +2517,33 @@
     },
     {
       "api": [
-        "30200000",
-        "65817",
+        "355260000",
+        "66786",
         "12-MAR-2026",
-        "L85100MH2010PLC200491",
-        "12-JAN-2025",
-        "13-MAR-2026",
-        "11-FEB-2026",
-        "13-MAR-2026",
-        "INE0PRF01011",
+        "L15420PN1933PLC133303",
+        "24-NOV-2025",
+        null,
+        "06-MAR-2026",
+        null,
+        "INE133E01013",
         "Preferential",
-        "Unihealth Hospitals Limited",
-        "UNIHEALTH",
-        "15499952",
-        "151",
+        "Tilaknagar Industries Limited",
+        "TI",
+        "245908750",
+        "382",
         null,
         "Listing Stage",
         "12-MAR-2026",
-        "200000",
-        "4.64 KB",
-        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1623088_11022026010120_WEB.xml"
+        "930000",
+        "3.98 KB",
+        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1633161_06032026040904_WEB.xml"
       ],
       "xbrl": [
-        "30200000",
-        "L85100MH2010PLC200491",
-        "2025-01-12",
-        "2026-02-11",
-        "INE0PRF01011",
+        "355260000",
+        "L15420PN1933PLC133303",
+        "2025-11-24",
+        "2026-03-06",
+        "INE133E01013",
         "NOTLISTED",
         [
           "xbrli:shares",
@@ -2612,29 +2551,29 @@
           "xbrli:shares",
           "iso4217:INR"
         ],
-        "UNIHEALTH",
-        "Unihealth Hospitals Limited",
-        "1. Please note that the date of allotment of shares is 12-01-2026. However, while filing the relevant form through the XBRL utility, the system is not allowing us to select the year 2026. Due to this technical limitation, we have temporarily selected the year 2025. <br></br> \n <br></br> \nWe kindly request your guidance on how to correctly select or report the year 2026 in the XBRL utility, or advise us on the appropriate corrective steps to be followed in this matter.",
-        "15499952",
-        "200000",
-        "151",
+        "TI",
+        "Tilaknagar Industries Limited",
+        null,
+        "245908750",
+        "930000",
+        "382",
         "Equity shares for 18 months",
-        "000000",
-        "200000"
+        "507205",
+        "930000"
       ],
       "marketData": [
-        321.4,
-        15499952,
-        0,
-        "32.89",
-        321.4,
-        120
+        434.4,
+        246838750,
+        43536829619.64,
+        "94.77",
+        549.7,
+        199.53
       ],
       "industry": [
-        "Healthcare",
-        "Healthcare",
-        "Healthcare Services",
-        "Hospital"
+        "Fast Moving Consumer Goods",
+        "Fast Moving Consumer Goods",
+        "Beverages",
+        "Breweries & Distilleries"
       ]
     },
     {
@@ -2700,33 +2639,33 @@
     },
     {
       "api": [
-        "61227000",
-        "66502",
-        "11-MAR-2026",
-        "L74999GJ2018PLC105533",
-        "06-FEB-2026",
-        null,
-        "23-FEB-2026",
-        null,
-        "INE0O1S01012",
+        "30200000",
+        "65817",
+        "12-MAR-2026",
+        "L85100MH2010PLC200491",
+        "12-JAN-2025",
+        "13-MAR-2026",
+        "11-FEB-2026",
+        "13-MAR-2026",
+        "INE0PRF01011",
         "Preferential",
-        "MAGSON RETAIL AND DISTRIBUTION LIMITED",
-        "MAGSON",
-        "11449708",
-        "93.25",
+        "Unihealth Hospitals Limited",
+        "UNIHEALTH",
+        "15499952",
+        "151",
         null,
         "Listing Stage",
-        "11-MAR-2026",
-        "875460",
-        "4.04 KB",
-        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1628827_23022026121212_WEB.xml"
+        "12-MAR-2026",
+        "200000",
+        "4.64 KB",
+        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1623088_11022026010120_WEB.xml"
       ],
       "xbrl": [
-        "61227000",
-        "L74999GJ2018PLC105533",
-        "2026-02-06",
-        "2026-02-23",
-        "INE0O1S01012",
+        "30200000",
+        "L85100MH2010PLC200491",
+        "2025-01-12",
+        "2026-02-11",
+        "INE0PRF01011",
         "NOTLISTED",
         [
           "xbrli:shares",
@@ -2734,60 +2673,60 @@
           "xbrli:shares",
           "iso4217:INR"
         ],
-        "MAGSON",
-        "MAGSON RETAIL AND DISTRIBUTION LIMITED",
-        null,
-        "11449708",
-        "875460",
-        "93.25",
-        "Equity shares for 6 months",
+        "UNIHEALTH",
+        "Unihealth Hospitals Limited",
+        "1. Please note that the date of allotment of shares is 12-01-2026. However, while filing the relevant form through the XBRL utility, the system is not allowing us to select the year 2026. Due to this technical limitation, we have temporarily selected the year 2025. <br></br> \n <br></br> \nWe kindly request your guidance on how to correctly select or report the year 2026 in the XBRL utility, or advise us on the appropriate corrective steps to be followed in this matter.",
+        "15499952",
+        "200000",
+        "151",
+        "Equity shares for 18 months",
         "000000",
-        "875460"
+        "200000"
       ],
       "marketData": [
-        140,
-        12325168,
-        491750045.87,
-        "598.72",
-        166.1,
-        92.6
+        321.4,
+        15499952,
+        0,
+        "32.89",
+        321.4,
+        120
       ],
       "industry": [
-        "Consumer Discretionary",
-        "Consumer Services",
-        "Retailing",
-        "Diversified Retail"
+        "Healthcare",
+        "Healthcare",
+        "Healthcare Services",
+        "Hospital"
       ]
     },
     {
       "api": [
-        "462897000",
-        "65827",
+        "3884050000",
+        "66104",
         "11-MAR-2026",
-        "L22209GJ2024PLC147599",
-        "23-JAN-2025",
+        "L45207GJ2012PLC070279",
+        "23-JAN-2026",
         "12-MAR-2026",
-        "30-JAN-2026",
+        "10-FEB-2026",
         "12-MAR-2026",
-        "INE0VZX01015",
+        "INE510W01014",
         "Preferential",
-        "Renol Polychem Limited",
-        "RNPL",
-        "7944000",
-        "134",
+        "Inox Green Energy Services Limited",
+        "INOXGREEN",
+        "374705495",
+        "145",
         null,
         "Listing Stage",
         "11-MAR-2026",
-        "3454462",
-        "4.40 KB",
-        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1614130_30012026122832_WEB.xml"
+        "26786550",
+        "4.44 KB",
+        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1622131_10022026100646_WEB.xml"
       ],
       "xbrl": [
-        "462897000",
-        "L22209GJ2024PLC147599",
-        "2025-01-23",
-        "2026-01-30",
-        "INE0VZX01015",
+        "3884050000",
+        "L45207GJ2012PLC070279",
+        "2026-01-23",
+        "2026-02-10",
+        "INE510W01014",
         "NOTLISTED",
         [
           "xbrli:shares",
@@ -2795,29 +2734,29 @@
           "xbrli:shares",
           "iso4217:INR"
         ],
-        "RNPL",
-        "Renol Polychem Limited",
-        "Company has made allotment of 3400745 equity shares on January 23, 2026 and allotment of 53717 equity shares on January 24, 2026. <br></br> \n <br></br> \nIn XBRL Date of Allotment we have mentioned January 23, 2025 (as drop down is not having option of 2026)",
-        "7944000",
-        "3454462",
-        "134",
+        "INOXGREEN",
+        "Inox Green Energy Services Limited",
+        "Total: 2,67,86,550 equity shares alloted  <br></br> \ni) 68,96,550 Equity shares alloted on 23rd January, 2026; and  <br></br> \nii) 198,90,000 equity shares alloted on 28th January, 2026 <br></br> \n <br></br>",
+        "374705495",
+        "26786550",
+        "145",
         "Equity shares for 6 months",
-        "000000",
-        "3454462"
+        "543667",
+        "26786550"
       ],
       "marketData": [
-        139.75,
-        11398462,
-        453577109.07,
-        null,
-        158,
-        69
+        150.4,
+        401492045,
+        26226798632.68,
+        "69.06",
+        279,
+        104
       ],
       "industry": [
-        "Commodities",
-        "Chemicals",
-        "Chemicals & Petrochemicals",
-        "Specialty Chemicals"
+        "Utilities",
+        "Power",
+        "Power",
+        "Power Generation"
       ]
     },
     {
@@ -2950,6 +2889,128 @@
     },
     {
       "api": [
+        "61227000",
+        "66502",
+        "11-MAR-2026",
+        "L74999GJ2018PLC105533",
+        "06-FEB-2026",
+        null,
+        "23-FEB-2026",
+        null,
+        "INE0O1S01012",
+        "Preferential",
+        "MAGSON RETAIL AND DISTRIBUTION LIMITED",
+        "MAGSON",
+        "11449708",
+        "93.25",
+        null,
+        "Listing Stage",
+        "11-MAR-2026",
+        "875460",
+        "4.04 KB",
+        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1628827_23022026121212_WEB.xml"
+      ],
+      "xbrl": [
+        "61227000",
+        "L74999GJ2018PLC105533",
+        "2026-02-06",
+        "2026-02-23",
+        "INE0O1S01012",
+        "NOTLISTED",
+        [
+          "xbrli:shares",
+          "iso4217:INR",
+          "xbrli:shares",
+          "iso4217:INR"
+        ],
+        "MAGSON",
+        "MAGSON RETAIL AND DISTRIBUTION LIMITED",
+        null,
+        "11449708",
+        "875460",
+        "93.25",
+        "Equity shares for 6 months",
+        "000000",
+        "875460"
+      ],
+      "marketData": [
+        140,
+        12325168,
+        491750045.87,
+        "598.72",
+        166.1,
+        92.6
+      ],
+      "industry": [
+        "Consumer Discretionary",
+        "Consumer Services",
+        "Retailing",
+        "Diversified Retail"
+      ]
+    },
+    {
+      "api": [
+        "462897000",
+        "65827",
+        "11-MAR-2026",
+        "L22209GJ2024PLC147599",
+        "23-JAN-2025",
+        "12-MAR-2026",
+        "30-JAN-2026",
+        "12-MAR-2026",
+        "INE0VZX01015",
+        "Preferential",
+        "Renol Polychem Limited",
+        "RNPL",
+        "7944000",
+        "134",
+        null,
+        "Listing Stage",
+        "11-MAR-2026",
+        "3454462",
+        "4.40 KB",
+        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1614130_30012026122832_WEB.xml"
+      ],
+      "xbrl": [
+        "462897000",
+        "L22209GJ2024PLC147599",
+        "2025-01-23",
+        "2026-01-30",
+        "INE0VZX01015",
+        "NOTLISTED",
+        [
+          "xbrli:shares",
+          "iso4217:INR",
+          "xbrli:shares",
+          "iso4217:INR"
+        ],
+        "RNPL",
+        "Renol Polychem Limited",
+        "Company has made allotment of 3400745 equity shares on January 23, 2026 and allotment of 53717 equity shares on January 24, 2026. <br></br> \n <br></br> \nIn XBRL Date of Allotment we have mentioned January 23, 2025 (as drop down is not having option of 2026)",
+        "7944000",
+        "3454462",
+        "134",
+        "Equity shares for 6 months",
+        "000000",
+        "3454462"
+      ],
+      "marketData": [
+        139.75,
+        11398462,
+        453577109.07,
+        null,
+        158,
+        69
+      ],
+      "industry": [
+        "Commodities",
+        "Chemicals",
+        "Chemicals & Petrochemicals",
+        "Specialty Chemicals"
+      ]
+    },
+    {
+      "api": [
         "346780000",
         "65913",
         "11-MAR-2026",
@@ -3013,189 +3074,6 @@
         "Consumer Services",
         "Retailing",
         "Diversified Retail"
-      ]
-    },
-    {
-      "api": [
-        "3884050000",
-        "66104",
-        "11-MAR-2026",
-        "L45207GJ2012PLC070279",
-        "23-JAN-2026",
-        "12-MAR-2026",
-        "10-FEB-2026",
-        "12-MAR-2026",
-        "INE510W01014",
-        "Preferential",
-        "Inox Green Energy Services Limited",
-        "INOXGREEN",
-        "374705495",
-        "145",
-        null,
-        "Listing Stage",
-        "11-MAR-2026",
-        "26786550",
-        "4.44 KB",
-        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1622131_10022026100646_WEB.xml"
-      ],
-      "xbrl": [
-        "3884050000",
-        "L45207GJ2012PLC070279",
-        "2026-01-23",
-        "2026-02-10",
-        "INE510W01014",
-        "NOTLISTED",
-        [
-          "xbrli:shares",
-          "iso4217:INR",
-          "xbrli:shares",
-          "iso4217:INR"
-        ],
-        "INOXGREEN",
-        "Inox Green Energy Services Limited",
-        "Total: 2,67,86,550 equity shares alloted  <br></br> \ni) 68,96,550 Equity shares alloted on 23rd January, 2026; and  <br></br> \nii) 198,90,000 equity shares alloted on 28th January, 2026 <br></br> \n <br></br>",
-        "374705495",
-        "26786550",
-        "145",
-        "Equity shares for 6 months",
-        "543667",
-        "26786550"
-      ],
-      "marketData": [
-        150.4,
-        401492045,
-        26226798632.68,
-        "69.06",
-        279,
-        104
-      ],
-      "industry": [
-        "Utilities",
-        "Power",
-        "Power",
-        "Power Generation"
-      ]
-    },
-    {
-      "api": [
-        "721500000",
-        "65268",
-        "10-MAR-2026",
-        "L26100MH1998PLC117437",
-        "17-DEC-2025",
-        "11-MAR-2026",
-        "16-JAN-2026",
-        "11-MAR-2026",
-        "INE955I01044",
-        "Preferential",
-        "SEJAL GLASS LIMITED",
-        "SEJALLTD",
-        "10100000",
-        "555",
-        null,
-        "Listing Stage",
-        "10-MAR-2026",
-        "1300000",
-        "4.00 KB",
-        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1602821_16012026071058_WEB.xml"
-      ],
-      "xbrl": [
-        "721500000",
-        "L26100MH1998PLC117437",
-        "2025-12-17",
-        "2026-01-16",
-        "INE955I01044",
-        "NOTLISTED",
-        [
-          "xbrli:shares",
-          "iso4217:INR",
-          "xbrli:shares",
-          "iso4217:INR"
-        ],
-        "SEJALLTD",
-        "SEJAL GLASS LIMITED",
-        null,
-        "10100000",
-        "1300000",
-        "555",
-        "Equity shares for 6 months",
-        "532993",
-        "1300000"
-      ],
-      "marketData": [
-        481.75,
-        11400000,
-        1386275360.52,
-        "27.06",
-        1036.7,
-        324
-      ],
-      "industry": [
-        "Industrials",
-        "Capital Goods",
-        "Industrial Products",
-        "Glass - Industrial"
-      ]
-    },
-    {
-      "api": [
-        "3410000",
-        "66437",
-        "10-MAR-2026",
-        "L32200MH1986PLC040652",
-        "11-FEB-2026",
-        null,
-        "20-FEB-2026",
-        null,
-        "INE676A01027",
-        "Preferential",
-        "Black Box Limited",
-        "BBOX",
-        "170482543",
-        "417",
-        null,
-        "Listing Stage",
-        "10-MAR-2026",
-        "8179",
-        "4.01 KB",
-        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1628209_20022026010036_WEB.xml"
-      ],
-      "xbrl": [
-        "3410000",
-        "L32200MH1986PLC040652",
-        "2026-02-11",
-        "2026-02-20",
-        "INE676A01027",
-        "NOTLISTED",
-        [
-          "xbrli:shares",
-          "iso4217:INR",
-          "xbrli:shares",
-          "iso4217:INR"
-        ],
-        "BBOX",
-        "Black Box Limited",
-        null,
-        "170482543",
-        "8179",
-        "417",
-        "Equity shares for 6 months",
-        "500463",
-        "8179"
-      ],
-      "marketData": [
-        504.35,
-        170490722,
-        23355170920.49,
-        "40.01",
-        613.8,
-        320.85
-      ],
-      "industry": [
-        "Information Technology",
-        "Information Technology",
-        "IT - Services",
-        "IT Enabled Services"
       ]
     },
     {
@@ -3267,6 +3145,67 @@
     },
     {
       "api": [
+        "3410000",
+        "66437",
+        "10-MAR-2026",
+        "L32200MH1986PLC040652",
+        "11-FEB-2026",
+        null,
+        "20-FEB-2026",
+        null,
+        "INE676A01027",
+        "Preferential",
+        "Black Box Limited",
+        "BBOX",
+        "170482543",
+        "417",
+        null,
+        "Listing Stage",
+        "10-MAR-2026",
+        "8179",
+        "4.01 KB",
+        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1628209_20022026010036_WEB.xml"
+      ],
+      "xbrl": [
+        "3410000",
+        "L32200MH1986PLC040652",
+        "2026-02-11",
+        "2026-02-20",
+        "INE676A01027",
+        "NOTLISTED",
+        [
+          "xbrli:shares",
+          "iso4217:INR",
+          "xbrli:shares",
+          "iso4217:INR"
+        ],
+        "BBOX",
+        "Black Box Limited",
+        null,
+        "170482543",
+        "8179",
+        "417",
+        "Equity shares for 6 months",
+        "500463",
+        "8179"
+      ],
+      "marketData": [
+        504.35,
+        170490722,
+        23355170920.49,
+        "40.01",
+        613.8,
+        320.85
+      ],
+      "industry": [
+        "Information Technology",
+        "Information Technology",
+        "IT - Services",
+        "IT Enabled Services"
+      ]
+    },
+    {
+      "api": [
         "283786000",
         "65820",
         "10-MAR-2026",
@@ -3324,6 +3263,67 @@
         "Power",
         "Power",
         "Power Generation"
+      ]
+    },
+    {
+      "api": [
+        "721500000",
+        "65268",
+        "10-MAR-2026",
+        "L26100MH1998PLC117437",
+        "17-DEC-2025",
+        "11-MAR-2026",
+        "16-JAN-2026",
+        "11-MAR-2026",
+        "INE955I01044",
+        "Preferential",
+        "SEJAL GLASS LIMITED",
+        "SEJALLTD",
+        "10100000",
+        "555",
+        null,
+        "Listing Stage",
+        "10-MAR-2026",
+        "1300000",
+        "4.00 KB",
+        "https://nsearchives.nseindia.com/corporate/xbrl/PREF_ISSUE_LS_1602821_16012026071058_WEB.xml"
+      ],
+      "xbrl": [
+        "721500000",
+        "L26100MH1998PLC117437",
+        "2025-12-17",
+        "2026-01-16",
+        "INE955I01044",
+        "NOTLISTED",
+        [
+          "xbrli:shares",
+          "iso4217:INR",
+          "xbrli:shares",
+          "iso4217:INR"
+        ],
+        "SEJALLTD",
+        "SEJAL GLASS LIMITED",
+        null,
+        "10100000",
+        "1300000",
+        "555",
+        "Equity shares for 6 months",
+        "532993",
+        "1300000"
+      ],
+      "marketData": [
+        481.75,
+        11400000,
+        1386275360.52,
+        "27.06",
+        1036.7,
+        324
+      ],
+      "industry": [
+        "Industrials",
+        "Capital Goods",
+        "Industrial Products",
+        "Glass - Industrial"
       ]
     }
   ]

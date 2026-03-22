@@ -1,0 +1,235 @@
+{
+  "metadata": {
+    "record": [
+      "symbol",
+      "company",
+      "transactionMode",
+      "tradeDate",
+      "transactionValue",
+      "pricePerShare",
+      "holdingDeltaPct"
+    ]
+  },
+  "data": [
+    {
+      "record": [
+        "PARKHOTELS",
+        "Apeejay Surrendra Park Hotels Limited",
+        "Market Purchase",
+        "19-Mar-2026 to 20-Mar-2026",
+        2984367,
+        110.3604393166186,
+        0.01
+      ]
+    },
+    {
+      "record": [
+        "PARKHOTELS",
+        "Apeejay Surrendra Park Hotels Limited",
+        "Market Purchase",
+        "20-Mar-2026",
+        1988350,
+        109.25,
+        0.01
+      ]
+    },
+    {
+      "record": [
+        "JARO",
+        "Jaro Institute of Technology Management and Research Limited",
+        "Market Purchase",
+        "20-Mar-2026",
+        27157748,
+        482.99331294017213,
+        0.26
+      ]
+    },
+    {
+      "record": [
+        "GALLANTT",
+        "Gallantt Ispat Limited",
+        "Market Purchase",
+        "20-Mar-2026",
+        13465918,
+        552.9015807842333,
+        0.01
+      ]
+    },
+    {
+      "record": [
+        "INNOMET",
+        "Innomet Advanced Materials Limited",
+        "Market Purchase",
+        "18-Mar-2026 to 20-Mar-2026",
+        960480,
+        72.76363636363637,
+        0.1
+      ]
+    },
+    {
+      "record": [
+        "INNOMET",
+        "Innomet Advanced Materials Limited",
+        "Market Purchase",
+        "18-Mar-2026 to 20-Mar-2026",
+        960480,
+        72.76363636363637,
+        0.1
+      ]
+    },
+    {
+      "record": [
+        "DOLLAR",
+        "Dollar Industries Limited",
+        "Market Purchase",
+        "20-Mar-2026",
+        7653300,
+        255.11,
+        0.05
+      ]
+    },
+    {
+      "record": [
+        "SINCLAIR",
+        "Sinclairs Hotels Limited",
+        "Market Purchase",
+        "19-Mar-2026 to 20-Mar-2026",
+        4352870,
+        75.16741784523994,
+        0.11
+      ]
+    },
+    {
+      "record": [
+        "PREMIERPOL",
+        "Premier Polyfilm Limited",
+        "Market Purchase",
+        "19-Mar-2026",
+        936627,
+        57.48999508961453,
+        0.02
+      ]
+    },
+    {
+      "record": [
+        "PREMIERPOL",
+        "Premier Polyfilm Limited",
+        "Market Purchase",
+        "19-Mar-2026",
+        120855,
+        57.55,
+        0
+      ]
+    },
+    {
+      "record": [
+        "SANSTAR",
+        "Sanstar Limited",
+        "Market Purchase",
+        "20-Mar-2026",
+        823355,
+        82.3355,
+        0.01
+      ]
+    },
+    {
+      "record": [
+        "GUJALKALI",
+        "Gujarat Alkalies and Chemicals Limited",
+        "Market Purchase",
+        "20-Mar-2026",
+        228288373,
+        495.91252769691965,
+        0.63
+      ]
+    },
+    {
+      "record": [
+        "HINDCON",
+        "Hindcon Chemicals Limited",
+        "Market Purchase",
+        "19-Mar-2026",
+        56692,
+        18.897333333333332,
+        0.01
+      ]
+    },
+    {
+      "record": [
+        "DWARKESH",
+        "Dwarikesh Sugar Industries Limited",
+        "Market Purchase",
+        "20-Mar-2026",
+        494919,
+        39.59352,
+        0.01
+      ]
+    },
+    {
+      "record": [
+        "NCLIND",
+        "NCL Industries Limited",
+        "Market Purchase",
+        "20-Mar-2026",
+        522283,
+        170.96006546644844,
+        0.01
+      ]
+    },
+    {
+      "record": [
+        "RILINFRA",
+        "Rachana Infrastructure Limited",
+        "Market Purchase",
+        "20-Mar-2026",
+        189250,
+        37.85,
+        0.03
+      ]
+    },
+    {
+      "record": [
+        "RILINFRA",
+        "Rachana Infrastructure Limited",
+        "Market Purchase",
+        "20-Mar-2026",
+        598720,
+        37.42,
+        0.08
+      ]
+    },
+    {
+      "record": [
+        "JSL",
+        "Jindal Stainless Limited",
+        "Market Purchase",
+        "17-Mar-2026 to 18-Mar-2026",
+        68852682,
+        724.7650736842105,
+        0.01
+      ]
+    },
+    {
+      "record": [
+        "SGIL",
+        "Synergy Green Industries Limited",
+        "Market Purchase",
+        "17-Mar-2026",
+        514539,
+        501.5,
+        0.01
+      ]
+    },
+    {
+      "record": [
+        "SGIL",
+        "Synergy Green Industries Limited",
+        "Market Purchase",
+        "17-Mar-2026",
+        98440,
+        492.2,
+        0
+      ]
+    }
+  ]
+}

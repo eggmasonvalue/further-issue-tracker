@@ -254,10 +254,6 @@ def test_further_issues_refine_writes_expected_metadata(monkeypatch, tmp_path):
             "fiftyTwoWeekHigh",
             "fiftyTwoWeekLow",
         ],
-        "xbrl": [
-            "Number of lock in shares",
-            "Period of lock in shares",
-        ],
     }
     assert refined["data"] == [
         {
@@ -279,7 +275,6 @@ def test_further_issues_refine_writes_expected_metadata(monkeypatch, tmp_path):
                 "Other Electrical Equipment",
             ],
             "marketData": [110, 1000, 25000, "18.5", 150, 80],
-            "xbrl": ["4", "Equity shares for 6 months"],
         }
     ]
 
@@ -366,7 +361,7 @@ def test_qip_refine_writes_expected_metadata(monkeypatch, tmp_path):
 
     assert result.exit_code == 0
     assert json.loads(result.output) == {"files": ["qip.json"]}
-    assert "xbrl" in refined["metadata"]
+    assert "xbrl" not in refined["metadata"]
 
 
 def test_insider_trading_fetch_uses_default_to_date(monkeypatch, tmp_path):

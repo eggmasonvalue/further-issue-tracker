@@ -17,8 +17,11 @@ def main():
     samples_dir = root_dir / "samples"
     samples_dir.mkdir(exist_ok=True)
 
-    # 1. Fetch Further Issues (10-03-2026 to 21-03-2026) fully enriched
-    print("Fetching Further Issues (10-Mar to 21-Mar)...")
+    # ---------------------------------------------------------
+    # PART 1: FULLY ENRICHED
+    # ---------------------------------------------------------
+    print("\n--- ENRICHED SAMPLES ---")
+    print("Fetching Further Issues (10-Mar to 21-Mar) [ENRICHED]...")
     run_command(
         [
             "uv",
@@ -40,8 +43,7 @@ def main():
         cwd=samples_dir,
     )
 
-    # 2. Refine Further Issues
-    print("Refining Further Issues...")
+    print("Refining Further Issues [ENRICHED]...")
     run_command(
         [
             "uv",
@@ -67,8 +69,7 @@ def main():
         cwd=samples_dir,
     )
 
-    # 3. Fetch Insider Trading (21-03-2026) fully enriched
-    print("Fetching Insider Trading (21-Mar)...")
+    print("Fetching Insider Trading (21-Mar) [ENRICHED]...")
     run_command(
         [
             "uv",
@@ -90,8 +91,7 @@ def main():
         cwd=samples_dir,
     )
 
-    # 4. Refine Insider Trading (market preset)
-    print("Refining Insider Trading...")
+    print("Refining Insider Trading [ENRICHED]...")
     run_command(
         [
             "uv",
@@ -104,6 +104,146 @@ def main():
         ],
         cwd=samples_dir,
     )
+
+    # ---------------------------------------------------------
+    # PART 2: UNENRICHED
+    # ---------------------------------------------------------
+    print("\n--- UNENRICHED SAMPLES ---")
+    print("Fetching Further Issues (10-Mar to 21-Mar) [UNENRICHED]...")
+    run_command(
+        [
+            "uv",
+            "run",
+            "nse-corporate-data",
+            "further-issues",
+            "fetch",
+            "--from-date",
+            "10-03-2026",
+            "--to-date",
+            "21-03-2026",
+        ],
+        cwd=samples_dir,
+    )
+
+    # Rename the un-enriched raw files
+    (samples_dir / "pref_raw.json").rename(samples_dir / "pref_unenriched_raw.json")
+    (samples_dir / "qip_raw.json").rename(samples_dir / "qip_unenriched_raw.json")
+
+    print("Refining Further Issues [UNENRICHED]...")
+    run_command(
+        [
+            "uv",
+            "run",
+            "nse-corporate-data",
+            "further-issues",
+            "refine",
+            "--category",
+            "pref",
+            "--input",
+            "pref_unenriched_raw.json",
+            "--output",
+            "pref_unenriched.json",
+        ],
+        cwd=samples_dir,
+    )
+    run_command(
+        [
+            "uv",
+            "run",
+            "nse-corporate-data",
+            "further-issues",
+            "refine",
+            "--category",
+            "qip",
+            "--input",
+            "qip_unenriched_raw.json",
+            "--output",
+            "qip_unenriched.json",
+        ],
+        cwd=samples_dir,
+    )
+
+    print("Fetching Insider Trading (21-Mar) [UNENRICHED]...")
+    run_command(
+        [
+            "uv",
+            "run",
+            "nse-corporate-data",
+            "insider-trading",
+            "fetch",
+            "--from-date",
+            "21-03-2026",
+            "--to-date",
+            "21-03-2026",
+        ],
+        cwd=samples_dir,
+    )
+
+    # Rename the un-enriched raw file
+    (samples_dir / "insider_raw.json").rename(samples_dir / "insider_unenriched_raw.json")
+
+    print("Refining Insider Trading [UNENRICHED]...")
+    run_command(
+        [
+            "uv",
+            "run",
+            "nse-corporate-data",
+            "insider-trading",
+            "refine",
+            "--preset",
+            "market",
+            "--input",
+            "insider_unenriched_raw.json",
+            "--output",
+            "insider_unenriched.json",
+        ],
+        cwd=samples_dir,
+    )
+
+    # Re-run ENRICHED fetch to restore the default output files
+    # (Since the unenriched step overwrites them before we rename them)
+    print("\n--- RESTORING DEFAULT ENRICHED RAW FILES ---")
+    run_command(
+        [
+            "uv",
+            "run",
+            "nse-corporate-data",
+            "further-issues",
+            "fetch",
+            "--from-date",
+            "10-03-2026",
+            "--to-date",
+            "21-03-2026",
+            "--enrich",
+            "market-data",
+            "--enrich",
+            "industry",
+            "--enrich",
+            "xbrl",
+        ],
+        cwd=samples_dir,
+    )
+    run_command(
+        [
+            "uv",
+            "run",
+            "nse-corporate-data",
+            "insider-trading",
+            "fetch",
+            "--from-date",
+            "21-03-2026",
+            "--to-date",
+            "21-03-2026",
+            "--enrich",
+            "market-data",
+            "--enrich",
+            "industry",
+            "--enrich",
+            "xbrl",
+        ],
+        cwd=samples_dir,
+    )
+
 
     print("Sample generation complete.")
 

@@ -1,11 +1,12 @@
 from dataclasses import dataclass
-from typing import Any, Callable, Dict, Mapping, Sequence
+from typing import Any, Callable, Dict, Mapping, Optional, Sequence
 
 
 @dataclass(frozen=True)
 class RefinedField:
     name: str
     extractor: Callable[[Mapping[str, Any]], Any]
+    requires: Optional[str] = None
 
 
 def build_refined_output(
@@ -15,9 +16,14 @@ def build_refined_output(
     metadata = full_output.get("metadata", {})
     api_fields = metadata.get("api", [])
 
+    active_fields = [
+        f for f in fields
+        if f.requires is None or f.requires in metadata
+    ]
+
     results: Dict[str, Any] = {
         "metadata": {
-            "record": [field.name for field in fields],
+            "record": [field.name for field in active_fields],
         },
         "data": [],
     }
@@ -26,8 +32,6 @@ def build_refined_output(
         results["metadata"]["industry"] = metadata["industry"]
     if "marketData" in metadata:
         results["metadata"]["marketData"] = metadata["marketData"]
-    if "xbrl" in metadata:
-        results["metadata"]["xbrl"] = metadata["xbrl"]
 
     for row in full_output.get("data", []):
         context = dict(zip(api_fields, row.get("api", [])))
@@ -43,14 +47,12 @@ def build_refined_output(
             context.update(dict(zip(metadata["marketData"], row["marketData"])))
 
         row_out = {
-            "record": [field.extractor(context) for field in fields],
+            "record": [field.extractor(context) for field in active_fields],
         }
         if "industry" in row:
             row_out["industry"] = row["industry"]
         if "marketData" in row:
             row_out["marketData"] = row["marketData"]
-        if "xbrl" in row:
-            row_out["xbrl"] = row["xbrl"]
 
         results["data"].append(row_out)
 
