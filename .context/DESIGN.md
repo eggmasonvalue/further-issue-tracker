@@ -22,7 +22,7 @@
 - Implemented: Canonical consumer-facing API labels for PREF, QIP, and insider full artifacts
 - Implemented: Refined artifacts now preserve the raw-artifact block structure with separate `record`, `industry`, and `marketData` arrays
 - Implemented: `further-issues refine --category qip` for debloated QIP output
-- Implemented: Confirmed root full-artifact samples are columnar and use a single `issueType` per dataset: `qip_data.json` is all `QIP` and `pref_data.json` is all `Preferential`
+- Implemented: Confirmed root full-artifact samples are columnar and use a single `issueType` per dataset: `qip_raw.json` is all `QIP` and `pref_raw.json` is all `Preferential`
 - Implemented: Removed redundant top-level `symbol` keys from full and refined row objects; `symbol` now exists only inside metadata-aligned row arrays
 - Not implemented: Rights Issues workflow
 - Implemented: Replaced the single `CMP` field in canonical outputs with a richer `marketData` snapshot derived from `getDetailedScripData`
