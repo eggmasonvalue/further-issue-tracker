@@ -31,9 +31,13 @@
 
 ## Note:
 - use "revisedFlag" to deduplicate filings while developing on top of this
-- For insider trading, for market purchases and sales, warrants will not be a problem. however, for categories like "Preferential Offer" or "Conversion of security", it might be. The shortening math will not hold.
+- For further-issues, warrants will not be a problem since we look for Listing Stage and we don't have publicly traded warrants.
 Warrants are not an issue for pref and qip since we're looking only at "Listing stage"
 - For insider trading,
-  - we may have to refactor the user-facing input to accept `transaction type` separately because it is a broader enum: `Buy`, `Sell`, `Pledge`, `Pledge Invoke`, `Pledge Revoke`.
-  - `type of instrument` may need to become a filter dimension as well. Current NSE values observed for this enum are: `Equity`, `Warrant`, `Debenture`, `Convertible Debenture`, `Bond`, `Derivative`, `Government Security`, `Preference Shares`, `Convertible Preference Shares`, `Any other instrument`.
   - In acqMode, for "pledge-revoke", "Revocation of Pledge" is what's described the NSE taxonomy however some filers somehow mess the enum dropdown(inexplicably) leading to "Revokation of Pledge" being found as well
+  - NSE is a hot mess wrt enforcing standards in XBRL filings. We don't know if the NSE's internal parser that outputs the values in the .json we are hitting with the endpoint is at fault or if the actual XBRL filings are but it's a mess.
+  - some notes regarding what is and is not present in the insider trading webpage currently but may be added to it in the future which will determine how we handle things:
+    - type of security (pre) and type of security(post) are the same i.e. when a warrant or any convertible is converted into equity shares, it results in two transactions- a warrant sell and an equity buy - quantity determined based on conversion ratios etc. Practically, there are edge cases where blanks and hyphens are interchanged.
+    - warrant buy modes are preferential offers, off market or hyphen(which means blanks are also likely)
+    - "securityType" and "postTransactionSecurityType" are the same
+    - at any point, NSE can enforce warrant buys properly. It seems inconsistent currently. sometimes, the filers seem to file for acquisition of warrants and sometimes they don't. maybe it was a newer rule enforced. so, it's better to ignore acquisition of warrants or converts or other types of securities for analysis. **this is solely to analyze when underlying equity shares are acquired by various means**
