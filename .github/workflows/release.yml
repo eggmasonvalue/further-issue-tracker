@@ -1,0 +1,78 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    name: Build ${{ matrix.os-name }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-24.04-arm
+            os-name: Linux-ARM64
+            artifact-name: nse-corporate-data-linux-arm64
+          - os: macos-latest
+            os-name: macOS-ARM64
+            artifact-name: nse-corporate-data-macos-arm64
+          - os: windows-latest
+            os-name: Windows-x64
+            artifact-name: nse-corporate-data-windows-x64.exe
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Dependencies
+        run: uv sync
+
+      - name: Build with Nuitka
+        run: uv run python -m nuitka --standalone --onefile --output-filename=${{ matrix.artifact-name }} src/nse_corporate_data/cli.py
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.artifact-name }}
+          path: ${{ matrix.artifact-name }}
+          retention-days: 1
+
+  release:
+    name: Create GitHub Release
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+          merge-multiple: true
+
+      - name: Create Release Notes
+        id: notes
+        run: |
+          # Use the template from the repository
+          cat .github/RELEASE_TEMPLATE.md > release_notes.md
+
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: artifacts/*
+          body_path: release_notes.md
+          generate_release_notes: true
