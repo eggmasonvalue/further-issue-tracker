@@ -16,15 +16,15 @@ jobs:
           - os: ubuntu-24.04-arm
             os-name: Linux-ARM64
             artifact-name: linux-arm64
-            output-filename: nse-corporate-data
+            output-filename: nse-corporate-data-linux-arm64
           - os: macos-latest
             os-name: macOS-ARM64
             artifact-name: macos-arm64
-            output-filename: nse-corporate-data
+            output-filename: nse-corporate-data-macos-arm64
           - os: windows-latest
             os-name: Windows-x64
             artifact-name: windows-x64
-            output-filename: nse-corporate-data.exe
+            output-filename: nse-corporate-data-windows-x64.exe
 
     steps:
       - name: Checkout repository
