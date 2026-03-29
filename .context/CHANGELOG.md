@@ -1,5 +1,6 @@
 # Changelog
 ## [Unreleased]
+- Fixed Nuitka CI build: added `--assume-yes-for-downloads` to prevent interactive ccache prompt, and `--noinclude-unittest-mode=allow` / `--noinclude-pytest-mode=allow` to suppress anti-bloat warnings from third-party libraries (pyparsing, anyio).
 - Updated `SKILL.md` and `README.md` to reflect the current CLI state, including the `refine` command, `--enrich` options, and `--preset` for insider trading.
 - Added a `forced-sales` preset to the `insider-trading refine` command to explicitly capture and deduplicate externally driven supply dumps (e.g. invocation of pledge) which are highly inconsistent in raw NSE filings.
 - Improved the insider trading percentage change calculation to use precise raw shares differences, resolving previous precision loss caused by NSE's rounded percentages.

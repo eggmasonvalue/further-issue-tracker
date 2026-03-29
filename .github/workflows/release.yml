@@ -42,7 +42,15 @@ jobs:
         run: uv sync
 
       - name: Build with Nuitka
-        run: uv run python -m nuitka --standalone --onefile --output-filename=${{ matrix.output-filename }} src/nse_corporate_data/cli.py
+        run: >-
+          uv run python -m nuitka
+          --standalone
+          --onefile
+          --output-filename=${{ matrix.output-filename }}
+          --assume-yes-for-downloads
+          --noinclude-unittest-mode=nofollow
+          --noinclude-pytest-mode=nofollow
+          src/nse_corporate_data/cli.py
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
